@@ -1,18 +1,30 @@
 import React, { Fragment } from 'react';
-import { Box, Grid } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
+const useStyles = makeStyles(() => ({
+  link: { marginRight: '10px' },
+}));
+
 export const NavBar = (): JSX.Element => {
+  const classes = useStyles();
   return (
     <Fragment>
       <Grid container>
         <Grid item md={6}>
-          <Box>Logo</Box>
+          <Link href="/">Logo</Link>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end">
-          <Link href="/writing">WRITING</Link>
-          <Link href="/github">GITHUB</Link>
-          <Link href="/about">ABOUT</Link>
+          <Box className={classes.link}>
+            <Link href="/writing">WRITING</Link>
+          </Box>
+          <Box className={classes.link}>
+            <Link href="/github">GITHUB</Link>
+          </Box>{' '}
+          <Box className={classes.link}>
+            <Link href="/about">ABOUT</Link>
+          </Box>
         </Grid>
       </Grid>
     </Fragment>
