@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .ts, .tsx --fix"
+    "lint": "eslint --ext .ts, .tsx --fix",
+    "new": "plop",
+    "new:component": "plop component",
+    "new:page": "plop page",
+    "new:icon": "plop icon"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",

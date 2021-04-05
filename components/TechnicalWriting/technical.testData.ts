@@ -13,7 +13,7 @@ export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
   {
     id: 2,
     article: 'feat: Regular Expressions CheatSheet',
-    href: '/blog/hello-world',
+    href: '/blog/regular-expressions',
   },
   {
     id: 3,
