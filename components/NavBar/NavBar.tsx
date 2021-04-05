@@ -34,6 +34,9 @@ export const NavBar = (): JSX.Element => {
           <Box className={classes.link}>
             <Link href="/about">ABOUT</Link>
           </Box>
+          <Box className={classes.link}>
+            <Link href="/about">BLOG</Link>
+          </Box>
         </Grid>
       </Grid>
     </Fragment>

@@ -1,10 +1,11 @@
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { getTechnicalWritingData } from '../TechnicalWriting/technical.testData';
+import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
   title: { textAlign: 'end', color: 'white' },
-  container: { marginTop: '60px' },
+  container: { marginTop: '100px' },
 
   technicalWritingContainer: {
     border: '1px solid #B5B3B3',
@@ -15,13 +16,22 @@ const useStyles = makeStyles(() => ({
   articleTitle: {
     color: '#B5B3B3',
   },
+  button: {
+    backgroundColor: '#222121',
+    border: '1px solid #7F7FF8',
+    color: '#7F7FF8',
+    padding: '5px 20px',
+    borderRadius: '5px',
+    maxWidth: '100px',
+    justifyContent: 'flex-end',
+  },
 }));
 
 export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid className={classes.container}>
-      <Typography variant="h4" className={classes.title}>
+      <Typography variant="h3" className={classes.title}>
         Technical Writing
       </Typography>
       <Grid container>
@@ -32,12 +42,17 @@ export const TechnicalWritingList = (): JSX.Element => {
           {getTechnicalWritingData.map(({ id, article, href }) => {
             return (
               <Grid key={id} container justify="flex-start" className={classes.technicalWritingContainer}>
-                <Box className={classes.articleTitle}>{article}</Box>
+                <Box className={classes.articleTitle}>
+                  <Link href={href}>{article}</Link>
+                </Box>
               </Grid>
             );
           })}
         </Grid>
       </Grid>
+      <Box className={classes.button}>
+        <Link href="/">View All</Link>
+      </Box>
     </Grid>
   );
 };
