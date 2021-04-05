@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     letterSpacing: '0.07rem',
   },
   logo: {
-    color: '#B5B3B3',
+    color: 'white',
     fontSize: '20px',
     letterSpacing: '0.1rem',
   },

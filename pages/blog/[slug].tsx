@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import ReactMarkdown from 'react-markdown';
 import fs from 'fs';
 import path from 'path';
@@ -14,10 +15,17 @@ interface BlogPostProps {
   };
 }
 
+const useStyles = makeStyles(() => ({
+  box: {
+    color: 'white',
+  },
+}));
+
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
+  const classes = useStyles();
   return (
     <>
-      <Box>{frontmatter.title}</Box>
+      <Box className={classes.box}>{frontmatter.title}</Box>
       <Box>{frontmatter.author}</Box>
       <ReactMarkdown source={content} />
     </>
