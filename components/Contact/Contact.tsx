@@ -1,11 +1,11 @@
-import { Grid, Typography, TextField, Button } from '@material-ui/core';
+import { Grid, Typography, TextField, Button, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   typography: {
     color: '#7F7FF8',
     fontSize: '40px',
-    alignSelf: 'center',
+    justifyContent: 'center',
   },
   textfield: {
     maxWidth: '300px',
