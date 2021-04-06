@@ -12,7 +12,8 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     color: 'white',
-    marginBottom: '20PX',
+    marginBottom: '20px',
+    fontSize: '40px',
   },
   aboutTitle: {
     transform: 'rotate(90deg)',
@@ -50,9 +51,7 @@ export default function Github(): JSX.Element {
         </Box>
       </Grid>
       <Grid item md={5} className={classes.githubItems} sm={5} xl={5}>
-        <Typography className={classes.title} variant="h3">
-          GITHUB
-        </Typography>
+        <Typography className={classes.title}>GITHUB</Typography>
         <GithubArticles />
       </Grid>
       <Grid container className={classes.contactContainer}>

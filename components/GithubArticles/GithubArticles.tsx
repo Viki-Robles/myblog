@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   details: {
     alignSelf: 'center',
     color: '#7F7FF8',
-    fontSize: '20px',
+    fontSize: '18px',
   },
   icon: {
     marginRight: '10px',
@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
     marginTop: '10px',
   },
   mainTitle: {
-    fontSize: '24px',
+    fontSize: '25px',
     color: '#DCDBDB',
   },
 }));
