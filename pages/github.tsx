@@ -28,6 +28,16 @@ const useStyles = makeStyles(() => ({
   contactContainer: {
     marginLeft: '150px',
   },
+  githubBoxLink: {
+    border: '1px solid #7F7FF8',
+    maxWidth: '100px',
+    backgroundColor: '#7F7FF8',
+    borderRadius: '5px',
+    padding: '6px',
+    marginBottom: '15px',
+    fontSize: '15px',
+    fontWeight: 'bold',
+  },
 }));
 
 export default function Github(): JSX.Element {
@@ -35,7 +45,7 @@ export default function Github(): JSX.Element {
 
   return (
     <Grid container className={classes.githubContainer}>
-      <Grid container md={7} direction="row" sm={7} xl={7}>
+      <Grid container md={7} direction="row" sm={7} xl={8}>
         {/* <Typography className={classes.aboutTitle}>About me</Typography> */}
         <Box className={classes.aboutText}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -49,13 +59,14 @@ export default function Github(): JSX.Element {
           unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
           passages, and more recently with desktop.
         </Box>
+        <Grid container className={classes.contactContainer}>
+          <Contact />
+        </Grid>
       </Grid>
-      <Grid item md={5} className={classes.githubItems} sm={5} xl={5}>
+      <Grid item md={5} className={classes.githubItems} sm={5} xl={4}>
         <Typography className={classes.title}>GITHUB</Typography>
+        <Box className={classes.githubBoxLink}>Github Link</Box>
         <GithubArticles />
-      </Grid>
-      <Grid container className={classes.contactContainer}>
-        <Contact />
       </Grid>
     </Grid>
   );
