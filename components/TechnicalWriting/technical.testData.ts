@@ -30,4 +30,14 @@ export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
     article: 'feat: Regular Expressions CheatSheet',
     href: 'https://vasiliki-robles.medium.com/regular-expressions-cheatsheet-663a4d751979',
   },
+  {
+    id: 5,
+    article: 'feat: Regular Expressions CheatSheet',
+    href: 'https://vasiliki-robles.medium.com/regular-expressions-cheatsheet-663a4d751979',
+  },
+  {
+    id: 5,
+    article: 'feat: Regular Expressions CheatSheet',
+    href: 'https://vasiliki-robles.medium.com/regular-expressions-cheatsheet-663a4d751979',
+  },
 ];

@@ -36,7 +36,6 @@ const useStyles = makeStyles(() => ({
     padding: '6px',
     marginBottom: '15px',
     fontSize: '15px',
-    fontWeight: 'bold',
   },
 }));
 

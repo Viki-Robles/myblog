@@ -1,14 +1,3 @@
-...
-title: Second Blog
-author: viki
-
-...
-
-This is the first post
-
-- Item 1
-- item 2
-
-## Subtitle
-
-### Another Subtitle
+<p>
+  I <strong>love</strong> using <a href="https://nextjs.org/">Next.js</a>
+</p>

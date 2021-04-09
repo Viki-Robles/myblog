@@ -46,7 +46,7 @@ export const NavBar = (): JSX.Element => {
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
-            <Link href="/writing">WRITING</Link>
+            <Link href="/">WRITING</Link>
           </Box>
           <Box className={classes.link}>
             <Link href="/github">GITHUB</Link>

@@ -20,6 +20,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: '5px',
     padding: '10px',
     maxWidth: '800px',
+    overflow: 'scroll',
     '&:hover': {
       borderColor: '#7F7FF8',
     },
@@ -65,15 +66,20 @@ export const TechnicalWritingList = (): JSX.Element => {
       <Grid container>
         <Grid item md={5}>
           <Image src="/mypicture.png" width={500} height={500} className={classes.picture} />
-          <Box className={classes.frontend}>🏠 Frontend Engineer</Box>
-          <motion.div animate={{ scale: 2 }} />
+          <Box className={classes.frontend}>
+            <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
+              <Typography variant="h4">🏠 Frontend Engineer</Typography>
+            </motion.div>
+          </Box>
           <Grid className={classes.quote} container direction="column">
             <Box>
-              I build custom <span className={classes.span}>WEB</span> solutions, write about{' '}
-              <span className={classes.span}>
-                <Link href="https://dev.to/vikirobles">DEV</Link>
-              </span>
-              and I love graphic novels.
+              <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
+                I build custom <span className={classes.span}>WEB</span> solutions, write about
+                <span className={classes.span}>
+                  <Link href="https://dev.to/vikirobles">DEV</Link>
+                </span>
+                and I love graphic novels.
+              </motion.div>
             </Box>
           </Grid>
         </Grid>
