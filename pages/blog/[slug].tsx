@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import fs from 'fs';
 import path from 'path';
@@ -16,19 +17,43 @@ interface BlogPostProps {
 }
 
 const useStyles = makeStyles(() => ({
-  box: {
-    color: 'white',
+  title: {
+    color: 'black',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginTop: '40px',
+  },
+  content: {
+    color: 'black',
+  },
+  author: {
+    color: 'black',
+  },
+  container: {
+    border: '1px',
+    borderRadius: '5px',
+    backgroundColor: '#f0f2f5',
+    margin: '0 auto',
+    marginTop: '20px',
+    maxWidth: '800px',
   },
 }));
 
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
   const classes = useStyles();
   return (
-    <>
-      <Box className={classes.box}>{frontmatter.title}</Box>
-      <Box>{frontmatter.author}</Box>
-      <ReactMarkdown source={content} />
-    </>
+    <Grid container justify="center" direction="column" alignItems="center" className={classes.container}>
+      <Image src="/regex.png" alt="Picture of the author" width={800} height={400} />
+      <Typography variant="h4" className={classes.title}>
+        {frontmatter.title}
+      </Typography>
+      <Box className={classes.content}>
+        <ReactMarkdown source={content} />
+      </Box>
+      <Typography variant="h6" className={classes.author}>
+        By: {frontmatter.author}
+      </Typography>
+    </Grid>
   );
 };
 

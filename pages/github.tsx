@@ -24,6 +24,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: '600px',
     color: 'white',
     textAlign: 'left',
+    padding: '20px',
   },
   contactContainer: {
     marginLeft: '150px',

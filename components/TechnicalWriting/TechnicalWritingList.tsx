@@ -56,6 +56,7 @@ const useStyles = makeStyles(() => ({
   span: {
     color: '#7F7FF8',
     marginRight: '5px',
+    marginLeft: '5px',
   },
 }));
 
@@ -65,7 +66,7 @@ export const TechnicalWritingList = (): JSX.Element => {
     <Grid className={classes.container}>
       <Grid container>
         <Grid item md={5}>
-          <Image src="/mypicture.png" width={500} height={500} className={classes.picture} />
+          <Image src="/myself.svg" width={600} height={600} className={classes.picture} />
           <Box className={classes.frontend}>
             <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
               <Typography variant="h4">🏠 Frontend Engineer</Typography>
@@ -107,9 +108,6 @@ export const TechnicalWritingList = (): JSX.Element => {
               </Timeline>
             );
           })}
-          {/* <Box className={classes.button}>
-            <Link href="/">View All</Link>
-          </Box> */}
         </Grid>
       </Grid>
     </Grid>

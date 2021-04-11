@@ -50,7 +50,7 @@ export const NavBar = (): JSX.Element => {
           </Box>
           <Box className={classes.link}>
             <Link href="/github">GITHUB</Link>
-          </Box>{' '}
+          </Box>
           <Box className={classes.link}>
             <Link href="/about">ABOUT</Link>
           </Box>
