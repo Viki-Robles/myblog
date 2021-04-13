@@ -18,15 +18,16 @@ const useStyles = makeStyles(() => ({
     fontSize: '40px',
   },
   aboutTitle: {
-    transform: 'rotate(90deg)',
+    // transform: 'rotate(90deg)',
     fontSize: '80px',
     color: 'white',
+    alignSelf: 'left',
+    marginLeft: '150px',
   },
   aboutText: {
     maxWidth: '600px',
     color: 'white',
-    textAlign: 'left',
-    padding: '20px',
+    marginLeft: '150px',
   },
   contactContainer: {
     marginLeft: '150px',
@@ -47,10 +48,10 @@ export default function Github(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.githubContainer}>
+    <Grid container className={classes.githubContainer} spacing={2}>
       <Grid container md={7} direction="row" sm={7} xl={8}>
-        {/* <Typography className={classes.aboutTitle}>About me</Typography> */}
-        <Box className={classes.aboutText}>
+        {/* <Typography className={classes.aboutTitle}>Who Am I?</Typography> */}
+        <Box className={classes.aboutText} display="flex">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
           make a type specimen book. It has survived not only five centuries, but also the leap into electronic
