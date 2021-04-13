@@ -42,7 +42,7 @@ export const NavBar = (): JSX.Element => {
     <Fragment>
       <Grid container className={classes.navBar}>
         <Grid item md={6} className={classes.logo}>
-          <Link href="/">Vasiliki Vasilopoulou</Link>
+          <Link href="/">Vicky Vasilopoulou</Link>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
@@ -52,7 +52,7 @@ export const NavBar = (): JSX.Element => {
             <Link href="/github">GITHUB</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/about">ABOUT</Link>
+            <Link href="/projects">PROJECTS</Link>
           </Box>
         </Grid>
       </Grid>

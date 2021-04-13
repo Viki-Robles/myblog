@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: '30px',
   },
   line: {
-    borderBottom: '1px solid #DCDBDB',
+    borderBottom: '1px solid #232b2b',
     padding: '10px',
   },
   details: {

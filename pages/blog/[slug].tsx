@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
+import Avatar from '@material-ui/core/Avatar';
 import ReactMarkdown from 'react-markdown';
 import fs from 'fs';
 import path from 'path';
@@ -19,41 +20,54 @@ interface BlogPostProps {
 const useStyles = makeStyles(() => ({
   title: {
     color: 'black',
-    textAlign: 'center',
     fontWeight: 'bold',
     marginTop: '40px',
+    marginLeft: '40px',
   },
   content: {
     color: 'black',
+    marginLeft: '40px',
   },
   author: {
     color: 'black',
+    alignSelf: 'center',
+    margin: '0 10px',
+  },
+  date: {
+    alignSelf: 'center',
   },
   container: {
     border: '1px',
     borderRadius: '5px',
     backgroundColor: '#f0f2f5',
-    margin: '0 auto',
-    marginTop: '20px',
     maxWidth: '800px',
+    margin: '0 auto',
+    marginTop: '40px',
+  },
+  details: {
+    marginLeft: '40px',
+    marginTop: '10px',
   },
 }));
 
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" direction="column" alignItems="center" className={classes.container}>
-      <Image src="/regex.png" alt="Picture of the author" width={800} height={400} />
-      <Typography variant="h4" className={classes.title}>
-        {frontmatter.title}
-      </Typography>
-      <Box className={classes.content}>
-        <ReactMarkdown source={content} />
+    <>
+      <Box display="flex" className={classes.details}>
+        <Avatar alt="VV" src="/static/images/avatar/mypicture.png" />
+        <Typography className={classes.author}>{frontmatter.author}</Typography>
+        <Typography className={classes.date}>22 February 2021</Typography>
       </Box>
-      <Typography variant="h6" className={classes.author}>
-        By: {frontmatter.author}
-      </Typography>
-    </Grid>
+      <Grid container direction="column" className={classes.container}>
+        <Typography variant="h4" className={classes.title}>
+          {frontmatter.title}
+        </Typography>
+        <Box className={classes.content}>
+          <ReactMarkdown source={content} />
+        </Box>
+      </Grid>
+    </>
   );
 };
 
