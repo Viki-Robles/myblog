@@ -3,6 +3,7 @@ import { Layout } from '../components/Layout.tsx/Layout';
 import '../styles/globals.css';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
+import { AnimatedWrapper } from '../components/AnimatedWrapper/AnimatedWrapper';
 
 function MyApp({ Component, pageProps }): JSX.Element {
   useEffect(() => {
@@ -14,9 +15,11 @@ function MyApp({ Component, pageProps }): JSX.Element {
 
   return (
     <Layout>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <AnimatedWrapper>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </AnimatedWrapper>
     </Layout>
   );
 }

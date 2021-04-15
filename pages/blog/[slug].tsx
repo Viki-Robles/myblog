@@ -19,33 +19,33 @@ interface BlogPostProps {
 
 const useStyles = makeStyles(() => ({
   title: {
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
     marginTop: '40px',
     marginLeft: '40px',
+    textAlign: 'center',
   },
   content: {
-    color: 'black',
+    color: 'white',
     marginLeft: '40px',
   },
   author: {
-    color: 'black',
+    color: 'white',
     alignSelf: 'center',
     margin: '0 10px',
   },
   date: {
     alignSelf: 'center',
+    color: '#C0C0C0',
   },
   container: {
     border: '1px',
     borderRadius: '5px',
-    backgroundColor: '#f0f2f5',
     maxWidth: '800px',
     margin: '0 auto',
     marginTop: '40px',
   },
   details: {
-    marginLeft: '40px',
     marginTop: '10px',
   },
 }));
@@ -54,15 +54,15 @@ const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
   const classes = useStyles();
   return (
     <>
-      <Box display="flex" className={classes.details}>
-        <Avatar alt="VV" src="/static/images/avatar/mypicture.png" />
-        <Typography className={classes.author}>{frontmatter.author}</Typography>
-        <Typography className={classes.date}>22 February 2021</Typography>
-      </Box>
       <Grid container direction="column" className={classes.container}>
         <Typography variant="h4" className={classes.title}>
           {frontmatter.title}
         </Typography>
+        <Box display="flex" className={classes.details}>
+          <Avatar src="/public/myself.svg" />
+          <Typography className={classes.author}>{frontmatter.author}</Typography>
+          <Typography className={classes.date}>10 Feb, 1 min read</Typography>
+        </Box>
         <Box className={classes.content}>
           <ReactMarkdown source={content} />
         </Box>

@@ -66,7 +66,7 @@ export default function Github(): JSX.Element {
       <Grid item md={5} className={classes.githubItems} sm={5} xl={4}>
         <Typography className={classes.title}>GITHUB</Typography>
         <Box className={classes.button}>
-          <Link href="/">Github Link</Link>
+          <Link href="/">GITHUB LINK</Link>
         </Box>
         <GithubArticles />
       </Grid>

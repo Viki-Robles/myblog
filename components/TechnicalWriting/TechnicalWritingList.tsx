@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
   quote: {
     color: 'white',
-    fontSize: '50px',
+    fontSize: '45px',
     marginTop: '20px',
     marginLeft: '20px',
   },
@@ -114,9 +114,7 @@ export const TechnicalWritingList = (): JSX.Element => {
             <Box>
               <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
                 I build custom <span className={classes.span}>WEB</span> solutions, write about
-                <span className={classes.span}>
-                  <Link href="https://dev.to/vikirobles">DEV</Link>
-                </span>
+                <span className={classes.span}> DEV</span>
                 and reading graphic novels.
               </motion.div>
             </Box>
