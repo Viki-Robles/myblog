@@ -6,7 +6,10 @@ import Image from 'next/image';
 
 const useStyles = makeStyles(() => ({
   githubItem: {
-    marginBottom: '30px',
+    marginBottom: '15px',
+    '&:hover': {
+      backgroundColor: '#1E1E1B',
+    },
   },
   line: {
     borderBottom: '1px solid #232b2b',
@@ -15,7 +18,8 @@ const useStyles = makeStyles(() => ({
   details: {
     alignSelf: 'center',
     color: '#7F7FF8',
-    fontSize: '18px',
+    fontSize: '16px',
+    fontFamily: 'Cinzel',
   },
   icon: {
     marginRight: '10px',
@@ -24,8 +28,9 @@ const useStyles = makeStyles(() => ({
     marginTop: '10px',
   },
   mainTitle: {
-    fontSize: '25px',
+    fontSize: '24px',
     color: '#DCDBDB',
+    letterSpacing: 0,
   },
 }));
 

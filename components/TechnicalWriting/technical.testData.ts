@@ -44,7 +44,7 @@ export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
   },
   {
     id: 7,
-    article: 'Cookie Policy Banner with lodash',
+    article: 'Cookie Policy Banner with localStorage',
     href: 'https://dev.to/vikirobles/how-to-make-a-cookie-policy-banner-without-any-npm-package-12j5',
     published: 'Published on Apr 7, 2021',
   },

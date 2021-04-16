@@ -40,15 +40,15 @@ const useStyles = makeStyles((theme) => ({
   },
   articleTitle: {
     color: '#B5B3B3',
-    fontSize: '18px',
-    fontFamily: 'Libre Baskerville, serif',
+    fontSize: '20px',
+    fontFamily: 'Cinzel',
     '&:hover': {
       color: 'white',
     },
   },
   published: {
-    fontSize: '14px',
-    fontFamily: 'Libre Baskerville, serif',
+    fontSize: '16px',
+    fontFamily: 'Cinzel',
     color: '#b5b3b3',
   },
   button: {
@@ -104,10 +104,13 @@ export const TechnicalWritingList = (): JSX.Element => {
     <Grid className={classes.container} sm={12} xs={12}>
       <Grid container>
         <Grid item md={4} sm={12}>
-          <Image src="/myself.svg" width={600} height={600} className={classes.picture} />
+          <Image src="/myself.svg" width={500} height={500} className={classes.picture} />
           <Box className={classes.frontend}>
             <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-              <Typography variant="h4">🏠 Frontend Engineer</Typography>
+              <Typography variant="h4">
+                <span>F</span>
+                rontend Engineer
+              </Typography>
             </motion.div>
           </Box>
           <Grid className={classes.quote} container direction="column">
@@ -159,3 +162,6 @@ export const TechnicalWritingList = (): JSX.Element => {
     </Grid>
   );
 };
+function clsx(animatedItem: any, arg1: { [x: number]: any }): string {
+  throw new Error('Function not implemented.');
+}

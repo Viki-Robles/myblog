@@ -6,14 +6,16 @@ import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
   blog: {},
-  header: {
+  blogHeader: {
     fontSize: '40px',
     color: 'white',
+    marginBottom: '20px',
   },
-  title: {
+  blogTitle: {
     color: 'white',
+    marginBottom: '10px',
   },
-  blogContainer: {},
+  blogItem: {},
   button: {
     marginTop: '10px',
     borderRadius: '10px',
@@ -43,12 +45,12 @@ export const Blog = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container className={classes.blog}>
-      <Box className={classes.header}>Blog Posts</Box>
+      <Box className={classes.blogHeader}>Blog Posts</Box>
       {blogData.map(({ title, link, id }) => {
         return (
           <>
-            <Grid key={id} container className={classes.blogContainer} direction="column">
-              <Box className={classes.title}>{title}</Box>
+            <Grid key={id} container className={classes.blogItem} direction="column">
+              <Box className={classes.blogTitle}>{title}</Box>
               <Box className={classes.button}>
                 <Link href={link}>SEE POST</Link>
               </Box>

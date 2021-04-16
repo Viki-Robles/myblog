@@ -8,9 +8,9 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <Fragment>
+    <Box style={{ position: 'relative', zIndex: 1 }}>
       <NavBar />
       <Box>{children}</Box>
-    </Fragment>
+    </Box>
   );
 };

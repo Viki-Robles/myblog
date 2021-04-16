@@ -14,13 +14,12 @@ function MyApp({ Component, pageProps }): JSX.Element {
   }, []);
 
   return (
-    <Layout>
-      <AnimatedWrapper>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </AnimatedWrapper>
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      <AnimatedWrapper children></AnimatedWrapper>
+    </ThemeProvider>
   );
 }
 

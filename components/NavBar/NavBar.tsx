@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -18,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navBar: {
+    marginBottom: '50px',
     [theme.breakpoints.up('sm')]: {
       display: 'grid',
     },
@@ -41,8 +43,10 @@ export const NavBar = (): JSX.Element => {
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
-        <Grid item md={6} className={classes.logo}>
-          <Link href="/">Vicky Vasilopoulou</Link>
+        <Grid container md={6} className={classes.logo}>
+          <Box>
+            <Link href="/">VICKY VASILOPOULOU</Link>
+          </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>

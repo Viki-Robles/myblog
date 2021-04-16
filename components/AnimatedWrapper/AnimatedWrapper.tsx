@@ -15,6 +15,11 @@ export const AnimatedWrapper = ({ children }): JSX.Element => {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
     </div>

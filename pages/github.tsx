@@ -5,10 +5,10 @@ import { Blog } from '../components/Blog/Blog';
 import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
-  githubItems: {
+  github: {
     textAlign: 'left',
   },
-  githubContainer: {
+  container: {
     marginTop: '100px',
     padding: '10px',
   },
@@ -18,20 +18,16 @@ const useStyles = makeStyles(() => ({
     fontSize: '40px',
   },
   aboutTitle: {
-    // transform: 'rotate(90deg)',
     fontSize: '80px',
     color: 'white',
     alignSelf: 'left',
-    marginLeft: '150px',
   },
-  aboutText: {
+  about: {
     maxWidth: '600px',
     color: 'white',
-    marginLeft: '150px',
+    marginBottom: '100px',
   },
-  contactContainer: {
-    marginLeft: '150px',
-  },
+
   button: {
     border: '1px solid #7F7FF8',
     padding: '7px 20px',
@@ -42,28 +38,35 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     marginBottom: '20px',
   },
+  aboutContainer: {
+    marginLeft: '60px',
+  },
+  blog: {},
 }));
 
 export default function Github(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.githubContainer} spacing={2}>
+    <Grid container className={classes.container} spacing={2}>
       <Grid container md={7} direction="row" sm={7} xl={8}>
-        {/* <Typography className={classes.aboutTitle}>Who Am I?</Typography> */}
-        <Box className={classes.aboutText} display="flex">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially. unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop. Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+        <Box className={classes.aboutContainer}>
+          <Typography className={classes.aboutTitle}>Who Am I?</Typography>
+          <Box className={classes.about} display="flex">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially. unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the
+          </Box>
+          <Grid container className={classes.blog}>
+            <Blog />
+          </Grid>
         </Box>
-        <Grid container className={classes.contactContainer}>
-          <Blog />
-        </Grid>
       </Grid>
-      <Grid item md={5} className={classes.githubItems} sm={5} xl={4}>
+      <Grid item md={5} className={classes.github} sm={5} xl={4}>
         <Typography className={classes.title}>GITHUB</Typography>
         <Box className={classes.button}>
           <Link href="/">GITHUB LINK</Link>
