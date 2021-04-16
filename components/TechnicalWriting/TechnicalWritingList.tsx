@@ -32,13 +32,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  technicalWritingContainer: {
+  articlesListItem: {
     maxWidth: '800px',
     '&:hover': {
       borderColor: '#7F7FF8',
     },
   },
-  articleTitle: {
+  articlesHeader: {
     color: '#B5B3B3',
     fontSize: '20px',
     fontFamily: 'Cinzel',
@@ -46,27 +46,17 @@ const useStyles = makeStyles((theme) => ({
       color: 'white',
     },
   },
-  published: {
+  articlesSubHeader: {
     fontSize: '16px',
     fontFamily: 'Cinzel',
     color: '#b5b3b3',
   },
-  button: {
-    backgroundColor: '#222121',
-    border: '1px solid #7F7FF8',
-    color: '#7F7FF8',
-    padding: '5px 20px',
-    borderRadius: '5px',
-    maxWidth: '100px',
-    marginTop: '40px',
-    margin: '0 auto',
-  },
   picture: {
     borderRadius: '50%',
   },
-  frontend: {
+  frontendTitle: {
     color: 'white',
-    fontSize: '30px',
+    fontSize: '40px',
     marginTop: '20px',
     marginLeft: '20px',
   },
@@ -81,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '5px',
     marginLeft: '5px',
   },
-  postLink: {
+  button: {
     border: '1px solid #7F7FF8',
     padding: '5px 20px',
     color: '#7F7FF8',
@@ -105,20 +95,15 @@ export const TechnicalWritingList = (): JSX.Element => {
       <Grid container>
         <Grid item md={4} sm={12}>
           <Image src="/myself.svg" width={500} height={500} className={classes.picture} />
-          <Box className={classes.frontend}>
-            <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-              <Typography variant="h4">
-                <span>F</span>
-                rontend Engineer
-              </Typography>
-            </motion.div>
-          </Box>
+          <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
+            <Typography className={classes.frontendTitle}>Frontend Engineer</Typography>
+          </motion.div>
           <Grid className={classes.quote} container direction="column">
             <Box>
               <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
                 I build custom <span className={classes.span}>WEB</span> solutions, write about
                 <span className={classes.span}> DEV</span>
-                and reading graphic novels.
+                and read graphic novels.
               </motion.div>
             </Box>
           </Grid>
@@ -137,21 +122,13 @@ export const TechnicalWritingList = (): JSX.Element => {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <Grid
-                      key={id}
-                      container
-                      justify="flex-start"
-                      className={classes.technicalWritingContainer}
-                      direction="column"
-                    >
-                      <Box className={classes.articleTitle}>
-                        <Link href={href}>{article}</Link>
-                      </Box>
-                      <Typography className={classes.published}>{published}</Typography>
-                      <Box className={classes.postLink}>
-                        <Link href={href}>SEE POST </Link>
-                      </Box>
-                    </Grid>
+                    <Box className={classes.articlesHeader} key={id}>
+                      <Link href={href}>{article}</Link>
+                    </Box>
+                    <Typography className={classes.articlesSubHeader}>{published}</Typography>
+                    <Box className={classes.button}>
+                      <Link href={href}>SEE POST</Link>
+                    </Box>
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>
@@ -162,6 +139,3 @@ export const TechnicalWritingList = (): JSX.Element => {
     </Grid>
   );
 };
-function clsx(animatedItem: any, arg1: { [x: number]: any }): string {
-  throw new Error('Function not implemented.');
-}

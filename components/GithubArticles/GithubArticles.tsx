@@ -15,19 +15,19 @@ const useStyles = makeStyles(() => ({
     borderBottom: '1px solid #232b2b',
     padding: '10px',
   },
-  details: {
+  githubItemDetails: {
     alignSelf: 'center',
     color: '#7F7FF8',
     fontSize: '16px',
     fontFamily: 'Cinzel',
   },
-  icon: {
+  starIcon: {
     marginRight: '10px',
   },
-  subTitle: {
+  githubsubTitle: {
     marginTop: '10px',
   },
-  mainTitle: {
+  githubTitle: {
     fontSize: '24px',
     color: '#DCDBDB',
     letterSpacing: 0,
@@ -42,14 +42,14 @@ export default function GithubArticles(): JSX.Element {
       {githubData.map(({ id, title, href, details }) => {
         return (
           <Grid key={id} className={classes.githubItem} direction="column">
-            <Box className={classes.mainTitle}>
+            <Box className={classes.githubTitle}>
               <Link href={href}>{title}</Link>
             </Box>
-            <Box display="flex" className={classes.subTitle}>
-              <Box className={classes.icon}>
+            <Box display="flex" className={classes.githubsubTitle}>
+              <Box className={classes.starIcon}>
                 <Image src="/star.svg" width={15} height={15} />
               </Box>
-              <Box className={classes.details}>{details}</Box>
+              <Box className={classes.githubItemDetails}>{details}</Box>
             </Box>
             <Box className={classes.line}></Box>
           </Grid>

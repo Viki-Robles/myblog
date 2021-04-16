@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     marginTop: '100px',
     padding: '10px',
   },
-  title: {
+  header: {
     color: 'white',
     marginBottom: '20px',
     fontSize: '40px',
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     alignSelf: 'left',
   },
-  about: {
+  aboutText: {
     maxWidth: '600px',
     color: 'white',
     marginBottom: '100px',
@@ -49,10 +49,10 @@ export default function Github(): JSX.Element {
 
   return (
     <Grid container className={classes.container} spacing={2}>
-      <Grid container md={7} direction="row" sm={7} xl={8}>
+      <Grid item md={7} direction="row" sm={7} xl={8}>
         <Box className={classes.aboutContainer}>
           <Typography className={classes.aboutTitle}>Who Am I?</Typography>
-          <Box className={classes.about} display="flex">
+          <Box className={classes.aboutText} display="flex">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
@@ -61,13 +61,13 @@ export default function Github(): JSX.Element {
             dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the
           </Box>
-          <Grid container className={classes.blog}>
+          <Grid item className={classes.blog}>
             <Blog />
           </Grid>
         </Box>
       </Grid>
       <Grid item md={5} className={classes.github} sm={5} xl={4}>
-        <Typography className={classes.title}>GITHUB</Typography>
+        <Typography className={classes.header}>GITHUB</Typography>
         <Box className={classes.button}>
           <Link href="/">GITHUB LINK</Link>
         </Box>
