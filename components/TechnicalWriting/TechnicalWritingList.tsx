@@ -13,13 +13,12 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    textAlign: 'end',
     color: 'white',
-    alignSelf: 'start',
+    textAlign: 'right',
     marginRight: '20px',
     fontSize: '40px',
     [theme.breakpoints.down('md')]: {
-      textAlign: 'center',
+      textAlign: 'right',
       margin: '0 auto',
       fontSize: '35px',
     },

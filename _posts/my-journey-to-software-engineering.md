@@ -1,6 +1,7 @@
 ---
 title: My journey from Sales to Software Engineering
 author: Vicky Vasilopoulou
+icon: 🚀
 ---
 
 I worked in sales for three years, and I must admit that whilst it was fun to begin with, in the end, I knew it wasn’t for me. For over a year I tried different options, such as copywriting, to discover what I wanted to do with my career – I started a blog with various articles but again, I knew it wasn’t for me.

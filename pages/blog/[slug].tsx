@@ -2,11 +2,11 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
-import Avatar from '@material-ui/core/Avatar';
 import ReactMarkdown from 'react-markdown';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Link from 'next/link';
 
 interface BlogPostProps {
   content: string;
@@ -14,25 +14,27 @@ interface BlogPostProps {
     title: string;
     author: string;
     date: string;
+    icon?: any;
   };
 }
 
 const useStyles = makeStyles(() => ({
   title: {
-    color: 'white',
+    color: '#FEDE00',
     fontWeight: 'bold',
     marginTop: '40px',
     marginLeft: '40px',
     textAlign: 'center',
+    fontFamily: 'Inter, sans-serif',
   },
   content: {
     color: 'white',
     marginLeft: '40px',
+    fontFamily: 'Inter, sans-serif',
   },
   author: {
     color: 'white',
     alignSelf: 'center',
-    margin: '0 10px',
   },
   date: {
     alignSelf: 'center',
@@ -48,6 +50,18 @@ const useStyles = makeStyles(() => ({
   details: {
     marginTop: '10px',
   },
+  picture: {
+    borderRadius: '50%',
+  },
+  followMebutton: {
+    fontSize: '12px',
+    color: 'white',
+    alignSelf: 'center',
+    backgroundColor: '#AB0552',
+    borderRadius: '10px',
+    padding: '8px',
+    marginLeft: '10px',
+  },
 }));
 
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
@@ -56,13 +70,20 @@ const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
     <>
       <Grid container direction="column" className={classes.container}>
         <Typography variant="h4" className={classes.title}>
-          {frontmatter.title}
+          {frontmatter.icon} {frontmatter.title}
         </Typography>
-        <Box display="flex" className={classes.details}>
-          <Avatar src="/public/myself.svg" />
-          <Typography className={classes.author}>{frontmatter.author}</Typography>
-          <Typography className={classes.date}>10 Feb, 1 min read</Typography>
-        </Box>
+        <Grid container className={classes.details}>
+          <Grid item>
+            <Image src="/myself.svg" width={50} height={50} className={classes.picture} />
+          </Grid>
+          <Grid item>
+            <Typography className={classes.author}>{frontmatter.author}</Typography>
+            <Typography className={classes.date}>10 Feb, 1 min read</Typography>
+          </Grid>
+          <Grid item className={classes.followMebutton}>
+            <Link href="https://dev.to/vikirobles">Follow</Link>
+          </Grid>
+        </Grid>
         <Box className={classes.content}>
           <ReactMarkdown source={content} />
         </Box>
@@ -99,6 +120,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
         title: data.title || null,
         author: data.author || null,
         date: date || null,
+        icon: data.icon || null,
       },
       content,
     },

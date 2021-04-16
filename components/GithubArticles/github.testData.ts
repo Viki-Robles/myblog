@@ -49,11 +49,4 @@ export const githubData: GithuDataProps[] = [
     href: 'https://github.com/Viki-Robles/joblisting',
     icon: 'icon',
   },
-  {
-    id: 7,
-    title: 'JOB LISTING APP',
-    details: 'An example of how to return data from Github API',
-    href: 'https://github.com/Viki-Robles/joblisting',
-    icon: 'icon',
-  },
 ];
