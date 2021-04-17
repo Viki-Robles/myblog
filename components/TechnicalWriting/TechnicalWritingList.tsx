@@ -18,16 +18,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '20px',
     fontSize: '40px',
     [theme.breakpoints.down('md')]: {
-      textAlign: 'right',
-      margin: '0 auto',
       fontSize: '35px',
-    },
-  },
-  container: {
-    marginTop: '80px',
-    [theme.breakpoints.down('md')]: {
-      dispplay: 'block',
-      margin: '0 auto',
     },
   },
 
@@ -57,13 +48,32 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontSize: '40px',
     marginTop: '20px',
-    marginLeft: '20px',
+    marginBottom: '20px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '35px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '30px',
+    },
   },
   quote: {
     color: 'white',
     fontSize: '45px',
     marginTop: '20px',
-    marginLeft: '20px',
+    maxWidth: 'auto',
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto',
+      fontSize: '35px',
+      maxWidth: '500px',
+    },
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '20px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '30px',
+      marginBottom: '40px',
+      alignItems: 'center',
+    },
   },
   span: {
     color: '#7F7FF8',
@@ -80,60 +90,61 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '10px',
     textAlign: 'center',
   },
-  articlesContainer: {
-    [theme.breakpoints.down('md')]: {
-      margin: '0 auto',
-    },
+  articlesTitle: {
+    margin: '0 auto',
   },
+
+  articlesContainer: {
+    [theme.breakpoints.down('sm')]: {},
+  },
+  pictureContainer: {},
 }));
 
 export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
-    <Grid className={classes.container} sm={12} xs={12}>
-      <Grid container>
-        <Grid item md={4} sm={12}>
+    <Grid container sm={12} xs={12}>
+      <Grid item md={4} sm={12}>
+        <Box className={classes.pictureContainer}>
           <Image src="/myself.svg" width={500} height={500} className={classes.picture} />
+        </Box>
+        <Grid className={classes.quote} container direction="column">
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
             <Typography className={classes.frontendTitle}>Frontend Engineer</Typography>
           </motion.div>
-          <Grid className={classes.quote} container direction="column">
-            <Box>
-              <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
-                I build custom <span className={classes.span}>WEB</span> solutions, write about
-                <span className={classes.span}> DEV</span>
-                and read graphic novels.
-              </motion.div>
-            </Box>
-          </Grid>
+          <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
+            I build custom <span className={classes.span}>WEB</span> solutions, write about
+            <span className={classes.span}> DEV</span>
+            and read graphic novels.
+          </motion.div>
         </Grid>
+      </Grid>
 
-        <Grid item md={8} className={classes.articlesContainer}>
-          <Typography variant="h3" className={classes.title}>
-            Technical Writing
-          </Typography>
-          {getTechnicalWritingData.map(({ id, article, href, published }) => {
-            return (
-              <Timeline>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <Box className={classes.articlesHeader} key={id}>
-                      <Link href={href}>{article}</Link>
-                    </Box>
-                    <Typography className={classes.articlesSubHeader}>{published}</Typography>
-                    <Box className={classes.button}>
-                      <Link href={href}>SEE POST</Link>
-                    </Box>
-                  </TimelineContent>
-                </TimelineItem>
-              </Timeline>
-            );
-          })}
-        </Grid>
+      <Grid item md={8} className={classes.articlesContainer}>
+        <Box className={classes.articlesTitle}>
+          <Typography className={classes.title}>Technical Writing</Typography>
+        </Box>
+        {getTechnicalWritingData.map(({ id, article, href, published }) => {
+          return (
+            <Timeline>
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Box className={classes.articlesHeader} key={id}>
+                    <Link href={href}>{article}</Link>
+                  </Box>
+                  <Typography className={classes.articlesSubHeader}>{published}</Typography>
+                  <Box className={classes.button}>
+                    <Link href={href}>SEE POST</Link>
+                  </Box>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
+          );
+        })}
       </Grid>
     </Grid>
   );

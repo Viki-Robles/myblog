@@ -53,6 +53,9 @@ const useStyles = makeStyles(() => ({
   picture: {
     borderRadius: '50%',
   },
+  pictureContainer: {
+    marginRight: '10px',
+  },
   followMebutton: {
     fontSize: '12px',
     color: 'white',
@@ -60,6 +63,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#AB0552',
     borderRadius: '10px',
     padding: '8px',
+    boxShadow: '2px 5px 10px 2px #000',
     marginLeft: '10px',
   },
 }));
@@ -73,8 +77,8 @@ const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
           {frontmatter.icon} {frontmatter.title}
         </Typography>
         <Grid container className={classes.details}>
-          <Grid item>
-            <Image src="/myself.svg" width={50} height={50} className={classes.picture} />
+          <Grid item className={classes.pictureContainer}>
+            <Image src="/avatar.png" width={50} height={50} className={classes.picture} />
           </Grid>
           <Grid item>
             <Typography className={classes.author}>{frontmatter.author}</Typography>

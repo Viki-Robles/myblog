@@ -3,9 +3,9 @@ import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { blogData } from '../Blog/blog.testData';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const useStyles = makeStyles(() => ({
-  blog: {},
   blogHeader: {
     fontSize: '40px',
     color: 'white',
@@ -13,9 +13,7 @@ const useStyles = makeStyles(() => ({
   },
   blogTitle: {
     color: 'white',
-    marginBottom: '10px',
   },
-  blogItem: {},
   button: {
     marginTop: '10px',
     borderRadius: '10px',
@@ -44,19 +42,21 @@ export interface BlogProps {
 export const Blog = (): JSX.Element => {
   const classes = useStyles();
   return (
-    <Grid container className={classes.blog}>
-      <Box className={classes.blogHeader}>Blog Posts</Box>
+    <Grid container>
+      <motion.div initial={{ y: -250 }} animate={{ y: -15 }}>
+        <Box className={classes.blogHeader}>Blog Posts</Box>
+      </motion.div>
       {blogData.map(({ title, link, id }) => {
         return (
-          <>
-            <Grid key={id} container className={classes.blogItem} direction="column">
+          <Grid key={id} container direction="column">
+            <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
               <Box className={classes.blogTitle}>{title}</Box>
               <Box className={classes.button}>
                 <Link href={link}>SEE POST</Link>
               </Box>
               <Box className={classes.line}></Box>
-            </Grid>
-          </>
+            </motion.div>
+          </Grid>
         );
       })}
     </Grid>

@@ -15,13 +15,17 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '0.1rem',
     [theme.breakpoints.down('sm')]: {
       margin: '0 auto',
+      marginBottom: '15px',
     },
   },
   navBar: {
     marginBottom: '50px',
     marginTop: '10px',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'grid',
+      boxShadow: '0 2px 10px 0 #000',
+      border: '1px solid #222',
+      padding: '30px 20px 25px',
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
@@ -36,6 +40,14 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'flex-end',
     },
   },
+  logoContainer: {
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto',
+    },
+    [theme.breakpoints.up('md')]: {
+      alignSelf: 'flex-start',
+    },
+  },
 }));
 
 export const NavBar = (): JSX.Element => {
@@ -44,7 +56,7 @@ export const NavBar = (): JSX.Element => {
     <Fragment>
       <Grid container className={classes.navBar}>
         <Grid container md={6} className={classes.logo}>
-          <Box>
+          <Box className={classes.logoContainer}>
             <Link href="/">VICKY VASILOPOULOU</Link>
           </Box>
         </Grid>
