@@ -23,13 +23,11 @@ const useStyles = makeStyles(() => ({
     color: '#FEDE00',
     fontWeight: 'bold',
     marginTop: '40px',
-    marginLeft: '40px',
     textAlign: 'center',
     fontFamily: 'Inter, sans-serif',
   },
   content: {
     color: 'white',
-    marginLeft: '40px',
     fontFamily: 'Inter, sans-serif',
   },
   author: {
@@ -46,6 +44,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: '800px',
     margin: '0 auto',
     marginTop: '40px',
+    padding: '20px',
   },
   details: {
     marginTop: '10px',

@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '40px',
     [theme.breakpoints.down('md')]: {
       fontSize: '35px',
+      margin: '0 auto',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '30px',
+      textAlign: 'center',
     },
   },
 
@@ -45,34 +50,27 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
   },
   frontendTitle: {
-    color: 'white',
-    fontSize: '40px',
     marginTop: '20px',
-    marginBottom: '20px',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '35px',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '40px',
+      textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '30px',
+      textAlign: 'center',
     },
   },
   quote: {
     color: 'white',
-    fontSize: '45px',
-    marginTop: '20px',
-    maxWidth: 'auto',
     [theme.breakpoints.down('md')]: {
       margin: '0 auto',
-      fontSize: '35px',
       maxWidth: '500px',
     },
     [theme.breakpoints.up('md')]: {
       marginLeft: '20px',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
       marginBottom: '40px',
-      alignItems: 'center',
     },
   },
   span: {
@@ -90,9 +88,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '10px',
     textAlign: 'center',
   },
-  articlesTitle: {
-    margin: '0 auto',
-  },
 
   articlesContainer: {
     [theme.breakpoints.down('sm')]: {},
@@ -104,7 +99,7 @@ export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container sm={12} xs={12}>
-      <Grid item md={4} sm={12}>
+      <Grid item md={4} sm={12} xs={12}>
         <Box className={classes.pictureContainer}>
           <Image src="/myself.svg" width={500} height={500} className={classes.picture} />
         </Box>
@@ -113,15 +108,17 @@ export const TechnicalWritingList = (): JSX.Element => {
             <Typography className={classes.frontendTitle}>Frontend Engineer</Typography>
           </motion.div>
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
-            I build custom <span className={classes.span}>WEB</span> solutions, write about
-            <span className={classes.span}> DEV</span>
-            and read graphic novels.
+            <Typography className={classes.frontendTitle}>
+              I build custom <span className={classes.span}>WEB</span> solutions, write about
+              <span className={classes.span}> DEV</span>
+              and read graphic novels.
+            </Typography>
           </motion.div>
         </Grid>
       </Grid>
 
       <Grid item md={8} className={classes.articlesContainer}>
-        <Box className={classes.articlesTitle}>
+        <Box>
           <Typography className={classes.title}>Technical Writing</Typography>
         </Box>
         {getTechnicalWritingData.map(({ id, article, href, published }) => {

@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '600px',
     color: 'white',
     marginBottom: '100px',
+    letterSpacing: '0px',
     [theme.breakpoints.down('sm')]: {
       fontSize: '14px',
     },

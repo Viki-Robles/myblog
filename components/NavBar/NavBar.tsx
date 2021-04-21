@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: '25px',
     color: '#B5B3B3',
     letterSpacing: '0.07rem',
+    '&:hover': {
+      color: 'white',
+    },
   },
   logo: {
     color: 'white',
