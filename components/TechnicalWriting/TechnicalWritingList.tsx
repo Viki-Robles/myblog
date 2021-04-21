@@ -101,7 +101,7 @@ export const TechnicalWritingList = (): JSX.Element => {
     <Grid container sm={12} xs={12}>
       <Grid item md={4} sm={12} xs={12}>
         <Box className={classes.pictureContainer}>
-          <Image src="/myself.svg" width={500} height={500} className={classes.picture} />
+          {/* <Image src="/myself.svg" width={500} height={500} className={classes.picture} /> */}
         </Box>
         <Grid className={classes.quote} container direction="column">
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
