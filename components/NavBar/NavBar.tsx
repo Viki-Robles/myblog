@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       margin: '0 auto',
       marginBottom: '15px',
+      justifyContent: 'center',
     },
   },
   navBar: {
@@ -43,13 +45,12 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'flex-end',
     },
   },
-  logoContainer: {
-    [theme.breakpoints.down('md')]: {
-      margin: '0 auto',
-    },
-    [theme.breakpoints.up('md')]: {
-      alignSelf: 'flex-start',
-    },
+  logoText: {
+    alignSelf: 'center',
+  },
+  logoImage: {
+    marginLeft: '10px',
+    marginRight: '10px',
   },
 }));
 
@@ -59,8 +60,11 @@ export const NavBar = (): JSX.Element => {
     <Fragment>
       <Grid container className={classes.navBar}>
         <Grid container md={6} className={classes.logo}>
-          <Box className={classes.logoContainer}>
-            <Link href="/">VICKY VASILOPOULOU</Link>
+          <Box className={classes.logoImage}>
+            <Image src="/monkey.svg" width={50} height={50} className={classes.logo} />
+          </Box>
+          <Box className={classes.logoText}>
+            <Link href="/">BlueMonkey</Link>
           </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
