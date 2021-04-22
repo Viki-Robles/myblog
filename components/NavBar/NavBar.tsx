@@ -6,8 +6,9 @@ import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    paddingRight: '25px',
+    paddingRight: '30px',
     color: '#B5B3B3',
+    fontSize: '18px',
     letterSpacing: '0.07rem',
     '&:hover': {
       color: 'white',
@@ -25,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
   },
   navBar: {
     marginBottom: '50px',
-    marginTop: '10px',
     [theme.breakpoints.down('sm')]: {
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
@@ -34,12 +34,14 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      marginTop: '10px',
     },
   },
   linkContainer: {
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
       margin: '0 auto',
+      alignItems: 'center',
     },
     [theme.breakpoints.up('md')]: {
       justifyContent: 'flex-end',
@@ -69,13 +71,13 @@ export const NavBar = (): JSX.Element => {
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
-            <Link href="/">WRITING</Link>
+            <Link href="/">writing.</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/github">GITHUB</Link>
+            <Link href="/github">github.</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/projects">PROJECTS</Link>
+            <Link href="/projects">projects.</Link>
           </Box>
         </Grid>
       </Grid>

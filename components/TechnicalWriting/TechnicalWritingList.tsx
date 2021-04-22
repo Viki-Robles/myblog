@@ -10,6 +10,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Monkey } from '../Monkey/Monkey';
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -46,9 +47,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cinzel',
     color: '#b5b3b3',
   },
-  picture: {
-    borderRadius: '50%',
-  },
+
   frontendTitle: {
     marginTop: '20px',
     [theme.breakpoints.up('md')]: {
@@ -92,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   articlesContainer: {
     [theme.breakpoints.down('sm')]: {},
   },
-  pictureContainer: {},
+  pictureContainer: { marginLeft: '40px', marginBottom: '40px', marginTop: '40px' },
 }));
 
 export const TechnicalWritingList = (): JSX.Element => {
@@ -101,7 +100,7 @@ export const TechnicalWritingList = (): JSX.Element => {
     <Grid container sm={12} xs={12}>
       <Grid item md={4} sm={12} xs={12}>
         <Box className={classes.pictureContainer}>
-          {/* <Image src="/myself.svg" width={500} height={500} className={classes.picture} /> */}
+          <Monkey />
         </Box>
         <Grid className={classes.quote} container direction="column">
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
