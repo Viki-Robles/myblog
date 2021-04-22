@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   frontendTitle: {
-    marginTop: '20px',
     [theme.breakpoints.up('md')]: {
       fontSize: '40px',
       textAlign: 'left',
@@ -59,6 +58,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
+  frontendEngineer: {
+    fontStyle: 'italic',
+    fontSize: '20px',
+    marginBottom: '20px',
+    marginLeft: '45px',
+  },
   quote: {
     color: 'white',
     [theme.breakpoints.down('md')]: {
@@ -66,7 +71,8 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: '500px',
     },
     [theme.breakpoints.up('md')]: {
-      marginLeft: '20px',
+      marginLeft: '45px',
+      maxWidth: '700px',
     },
     [theme.breakpoints.down('sm')]: {
       marginBottom: '40px',
@@ -98,13 +104,16 @@ export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container sm={12} xs={12}>
-      <Grid item md={4} sm={12} xs={12}>
+      <Grid item md={5} sm={12} xs={12}>
         <Box className={classes.pictureContainer}>
           <Monkey />
         </Box>
         <Grid className={classes.quote} container direction="column">
+          <motion.div initial={{ y: -150 }} animate={{ y: -5 }} transition={{ type: 'spring', stiffness: 100 }}>
+            <Typography className={classes.frontendTitle}>👋 Hi, I am Vicky</Typography>
+          </motion.div>
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-            <Typography className={classes.frontendTitle}>Frontend Engineer</Typography>
+            <Typography className={classes.frontendEngineer}>Frontend Engineer</Typography>
           </motion.div>
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
             <Typography className={classes.frontendTitle}>
@@ -116,7 +125,7 @@ export const TechnicalWritingList = (): JSX.Element => {
         </Grid>
       </Grid>
 
-      <Grid item md={8} className={classes.articlesContainer}>
+      <Grid item md={7} className={classes.articlesContainer}>
         <Box>
           <Typography className={classes.title}>Technical Writing</Typography>
         </Box>
