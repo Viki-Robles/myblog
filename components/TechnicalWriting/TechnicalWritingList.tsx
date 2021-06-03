@@ -8,11 +8,33 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Monkey } from '../Monkey/Monkey';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
+  line: {
+    borderBottom: '2px solid #232b2b',
+    marginBottom: '80px',
+  },
+  occupation: {
+    color: '#7F7FF8',
+    marginTop: '80px',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '70px',
+      textAlign: 'left',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '45px',
+      textAlign: 'left',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '30px',
+      textAlign: 'center',
+    },
+  },
+  socialMedia: {
+    marginTop: '250px',
+  },
   title: {
     color: 'white',
     textAlign: 'right',
@@ -50,7 +72,11 @@ const useStyles = makeStyles((theme) => ({
 
   frontendTitle: {
     [theme.breakpoints.up('md')]: {
-      fontSize: '40px',
+      fontSize: '60px',
+      textAlign: 'left',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '45px',
       textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
@@ -59,23 +85,28 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   frontendEngineer: {
-    fontStyle: 'italic',
-    fontSize: '20px',
-    marginBottom: '20px',
-    marginLeft: '45px',
+    fontSize: '25px',
+    marginBottom: '10px',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+      margin: '0 auto',
+    },
   },
   quote: {
+    marginLeft: '40px',
     color: 'white',
     [theme.breakpoints.down('md')]: {
       margin: '0 auto',
       maxWidth: '500px',
+      marginLeft: '40px',
     },
     [theme.breakpoints.up('md')]: {
-      marginLeft: '45px',
       maxWidth: '700px',
+      marginTop: '80px',
     },
     [theme.breakpoints.down('sm')]: {
       marginBottom: '40px',
+      padding: '10px',
     },
   },
   span: {
@@ -98,22 +129,39 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {},
   },
   pictureContainer: { marginLeft: '40px', marginBottom: '40px', marginTop: '40px' },
+  socialMediaItem: {
+    marginBottom: '20px',
+    marginLeft: '20px',
+  },
 }));
 
 export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container sm={12} xs={12}>
-      <Grid item md={5} sm={12} xs={12}>
-        <Box className={classes.pictureContainer}>
-          <Monkey />
+      {/* <Grid container direction="column" className={classes.socialMedia} md={1}>
+        <Box className={classes.socialMediaItem}>
+          <Link href="/">
+            <Image src="/linkedin.svg" width={25} height={25} />
+          </Link>
         </Box>
+        <Box className={classes.socialMediaItem}>
+          <Link href="/">
+            <Image src="/github.svg" width={25} height={25} />
+          </Link>
+        </Box>
+        <Box className={classes.socialMediaItem}>
+          <Link href="/">
+            <Image src="/github.svg" width={25} height={25} />
+          </Link>
+        </Box>
+      </Grid> */}
+      <Grid item md={5} sm={12} xs={12}>
         <Grid className={classes.quote} container direction="column">
           <motion.div initial={{ y: -150 }} animate={{ y: -5 }} transition={{ type: 'spring', stiffness: 100 }}>
-            <Typography className={classes.frontendTitle}>👋 Hi, I am Vicky</Typography>
-          </motion.div>
-          <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-            <Typography className={classes.frontendEngineer}>Frontend Engineer</Typography>
+            <Typography className={classes.occupation}>Vicky L. Vasilopoulou</Typography>
+            <Typography className={classes.frontendEngineer}>Frontend Engineer | Website Content Writer</Typography>
+            <Box className={classes.line}></Box>
           </motion.div>
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
             <Typography className={classes.frontendTitle}>

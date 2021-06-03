@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoText: {
     alignSelf: 'center',
+    fontFamily: ['Righteous', 'cursive'].join(','),
   },
   logoImage: {
     marginLeft: '10px',
@@ -66,7 +67,7 @@ export const NavBar = (): JSX.Element => {
             <Image src="/monkey.svg" width={50} height={50} className={classes.logo} />
           </Box>
           <Box className={classes.logoText}>
-            <Link href="/">BlueMonkey</Link>
+            <Link href="/">V.V</Link>
           </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>

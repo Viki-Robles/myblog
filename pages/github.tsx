@@ -78,7 +78,10 @@ export default function Github(): JSX.Element {
     <Grid container className={classes.container} spacing={2}>
       <Grid item md={7} direction="row" sm={7} xl={8}>
         <Box className={classes.aboutContainer}>
-          <Typography className={classes.aboutTitle}>Who Am I?</Typography>
+          <Grid item className={classes.blog}>
+            <Blog />
+          </Grid>
+          {/* <Typography className={classes.aboutTitle}>Contact me</Typography>
           <Box className={classes.aboutText} display="flex">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -87,10 +90,7 @@ export default function Github(): JSX.Element {
             of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop. Lorem Ipsum is simply
             dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the
-          </Box>
-          <Grid item className={classes.blog}>
-            <Blog />
-          </Grid>
+          </Box> */}
         </Box>
       </Grid>
       <Grid item md={5} className={classes.github} sm={5} xl={4}>
