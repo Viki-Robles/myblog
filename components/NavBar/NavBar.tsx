@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navBar: {
     marginBottom: '50px',
+    width: 'auto',
     [theme.breakpoints.down('sm')]: {
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',

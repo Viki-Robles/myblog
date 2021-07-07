@@ -93,12 +93,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   quote: {
-    marginLeft: '40px',
     color: 'white',
     [theme.breakpoints.down('md')]: {
       margin: '0 auto',
       maxWidth: '500px',
-      marginLeft: '40px',
     },
     [theme.breakpoints.up('md')]: {
       maxWidth: '700px',
@@ -139,23 +137,6 @@ export const TechnicalWritingList = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container sm={12} xs={12}>
-      {/* <Grid container direction="column" className={classes.socialMedia} md={1}>
-        <Box className={classes.socialMediaItem}>
-          <Link href="/">
-            <Image src="/linkedin.svg" width={25} height={25} />
-          </Link>
-        </Box>
-        <Box className={classes.socialMediaItem}>
-          <Link href="/">
-            <Image src="/github.svg" width={25} height={25} />
-          </Link>
-        </Box>
-        <Box className={classes.socialMediaItem}>
-          <Link href="/">
-            <Image src="/github.svg" width={25} height={25} />
-          </Link>
-        </Box>
-      </Grid> */}
       <Grid item md={5} sm={12} xs={12}>
         <Grid className={classes.quote} container direction="column">
           <motion.div initial={{ y: -150 }} animate={{ y: -5 }} transition={{ type: 'spring', stiffness: 100 }}>
