@@ -1,6 +1,6 @@
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { getTechnicalWritingData } from '../TechnicalWriting/technical.testData';
+import { getTechnicalWritingData } from './technical.testData';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -10,28 +10,9 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Introduction } from '../Introduction/Introduction';
 
 const useStyles = makeStyles((theme) => ({
-  line: {
-    borderBottom: '2px solid #232b2b',
-    marginBottom: '80px',
-  },
-  occupation: {
-    color: '#7F7FF8',
-    marginTop: '80px',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '70px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '45px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
-      textAlign: 'center',
-    },
-  },
   socialMedia: {
     marginTop: '250px',
   },
@@ -60,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#B5B3B3',
     fontSize: '20px',
     fontFamily: 'Cinzel',
+
     '&:hover': {
       color: 'white',
     },
@@ -70,48 +52,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#b5b3b3',
   },
 
-  frontendTitle: {
-    [theme.breakpoints.up('md')]: {
-      fontSize: '60px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '45px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
-      textAlign: 'center',
-    },
-  },
-  frontendEngineer: {
-    fontSize: '25px',
-    marginBottom: '10px',
-    [theme.breakpoints.down('sm')]: {
-      textAlign: 'center',
-      margin: '0 auto',
-    },
-  },
-  quote: {
-    color: 'white',
-    [theme.breakpoints.down('md')]: {
-      margin: '0 auto',
-      maxWidth: '500px',
-    },
-    [theme.breakpoints.up('md')]: {
-      maxWidth: '700px',
-      marginTop: '80px',
-    },
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '40px',
-      padding: '10px',
-    },
-  },
-  span: {
-    color: '#7F7FF8',
-    marginRight: '5px',
-    marginLeft: '5px',
-  },
   button: {
     border: '1px solid #7F7FF8',
     padding: '5px 20px',
@@ -133,27 +73,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TechnicalWritingList = (): JSX.Element => {
+export const HomePage = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container sm={12} xs={12}>
-      <Grid item md={5} sm={12} xs={12}>
-        <Grid className={classes.quote} container direction="column">
-          <motion.div initial={{ y: -150 }} animate={{ y: -5 }} transition={{ type: 'spring', stiffness: 100 }}>
-            <Typography className={classes.occupation}>Vicky L. Vasilopoulou</Typography>
-            <Typography className={classes.frontendEngineer}>Frontend Engineer | Website Content Writer</Typography>
-            <Box className={classes.line}></Box>
-          </motion.div>
-          <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
-            <Typography className={classes.frontendTitle}>
-              I build custom <span className={classes.span}>WEB</span> solutions, write about
-              <span className={classes.span}> DEV</span>
-              and read graphic novels.
-            </Typography>
-          </motion.div>
-        </Grid>
-      </Grid>
-
+      <Introduction />
       <Grid item md={7} className={classes.articlesContainer}>
         <Box>
           <Typography className={classes.title}>Technical Writing</Typography>

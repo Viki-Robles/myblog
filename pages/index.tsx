@@ -1,10 +1,10 @@
 import React from 'react';
-import { TechnicalWritingList } from '../components/TechnicalWriting/TechnicalWritingList';
+import { HomePage } from '../components/HomePage/HomePage';
 
 export default function Home(): JSX.Element {
   return (
     <>
-      <TechnicalWritingList />
+      <HomePage />
     </>
   );
 }
