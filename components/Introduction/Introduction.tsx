@@ -9,9 +9,11 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFF',
     [theme.breakpoints.up('md')]: {
       fontSize: '4.3em',
+      textAlign: 'left',
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '45px',
+      textAlign: 'center',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '30px',
@@ -23,27 +25,27 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     [theme.breakpoints.up('md')]: {
       fontSize: '3em',
+      textAlign: 'left',
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '40px',
+      textAlign: 'center',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '25px',
     },
   },
-  name: {
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: '200px',
-    },
-  },
+
   socialMedia: {
     color: '#FFFF',
   },
-  introduction: {
+  name: {
+    [theme.breakpoints.up('md')]: {
+      marginTop: '250px',
+      marginLeft: '200px',
+    },
     [theme.breakpoints.down('md')]: {
-      position: 'fixed',
-      transform: 'translateY(-50%)',
-      top: '50%',
+      marginTop: '50px',
     },
   },
   button: {
@@ -64,32 +66,19 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '40px',
     },
   },
-  line: {
-    position: 'absolute',
-    bottom: 130,
-    width: '70%',
-    height: '12%',
-    // backgroundColor: 'rgba(72, 48, 230, 0.1)',
-    transformOrigin: '50% 100%',
-  },
 }));
 
 export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <>
-      <Box display="flex" className={classes.introduction}>
-        <Box className={classes.name}>
-          <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
-          <Typography className={classes.title}>Front-End Developer</Typography>
-          <div className={classes.line}></div>
-          <SocialMedia />
-          <Box className={classes.button}>
-            <Link href="/projects">Projects</Link>
-          </Box>
-        </Box>
+    <Box className={classes.name}>
+      <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
+      <Typography className={classes.title}>Front-End Developer</Typography>
+      <SocialMedia />
+      <Box className={classes.button}>
+        <Link href="/projects">Projects</Link>
       </Box>
-    </>
+    </Box>
   );
 };

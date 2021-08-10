@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   link: {
