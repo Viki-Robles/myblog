@@ -1,71 +1,76 @@
-import React, { ReactNode } from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { SocialMedia } from '../SocialMedia/SocialMedia';
+import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
-  quote: {
-    color: 'white',
-    [theme.breakpoints.down('md')]: {
-      margin: '0 auto',
-      maxWidth: '500px',
-    },
+  occupation: {
+    color: '#FFFF',
     [theme.breakpoints.up('md')]: {
-      maxWidth: '700px',
-      marginTop: '80px',
-      marginLeft: '60px',
-    },
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '40px',
-      padding: '10px',
-    },
-  },
-  frontendEngineer: {
-    fontSize: '25px',
-    marginBottom: '10px',
-    [theme.breakpoints.down('sm')]: {
-      textAlign: 'center',
-      margin: '0 auto',
-    },
-  },
-  frontendTitle: {
-    [theme.breakpoints.up('md')]: {
-      fontSize: '60px',
-      textAlign: 'left',
+      fontSize: '4.3em',
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '45px',
-      textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '30px',
-      textAlign: 'center',
     },
   },
-  span: {
-    color: '#7F7FF8',
-    marginRight: '5px',
-    marginLeft: '5px',
+  title: {
+    color: '#FFFF',
+    marginBottom: '10px',
+    fontWeight: 300,
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3em',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '40px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '25px',
+    },
+  },
+  name: {
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: '200px',
+    },
+  },
+  socialMedia: {
+    color: '#FFFF',
+  },
+  introduction: {
+    [theme.breakpoints.down('md')]: {
+      position: 'fixed',
+      transform: 'translateY(-50%)',
+      top: '50%',
+    },
+  },
+  button: {
+    border: '1px solid #7F7FF8',
+    padding: '7px 12px',
+    color: 'white',
+    boxShadow: '2px 5px 10px 2px #000',
+    fontSize: '16px',
+    maxWidth: '140px',
+    textAlign: 'center',
+    marginBottom: '20px',
+    [theme.breakpoints.down('sm')]: {
+      margin: '0 auto',
+      marginBottom: '40px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      margin: 0,
+      marginBottom: '40px',
+    },
   },
   line: {
-    borderBottom: '2px solid #232b2b',
-    marginBottom: '80px',
-  },
-  occupation: {
-    color: '#7F7FF8',
-    marginTop: '80px',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '70px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '45px',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
-      textAlign: 'center',
-    },
+    position: 'absolute',
+    bottom: 130,
+    width: '70%',
+    height: '12%',
+    // backgroundColor: 'rgba(72, 48, 230, 0.1)',
+    transformOrigin: '50% 100%',
   },
 }));
 
@@ -73,21 +78,18 @@ export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid item md={5} sm={12} xs={12}>
-      <Grid className={classes.quote} container direction="column">
-        <motion.div initial={{ y: -150 }} animate={{ y: -5 }} transition={{ type: 'spring', stiffness: 100 }}>
-          <Typography className={classes.occupation}>Vicky L. Vasilopoulou</Typography>
-          <Typography className={classes.frontendEngineer}>Frontend Engineer | Website Content Writer</Typography>
-          <Box className={classes.line}></Box>
-        </motion.div>
-        <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
-          <Typography className={classes.frontendTitle}>
-            I build custom <span className={classes.span}>WEB</span> solutions, write about
-            <span className={classes.span}> DEV</span>
-            and read graphic novels.
-          </Typography>
-        </motion.div>
-      </Grid>
-    </Grid>
+    <>
+      <Box display="flex" className={classes.introduction}>
+        <Box className={classes.name}>
+          <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
+          <Typography className={classes.title}>Front-End Developer</Typography>
+          <div className={classes.line}></div>
+          <SocialMedia />
+          <Box className={classes.button}>
+            <Link href="/projects">Projects</Link>
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 };

@@ -19,7 +19,6 @@ const useStyles = makeStyles(() => ({
     alignSelf: 'center',
     color: '#7F7FF8',
     fontSize: '16px',
-    fontFamily: 'Cinzel',
   },
   starIcon: {
     marginRight: '10px',

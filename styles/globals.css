@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: Inconsolata, monospace;
   background-color: #141618;
   letter-spacing: 0.06rem;
 }

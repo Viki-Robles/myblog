@@ -7,11 +7,15 @@ import Image from 'next/image';
 const useStyles = makeStyles((theme) => ({
   link: {
     paddingRight: '30px',
-    color: '#B5B3B3',
+    color: '#FFFF',
     fontSize: '18px',
-    letterSpacing: '0.07rem',
+    letterSpacing: '0.05rem',
+    fontWeight: 400,
     '&:hover': {
-      color: 'white',
+      color: '#7F7FF8',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
     },
   },
   logo: {
@@ -25,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navBar: {
-    marginBottom: '50px',
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
+      paddingTop: '40px',
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
       border: '1px solid #222',
@@ -35,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-      marginTop: '10px',
+      marginTop: '50px',
     },
   },
   linkContainer: {
@@ -50,11 +54,24 @@ const useStyles = makeStyles((theme) => ({
   },
   logoText: {
     alignSelf: 'center',
-    fontFamily: ['Righteous', 'cursive'].join(','),
   },
   logoImage: {
     marginLeft: '10px',
     marginRight: '10px',
+  },
+  contactButton: {
+    border: '1px solid #7F7FF8',
+    padding: '7px 12px',
+    boxShadow: '2px 5px 10px 2px #000',
+    maxWidth: '140px',
+    textAlign: 'center',
+    color: 'white',
+    marginTop: '-10px',
+    [theme.breakpoints.down('sm')]: { marginTop: '12px' },
+    '&:hover': {
+      backgroundColor: '#7F7FF8',
+      color: 'black',
+    },
   },
 }));
 
@@ -63,23 +80,23 @@ export const NavBar = (): JSX.Element => {
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
-        <Grid container md={6} className={classes.logo}>
-          <Box className={classes.logoImage}>
-            <Image src="/monkey.svg" width={50} height={50} className={classes.logo} />
-          </Box>
+        <Grid container md={5} className={classes.logo}>
           <Box className={classes.logoText}>
             <Link href="/">V.V</Link>
           </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
-            <Link href="/">writing.</Link>
+            <Link href="/writing">Writing</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/github">github.</Link>
+            <Link href="/github">Github</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/projects">projects.</Link>
+            <Link href="/projects">Projects</Link>
+          </Box>
+          <Box className={classes.contactButton}>
+            <Link href="/projects">Let's chat</Link>
           </Box>
         </Grid>
       </Grid>
