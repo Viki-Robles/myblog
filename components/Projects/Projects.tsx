@@ -75,16 +75,16 @@ export const Projects = (): JSX.Element => {
         const reverseItems = index % 2 !== 0;
         return (
           <Grid container key={title} direction={reverseItems ? 'row-reverse' : 'row'} className={classes.container}>
-            <Grid item md={5} className={classes.description}>
-              <Typography className={classes.title}>{title}</Typography>
-              <Typography className={classes.details}>{details}</Typography>
-              <Typography className={classes.technologies}>Stack: {technologies}</Typography>
-            </Grid>
             <Grid item md={7} className={classes.pictureContainer}>
               <Image src="/hellohub.png" width={700} height={450} className={classes.picture} />
               <Box className={classes.link}>
                 <Link href={link}>View Project</Link>
               </Box>
+            </Grid>
+            <Grid item md={5} className={classes.description}>
+              <Typography className={classes.title}>{title}</Typography>
+              <Typography className={classes.details}>{details}</Typography>
+              <Typography className={classes.technologies}>Stack: {technologies}</Typography>
             </Grid>
           </Grid>
         );
