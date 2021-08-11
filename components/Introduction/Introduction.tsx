@@ -12,11 +12,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: '45px',
-      textAlign: 'center',
+      fontSize: '4.3em',
+      textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '30px',
+      textAlign: 'center',
     },
   },
   title: {
@@ -28,11 +29,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: '40px',
-      textAlign: 'center',
+      fontSize: '3em',
+      textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '25px',
+      textAlign: 'center',
     },
   },
 
@@ -41,11 +43,14 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     [theme.breakpoints.up('md')]: {
-      marginTop: '250px',
       marginLeft: '200px',
+      marginTop: '250px',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '50px',
+      marginTop: '250px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '100px',
     },
   },
   button: {
@@ -61,9 +66,8 @@ const useStyles = makeStyles((theme) => ({
       margin: '0 auto',
       marginBottom: '40px',
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       margin: 0,
-      marginBottom: '40px',
     },
   },
 }));

@@ -5,6 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   socialMedia: {
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'center',
+    },
+    [theme.breakpoints.up('md')]: {
+      justifyContent: 'end',
+    },
     marginBottom: '20px',
     gap: '20px',
     // marginTop: '20px',

@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   technologies: {
     color: 'white',
+    paddingTop: '20px',
   },
   link: {
     color: 'white',

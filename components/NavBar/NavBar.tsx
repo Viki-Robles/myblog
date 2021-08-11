@@ -86,13 +86,13 @@ export const NavBar = (): JSX.Element => {
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
-            <Link href="/writing">Writing</Link>
+            <Link href="/writing">WRITING</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/github">Github</Link>
+            <Link href="/github">GITHUB</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">PROJECTS</Link>
           </Box>
           <Box className={classes.contactButton}>
             <Link href="/projects">Let's chat</Link>
