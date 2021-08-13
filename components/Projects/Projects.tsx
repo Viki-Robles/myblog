@@ -1,23 +1,39 @@
 import React, { Fragment } from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Image from 'next/image';
+import { projectsData } from '../../data/projects.testData';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
-    [theme.breakpoints.up('md')]: {
-      marginLeft: '100px',
+    border: '1px solid #7F7FF8',
+    padding: '20px',
+    width: '80%',
+    margin: '0 auto',
+    marginBottom: '25px',
+    '&::before': {
+      content: '"',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: '#7F7FF8',
+      transformOrigin: 'right',
+      transition: '0.5s',
     },
-    marginTop: '20%',
   },
+
   title: {
     color: 'white',
-    fontSize: '40px',
+    fontSize: '1.625rem',
   },
   details: {
     color: 'white',
     marginTop: '20px',
+    fontSize: 'inherit',
   },
   technologies: {
     color: 'white',
@@ -37,55 +53,29 @@ const useStyles = makeStyles((theme) => ({
   description: {
     padding: '0 30px',
   },
-  pictureContainer: {
-    padding: '0 30px',
-  },
-  picture: {
-    borderRadius: '10px',
-    '&:hover': {
-      transform: 'scale(1.5)',
-      transition: 'transform .2s',
-    },
-  },
 }));
 
-const PROJECTS = [
-  {
-    title: 'Hellohub',
-    details:
-      'Hellohub is a React website and application which assists users to sign up/ sign in  to their hellohub account and also gives information about the company itself. I build this project from scratch alongside with a designer using React and Material UI. The difficult part of the website was the Authentication of users using Firebase however ut was fun but also very intersting to see how the whole process is done isnce most of the web apps are using kind of the same logic. ',
-    link: 'https://hellohub.com/',
-    technologies: 'JavaScript, React, Material UI',
-    img: '/images/hellohub.png',
-  },
-  {
-    title: 'Digital Futures',
-    details:
-      'Digital Futures DFX is a recruitment web application and integral part of the Academy. The application presents the skills and capabilites to potential clients for roles in software engineering and data science. This application is using TypeScript, Vite, Theme UI, Firebase, Hasura, GraphQl.',
-    link: '',
-    technologies: 'TypeScript,Vite, GraphQL, Firebase, Hasura, Theme UI',
-    img: '/images/hellohub.png',
-  },
-];
-export const Projects = (): JSX.Element => {
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: { projects: projectsData },
+  };
+};
+
+export const Projects = ({ projects }): JSX.Element => {
   const classes = useStyles();
+
   return (
     <Fragment>
-      {PROJECTS.map(({ title, details, link, technologies, img }, index) => {
-        const reverseItems = index % 2 !== 0;
+      {projects.map(({ title, details, id }) => {
         return (
-          <Grid container key={title} direction={reverseItems ? 'row-reverse' : 'row'} className={classes.container}>
-            <Grid item md={7} className={classes.pictureContainer}>
-              <Image src="/hellohub.png" width={700} height={450} className={classes.picture} />
-              <Box className={classes.link}>
-                <Link href={link}>View Project</Link>
-              </Box>
-            </Grid>
-            <Grid item md={5} className={classes.description}>
-              <Typography className={classes.title}>{title}</Typography>
-              <Typography className={classes.details}>{details}</Typography>
-              <Typography className={classes.technologies}>Stack: {technologies}</Typography>
-            </Grid>
+          <Grid container className={classes.container}>
+            <Typography className={classes.title}>{title}</Typography>
+            <Typography className={classes.details}>{details}</Typography>
+            <Typography className={classes.link}>
+              <Link key={id} href={`/projects/${id}`}>
+                CASE STUDY
+              </Link>
+            </Typography>
           </Grid>
         );
       })}

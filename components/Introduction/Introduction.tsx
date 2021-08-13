@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFF',
   },
   name: {
+    marginBottom: '20%',
     [theme.breakpoints.up('md')]: {
       marginLeft: '200px',
       marginTop: '250px',
