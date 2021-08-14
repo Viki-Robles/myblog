@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoText: {
     alignSelf: 'center',
+    marginLeft: '15px',
   },
   logoImage: {
     marginLeft: '10px',
@@ -81,15 +82,12 @@ export const NavBar = (): JSX.Element => {
       <Grid container className={classes.navBar}>
         <Grid container md={5} className={classes.logo}>
           <Box className={classes.logoText}>
-            <Link href="/">V.V</Link>
+            <Link href="/">VICKY VASILOPOULOU.</Link>
           </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <Box className={classes.link}>
             <Link href="/writing">WRITING</Link>
-          </Box>
-          <Box className={classes.link}>
-            <Link href="/github">GITHUB</Link>
           </Box>
           <Box className={classes.link}>
             <Link href="/projects">PROJECTS</Link>

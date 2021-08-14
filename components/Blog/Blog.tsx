@@ -16,7 +16,6 @@ const useStyles = makeStyles(() => ({
   },
   button: {
     marginTop: '10px',
-    borderRadius: '10px',
     backgroundColor: '#AB0552',
     padding: '7px 20px',
     color: 'white',

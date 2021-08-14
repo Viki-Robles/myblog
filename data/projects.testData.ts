@@ -5,34 +5,44 @@ export interface ProjectsProps {
   technologies?: string;
   img?: string;
   id: string;
+  role?: string;
+  subtitle?: string;
 }
 
 export const projectsData: ProjectsProps[] = [
   {
-    title: 'Digital Futures',
+    title: 'DFX by Digital Futures',
+    subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
     details:
-      'Digital Futures DFX is a recruitment web application and integral part of the Academy. The application presents the skills and capabilites to potential clients for roles in software engineering and data science. This application is using TypeScript, Vite, Theme UI, Firebase, Hasura, GraphQl.',
+      'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients.',
     link: '',
-    technologies: 'TypeScript,Vite, GraphQL, Firebase, Hasura, Theme UI',
+    role:
+      'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
+    technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',
     img: '/images/hellohub.png',
     id: 'digital-futures',
   },
   {
-    title: 'Hellohub',
+    title: 'Hellohub Website',
     details:
-      'Hellohub is a React website and application which assists users to sign up/ sign in  to their hellohub account and also gives information about the company itself. I build this project from scratch alongside with a designer using React and Material UI. The difficult part of the website was the Authentication of users using Firebase however ut was fun but also very intersting to see how the whole process is done isnce most of the web apps are using kind of the same logic. ',
+      'An interactive website which assists users to sign up/ sign in  to their hellohub account and also provides them with information about the events that happening . I build this project from scratch alongside with a designer using React and Material UI. The difficult part of the website was the Authentication of users using Firebase however ut was fun but also very intersting to see how the whole process is done isnce most of the web apps are using kind of the same logic. ',
     link: 'https://hellohub.com/',
     technologies: 'JavaScript, React, Material UI',
     img: '/images/hellohub.png',
     id: 'hellohub',
+    role: 'Working with the team of desingers I managed the end to end build of the Hellohub website on React',
+    subtitle:
+      'A responsive website where venues can sign up and login to their account and learn more about the latest new',
   },
   {
     title: 'DrinkMeApp',
-    details:
-      'Digital Futures DFX is a recruitment web application and integral part of the Academy. The application presents the skills and capabilites to potential clients for roles in software engineering and data science. This application is using TypeScript, Vite, Theme UI, Firebase, Hasura, GraphQl.',
+    details: 'That was the first team project I build during the bootcamp.',
     link: '',
     technologies: 'TypeScript,Vite, GraphQL, Firebase, Hasura, Theme UI',
     img: '/images/hellohub.png',
     id: 'drinkmeapp',
+    subtitle:
+      'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
+    role: '',
   },
 ];

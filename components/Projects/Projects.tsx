@@ -2,9 +2,8 @@ import React, { Fragment } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projects.testData';
-import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import axios from 'axios';
+import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -40,14 +39,9 @@ const useStyles = makeStyles(() => ({
     paddingTop: '20px',
   },
   link: {
-    color: 'white',
-    borderRadius: '10px',
-    backgroundColor: '#AB0552',
-    padding: '7px 20px',
-    boxShadow: '2px 5px 10px 2px #000',
-    maxWidth: '160px',
-    textAlign: 'center',
-    fontSize: '13px',
+    color: '#AB0552',
+    fontWeight: 500,
+    fontSize: '1.2rem',
     marginTop: '10px',
   },
   description: {
@@ -68,7 +62,7 @@ export const Projects = ({ projects }): JSX.Element => {
     <Fragment>
       {projects.map(({ title, details, id }) => {
         return (
-          <Grid container className={classes.container}>
+          <Grid container className={classes.container} direction="column">
             <Typography className={classes.title}>{title}</Typography>
             <Typography className={classes.details}>{details}</Typography>
             <Typography className={classes.link}>
