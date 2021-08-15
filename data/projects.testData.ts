@@ -15,7 +15,7 @@ export const projectsData: ProjectsProps[] = [
     subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
     details:
       'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients.',
-    link: '',
+    link: 'https://hellohub.com/',
     role:
       'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
     technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',

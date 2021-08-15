@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   details: {
     color: 'white',
     marginTop: '20px',
-    fontSize: 'inherit',
+    fontSize: '1.2rem',
   },
   technologies: {
     color: 'white',

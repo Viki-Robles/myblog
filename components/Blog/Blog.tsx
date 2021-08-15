@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
   },
   blogTitle: {
     color: 'white',
+    lineHeight: '2rem',
   },
   button: {
     marginTop: '10px',

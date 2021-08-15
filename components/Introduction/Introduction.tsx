@@ -56,11 +56,11 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     border: '1px solid #7F7FF8',
-    padding: '7px 12px',
+    padding: '9px 24px',
     color: 'white',
     boxShadow: '2px 5px 10px 2px #000',
-    fontSize: '16px',
-    maxWidth: '140px',
+    fontSize: '18px',
+    maxWidth: '160px',
     textAlign: 'center',
     marginBottom: '20px',
     [theme.breakpoints.down('sm')]: {

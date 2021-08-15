@@ -23,10 +23,10 @@ export default function Writing(): JSX.Element {
   const classes = useStyles();
   return (
     <Grid container className={classes.container}>
-      <Grid item md={4} sm={5} xl={4} className={classes.blog}>
+      <Grid item md={5} xl={5} sm={4} className={classes.blog}>
         <Blog />
       </Grid>
-      <Grid item md={8} sm={5} xl={8}>
+      <Grid item md={7} xl={7} sm={7}>
         <Box display="flex" flexDirection="row-reverse">
           <Box>
             <Typography className={classes.title}>TECHNICAL WRITING</Typography>
