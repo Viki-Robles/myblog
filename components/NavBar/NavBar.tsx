@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Button } from '../Button/Button';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contactButton: {
     border: '1px solid #7F7FF8',
-    padding: '7px 12px',
+    padding: '11px 20px',
     boxShadow: '2px 5px 10px 2px #000',
     maxWidth: '140px',
     textAlign: 'center',
@@ -90,7 +91,7 @@ export const NavBar = (): JSX.Element => {
             <Link href="/writing">WRITING</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="/projects">PROJECTS</Link>
+            <Link href="#about">ABOUT</Link>
           </Box>
           <Box className={classes.contactButton}>
             <Link href="/projects">Let's chat</Link>

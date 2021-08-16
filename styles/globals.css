@@ -6,6 +6,7 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #141618;
   letter-spacing: 0.06rem;
+  scroll-behavior: smooth;
 }
 
 a {

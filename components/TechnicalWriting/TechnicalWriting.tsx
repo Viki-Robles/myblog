@@ -9,6 +9,7 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
   articlesListItem: {

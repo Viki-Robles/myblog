@@ -2,13 +2,14 @@ import React from 'react';
 import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SocialMedia } from '../SocialMedia/SocialMedia';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   occupation: {
     color: '#FFFF',
     [theme.breakpoints.up('md')]: {
-      fontSize: '4.3em',
+      fontSize: '4.6em',
       textAlign: 'left',
     },
     [theme.breakpoints.down('md')]: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
+      fontSize: '2.4rem',
       textAlign: 'center',
     },
   },
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFF',
   },
   name: {
-    marginBottom: '20%',
+    marginBottom: '25%',
     [theme.breakpoints.up('md')]: {
       marginLeft: '200px',
       marginTop: '250px',
@@ -52,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       marginTop: '100px',
+      marginBottom: '70%',
     },
   },
   button: {
@@ -78,12 +80,16 @@ export const Introduction = (): JSX.Element => {
 
   return (
     <Box className={classes.name}>
-      <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
-      <Typography className={classes.title}>Front-End Developer</Typography>
-      <SocialMedia />
-      <Box className={classes.button}>
-        <Link href="/projects">Projects</Link>
-      </Box>
+      <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
+        <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
+      </motion.div>
+      <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
+        <Typography className={classes.title}>Front-End Developer</Typography>
+        <SocialMedia />
+        <Box className={classes.button}>
+          <Link href="/projects">Projects</Link>
+        </Box>
+      </motion.div>
     </Box>
   );
 };

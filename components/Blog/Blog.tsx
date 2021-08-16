@@ -43,13 +43,13 @@ export const Blog = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container>
-      <motion.div initial={{ y: -250 }} animate={{ y: -15 }}>
+      <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
         <Box className={classes.blogHeader}>Blog Posts</Box>
       </motion.div>
       {blogData.map(({ title, link, id }) => {
         return (
           <Grid key={id} container direction="column">
-            <motion.div initial={{ y: -250 }} animate={{ y: -10 }} transition={{ type: 'spring', stiffness: 100 }}>
+            <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
               <Box className={classes.blogTitle}>{title}</Box>
               <Box className={classes.button}>
                 <Link href={link}>SEE POST</Link>

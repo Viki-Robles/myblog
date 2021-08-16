@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Box } from '@material-ui/core';
 import { NavBar } from '../NavBar/NavBar';
 

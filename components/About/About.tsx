@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -35,10 +35,11 @@ export const About = (): JSX.Element => {
 
   return (
     <Fragment>
-      {/* <Typography>About</Typography> */}
       <Grid container className={classes.container} direction="row" spacing={3}>
         <Grid item md={6} xl={6}>
-          <Typography className={classes.about}>About</Typography>
+          <Typography className={classes.about} id="about">
+            About
+          </Typography>
           <Typography className={classes.firstItem}>
             I started coding a year ago as a hobby and it became a fullfilled passion. Last year I decided to join a
             bootcamp and I am currently working at my first frontend role using React and TypeScript. I have been
@@ -46,6 +47,7 @@ export const About = (): JSX.Element => {
             that I faced.. and I will not lie... I love TypeScript! I am up for a challenge but also looking for a
             inspiring and fun crew!
           </Typography>
+
           <Typography className={classes.secondItem}>
             Mostly I am familiar with TypeScript, JavaScript, React / NextJS, GraphQl, REST API's, Firebase, but my aim
             is to boost my skills and work on cool projects!
