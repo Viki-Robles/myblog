@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Grid, Typography, Box } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { getTechnicalWritingData } from '../../utils/technical.testData';
 import Timeline from '@material-ui/lab/Timeline';
@@ -8,8 +8,8 @@ import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
   articlesListItem: {
@@ -58,10 +58,13 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
-  root: {
+  timelineItem: {
     '&::before': {
       display: 'none',
     },
+  },
+  timelineSeparator: {
+    width: '1px',
   },
 }));
 
@@ -73,10 +76,10 @@ export default function Writing(): JSX.Element {
       {getTechnicalWritingData.map(({ id, article, href, published }) => {
         return (
           <Timeline>
-            <TimelineItem className={classes.root}>
+            <TimelineItem className={classes.timelineItem}>
               <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
+                <TimelineDot variant="outlined" />
+                <TimelineConnector className={classes.timelineSeparator} />
               </TimelineSeparator>
               <TimelineContent>
                 <Box className={classes.articlesHeader} key={id}>
