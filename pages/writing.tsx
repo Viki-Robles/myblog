@@ -5,9 +5,15 @@ import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  container: { marginTop: '100px' },
+  container: { marginTop: '80px' },
   blog: {
-    padding: '80px 0 0 40px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '30px',
+      padding: '5px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      padding: '40px',
+    },
   },
   title: {
     fontSize: '40px',
