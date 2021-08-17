@@ -58,6 +58,11 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
+  root: {
+    '&::before': {
+      display: 'none',
+    },
+  },
 }));
 
 export default function Writing(): JSX.Element {
@@ -68,7 +73,7 @@ export default function Writing(): JSX.Element {
       {getTechnicalWritingData.map(({ id, article, href, published }) => {
         return (
           <Timeline>
-            <TimelineItem>
+            <TimelineItem className={classes.root}>
               <TimelineSeparator>
                 <TimelineDot />
                 <TimelineConnector />

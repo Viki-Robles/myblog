@@ -4,7 +4,7 @@ import { Blog } from '../components/Blog/Blog';
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   container: { marginTop: '100px' },
   blog: {
     padding: '80px 0 0 40px',
@@ -16,6 +16,11 @@ const useStyles = makeStyles(() => ({
     writingMode: 'vertical-lr',
     marginTop: '100px',
   },
+  timeline: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '20%',
+    },
+  },
 }));
 
 export default function Writing(): JSX.Element {
@@ -25,10 +30,10 @@ export default function Writing(): JSX.Element {
       <Grid item md={5} xl={5} sm={12} className={classes.blog}>
         <Blog />
       </Grid>
-      <Grid item md={7} xl={7} sm={12}>
+      <Grid item md={7} xl={7} sm={12} className={classes.timeline}>
         <Box display="flex" flexDirection="row-reverse">
           <Typography className={classes.title}>TECHNICAL WRITING</Typography>
-          <Box flexGrow={3}>
+          <Box>
             <TechnicalWriting />
           </Box>
         </Box>
