@@ -15,7 +15,6 @@ const useStyles = makeStyles(() => ({
     textOrientation: 'sideways',
     writingMode: 'vertical-lr',
     marginTop: '100px',
-    marginRight: '40px',
   },
 }));
 
@@ -23,14 +22,12 @@ export default function Writing(): JSX.Element {
   const classes = useStyles();
   return (
     <Grid container className={classes.container}>
-      <Grid item md={5} xl={5} sm={4} className={classes.blog}>
+      <Grid item md={5} xl={5} sm={12} className={classes.blog}>
         <Blog />
       </Grid>
-      <Grid item md={7} xl={7} sm={7}>
+      <Grid item md={7} xl={7} sm={12}>
         <Box display="flex" flexDirection="row-reverse">
-          <Box>
-            <Typography className={classes.title}>TECHNICAL WRITING</Typography>
-          </Box>
+          <Typography className={classes.title}>TECHNICAL WRITING</Typography>
           <Box flexGrow={3}>
             <TechnicalWriting />
           </Box>
