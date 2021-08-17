@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <Box style={{ position: 'relative', zIndex: 1 }}>
+    <Box style={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
       <NavBar />
       <Box>{children}</Box>
     </Box>

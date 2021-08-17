@@ -31,11 +31,10 @@ const useStyles = makeStyles((theme) => ({
   navBar: {
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '40px',
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
       border: '1px solid #222',
-      padding: '30px 20px 25px',
+      padding: '25px',
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',

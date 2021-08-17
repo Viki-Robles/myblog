@@ -32,12 +32,14 @@
     "node-plop": "^0.26.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.32.0",
     "react-markdown": "^5.0.3",
     "react-use-localstorage": "^3.5.3",
     "react-window": "^1.8.6",
     "rebass": "^4.0.7",
     "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "remark-html": "^13.0.1",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^4.20.0",

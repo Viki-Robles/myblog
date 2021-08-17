@@ -3,10 +3,11 @@ import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projects.testData';
 import { GetStaticProps } from 'next';
+import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
-  container: {
+  swipe: {
     border: '1px solid #7F7FF8',
     padding: '20px',
     width: '80%',
@@ -76,13 +77,18 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export const Projects = ({ projects }): JSX.Element => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    rootMargin: '0px',
+  });
   const classes = useStyles();
 
   return (
     <Fragment>
       {projects.map(({ title, details, id }) => {
         return (
-          <Grid container className={classes.container} direction="column">
+          <Grid container className={classes.swipe} direction="column" ref={ref}>
             <Typography className={classes.title}>{title}</Typography>
             <Typography className={classes.details}>{details}</Typography>
             <Typography className={classes.link}>
