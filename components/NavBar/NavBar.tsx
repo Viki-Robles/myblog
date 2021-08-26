@@ -90,7 +90,7 @@ export const NavBar = (): JSX.Element => {
             <Link href="/writing">WRITING</Link>
           </Box>
           <Box className={classes.link}>
-            <Link href="#about">ABOUT</Link>
+            <Link href="/#about">ABOUT</Link>
           </Box>
           <Box className={classes.contactButton}>
             <Link href="/projects">Let's chat</Link>
