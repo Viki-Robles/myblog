@@ -28,7 +28,7 @@ export const projectsData: ProjectsProps[] = [
       'An interactive website which assists users to sign up/ sign in  to their hellohub account and also provides them with information about the events that happening . I build this project from scratch alongside with a designer using React and Material UI. The difficult part of the website was the Authentication of users using Firebase however ut was fun but also very intersting to see how the whole process is done isnce most of the web apps are using kind of the same logic. ',
     link: 'https://hellohub.com/',
     technologies: 'JavaScript, React, Material UI',
-    img: '/images/hellohub.png',
+    img: 'https://github.com/Viki-Robles/myblog/blob/main/media/projects/hellohub.png?raw=true',
     id: 'hellohub',
     role: 'Working with the team of desingers I managed the end to end build of the Hellohub website on React',
     subtitle:

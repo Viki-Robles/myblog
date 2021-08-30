@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { projectsData } from '../../data/projects.testData';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const projects = projectsData.filter((project) => project.id.toString() === params.id);
@@ -103,7 +102,7 @@ export default ({ project }) => {
       <Typography className={classes.title}>{project.title}</Typography>
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
       <Box className={classes.picture}>
-        <Image src="/image.svg" width={700} height={500} />
+        <img src={project.img} width={700} height={500} />
       </Box>
       <Box className={classes.link}>
         <Link href={project.link}>View Website</Link>
