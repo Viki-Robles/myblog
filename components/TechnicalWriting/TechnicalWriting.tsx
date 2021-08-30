@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { getTechnicalWritingData } from '../../utils/technical.testData';
+import { getTechnicalWritingData } from '../../data/technical.testData';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';

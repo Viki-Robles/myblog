@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projects.testData';
@@ -76,27 +76,51 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
+const useOnScreen = (options) => {
+  const ref = useRef<HTMLDivElement>();
+  const [visible, setVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.isIntersecting);
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref, options]);
+
+  return [ref, visible];
+};
+
 export const Projects = ({ projects }): JSX.Element => {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    rootMargin: '0px',
-  });
+  const [ref, visible] = useOnScreen({ rootMargin: '-300px' });
+
   const classes = useStyles();
 
   return (
     <Fragment>
       {projects.map(({ title, details, id }) => {
         return (
-          <Grid container className={classes.swipe} direction="column" ref={ref}>
-            <Typography className={classes.title}>{title}</Typography>
-            <Typography className={classes.details}>{details}</Typography>
-            <Typography className={classes.link}>
-              <Link key={id} href={`/projects/${id}`}>
-                CASE STUDY
-              </Link>
-            </Typography>
-          </Grid>
+          <Fragment>
+            {!visible && (
+              <Grid container className={classes.swipe} direction="column">
+                <Typography className={classes.title}>{title}</Typography>
+                <Typography className={classes.details}>{details}</Typography>
+                <Typography className={classes.link}>
+                  <Link key={id} href={`/projects/${id}`}>
+                    CASE STUDY
+                  </Link>
+                </Typography>
+              </Grid>
+            )}
+          </Fragment>
         );
       })}
     </Fragment>
