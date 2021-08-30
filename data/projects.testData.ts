@@ -19,7 +19,8 @@ export const projectsData: ProjectsProps[] = [
     role:
       'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
     technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',
-    img: '/images/hellohub.png',
+    img:
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/91885e2fb607deb6345cfdc63abbf48413e73cba/media/projects/image.svg',
     id: 'digital-futures',
   },
   {
