@@ -82,7 +82,7 @@ export const NavBar = (): JSX.Element => {
       <Grid container className={classes.navBar}>
         <Grid container md={5} className={classes.logo}>
           <Box className={classes.logoText}>
-            <Link href="/">VICKY VASILOPOULOU.</Link>
+            <Link href="/">VICKY.</Link>
           </Box>
         </Grid>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>

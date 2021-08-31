@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -55,7 +56,7 @@ export const About = (): JSX.Element => {
           <Typography className={classes.secondItem}>Feel free to email me below.</Typography>
         </Grid>
         <Grid item md={5} xl={5} className={classes.picture}>
-          <Typography>Picture</Typography>
+          <Image src="/eclipse.svg" width={400} height={400} />
         </Grid>
       </Grid>
     </Fragment>
