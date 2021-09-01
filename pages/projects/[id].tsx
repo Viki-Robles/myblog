@@ -85,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     margin: '0 auto',
+    maxWidth: '100%',
   },
   link: {
     marginBottom: '50px',
@@ -105,7 +106,7 @@ export default ({ project }) => {
       <Typography className={classes.title}>{project.title}</Typography>
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
       <Box className={classes.picture}>
-        <img src={project.img} width={700} height={500} className={classes.img} />
+        <img src={project.img} className={classes.img} />
       </Box>
       <Box className={classes.link}>
         <Link href={project.link}>View Website</Link>
