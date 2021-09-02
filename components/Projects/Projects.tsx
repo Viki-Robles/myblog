@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
   },
   details: {
     color: 'white',
-    marginTop: '20px',
+    marginTop: '5px',
     fontSize: '1.2rem',
-    letterSpacing: '.1rem',
+    letterSpacing: '.04rem',
     fontWeight: 300,
   },
   technologies: {
