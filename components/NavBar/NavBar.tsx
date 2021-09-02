@@ -66,12 +66,12 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '2px 5px 10px 2px #000',
     maxWidth: '140px',
     textAlign: 'center',
-    color: 'white',
+    color: '#ffff',
     marginTop: '-10px',
+    backgroundColor: '#7F7FF8',
     [theme.breakpoints.down('sm')]: { marginTop: '12px' },
     '&:hover': {
-      backgroundColor: '#7F7FF8',
-      color: 'black',
+      backgroundColor: '#0000',
     },
   },
 }));
