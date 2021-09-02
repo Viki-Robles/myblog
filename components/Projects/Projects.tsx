@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px',
     width: '80%',
     margin: '0 auto',
-    marginBottom: '25px',
+    marginTop: '45px',
     position: 'relative',
     '&:before': {
       position: 'absolute',
@@ -55,6 +55,8 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     marginTop: '20px',
     fontSize: '1.2rem',
+    letterSpacing: '.1rem',
+    fontWeight: 300,
   },
   technologies: {
     color: 'white',

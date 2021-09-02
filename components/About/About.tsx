@@ -15,19 +15,28 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'italic',
     fontSize: '1.5rem',
     fontWeight: 300,
+    marginLeft: '40px',
   },
   secondItem: {
     color: 'white',
     fontSize: '1.5rem',
     fontWeight: 300,
+    marginLeft: '40px',
   },
   picture: {
     textAlign: 'right',
   },
-  about: {
+  openTag: {
     fontSize: '2rem',
-    color: 'white',
-    marginBottom: '10px',
+    color: '#7F7FF8',
+    marginBottom: '40px',
+    fontWeight: 300,
+  },
+  closeTag: {
+    marginTop: '40px',
+    fontSize: '2rem',
+    color: '#7F7FF8',
+    fontWeight: 300,
   },
 }));
 
@@ -38,8 +47,8 @@ export const About = (): JSX.Element => {
     <Fragment>
       <Grid container className={classes.container} direction="row" spacing={3}>
         <Grid item md={6} xl={6}>
-          <Typography className={classes.about} id="about">
-            About
+          <Typography className={classes.openTag} id="about">
+            &lt;about&gt;
           </Typography>
           <Typography className={classes.firstItem}>
             I started coding a year ago as a hobby and it became a fullfilled passion. Last year I decided to join a
@@ -53,7 +62,9 @@ export const About = (): JSX.Element => {
             Mostly I am familiar with TypeScript, JavaScript, React / NextJS, GraphQl, REST API's, Firebase, but my aim
             is to boost my skills and work on cool projects!
           </Typography>
-          <Typography className={classes.secondItem}>Feel free to email me below.</Typography>
+          <Typography className={classes.closeTag} id="about">
+            &lt;/about&gt;
+          </Typography>
         </Grid>
         <Grid item md={5} xl={5} className={classes.picture}>
           <Image src="/eclipse.svg" width={400} height={400} />
