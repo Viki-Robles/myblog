@@ -40,7 +40,7 @@ export const projectsData: ProjectsProps[] = [
     title: 'DrinkMeApp',
     details:
       'That was the first team project I build during the bootcamp. The application collects 3.000+ of cocktail recipes for users to choose from based on ingredients or other preferences.',
-    link: '',
+    link: 'https://drink-me-app.vercel.app/',
     technologies: 'React, JavaScript, Material UI, Web API',
     img: '/images/hellohub.png',
     id: 'drinkmeapp',
