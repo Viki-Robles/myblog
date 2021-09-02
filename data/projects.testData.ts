@@ -42,10 +42,11 @@ export const projectsData: ProjectsProps[] = [
       'That was the first team project I build during the bootcamp. The application collects 3.000+ of cocktail recipes for users to choose from based on ingredients or other preferences.',
     link: 'https://drink-me-app.vercel.app/',
     technologies: 'React, JavaScript, Material UI, Web API',
-    img: '/images/hellohub.png',
+    img:
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/5acf796822d73d3828d3da4706ce2aa7067eb4a7/media/projects/portfoliodrinkmeapp.svg',
     id: 'drinkmeapp',
     subtitle:
       'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
-    role: '',
+    role: 'Responsible for the design and the implementation of the details page of each cocktail.',
   },
 ];
