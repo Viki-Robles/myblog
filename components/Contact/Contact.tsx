@@ -15,6 +15,7 @@ const useStyles = makeStyles(() => ({
   textfieldContainer: {},
   contactContainer: {},
   button: {
+    borderRadius: '5px',
     backgroundColor: '#7F7FF8',
     color: 'black',
   },

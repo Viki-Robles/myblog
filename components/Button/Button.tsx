@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   button: {
+    borderRadius: '5px',
     border: '1px solid #7F7FF8',
     padding: '9px 24px',
     color: 'white',

@@ -16,6 +16,7 @@ const useStyles = makeStyles(() => ({
     lineHeight: '2rem',
   },
   button: {
+    borderRadius: '5px',
     marginTop: '10px',
     backgroundColor: '#AB0552',
     padding: '7px 20px',

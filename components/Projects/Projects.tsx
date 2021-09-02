@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   swipe: {
+    borderRadius: '5px',
     border: '1px solid #7F7FF8',
     padding: '20px',
     width: '80%',
@@ -110,7 +111,7 @@ export const Projects = ({ projects }): JSX.Element => {
         return (
           <Fragment>
             {!visible && (
-              <Grid container className={classes.swipe} direction="column">
+              <Grid container className={classes.swipe} direction="column" id="projects">
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 <Typography className={classes.link}>

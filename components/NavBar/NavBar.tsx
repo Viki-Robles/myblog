@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '10px',
   },
   contactButton: {
+    borderRadius: '5px',
     border: '1px solid #7F7FF8',
     padding: '11px 20px',
     boxShadow: '2px 5px 10px 2px #000',
@@ -93,7 +94,7 @@ export const NavBar = (): JSX.Element => {
             <Link href="/#about">ABOUT</Link>
           </Box>
           <Box className={classes.contactButton}>
-            <Link href="/projects">Let's chat</Link>
+            <Link href="vasiliki.robles@gmail.com">Let's chat</Link>
           </Box>
         </Grid>
       </Grid>

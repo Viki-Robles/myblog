@@ -30,7 +30,7 @@ export const projectsData: ProjectsProps[] = [
     link: 'https://hellohub.com/',
     technologies: 'JavaScript, React, Material UI',
     img:
-      'https://raw.githubusercontent.com/Viki-Robles/myblog/782669627c6083e8f7213c7366e7f0022635c5b8/media/projects/portfoliohellohub-image.svg',
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/95300411ce17b06c92a23d6057496512ae47728e/media/projects/hellohub.svg',
     id: 'hellohub',
     role: 'Responsible for the UI development of the new website.',
     subtitle:

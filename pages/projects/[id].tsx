@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { projectsData } from '../../data/projects.testData';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const projects = projectsData.filter((project) => project.id.toString() === params.id);
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '50px',
   },
   button: {
+    borderRadius: '5px',
     border: '1px solid #7F7FF8',
     padding: '10px 22px',
     color: 'white',
@@ -88,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
   },
   link: {
+    borderRadius: '5px',
     marginBottom: '50px',
     backgroundColor: '#AB0552',
     padding: '12px 20px',
@@ -105,9 +108,11 @@ export default ({ project }) => {
     <Grid className={classes.container}>
       <Typography className={classes.title}>{project.title}</Typography>
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
-      <Box className={classes.picture}>
-        <img src={project.img} className={classes.img} />
-      </Box>
+      <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
+        <Box className={classes.picture}>
+          <img src={project.img} className={classes.img} />
+        </Box>
+      </motion.div>
       <Box className={classes.link}>
         <Link href={project.link}>View Website</Link>
       </Box>
