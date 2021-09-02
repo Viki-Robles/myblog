@@ -90,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       right: 0,
       zIndex: 8,
+      marginTop: '50px',
     },
     [theme.breakpoints.up('md')]: {
       paddingLeft: '8%',
