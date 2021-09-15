@@ -113,7 +113,7 @@ export const Introduction = (): JSX.Element => {
       </Grid>
       <Grid item md={6} xl={6}>
         <motion.div initial={{ y: 0 }} animate={{ y: -100 }} transition={{ duration: 2, type: 'spring' }}>
-          <Image src="/cyborg-131.svg" width={500} height={700} className={classes.image} />
+          <Image src="/cyborg-131.svg" width={500} height={700} className={classes.image} loading="eager" />
         </motion.div>
       </Grid>
     </Grid>

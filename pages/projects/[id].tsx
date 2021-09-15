@@ -111,7 +111,7 @@ export default ({ project }) => {
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
       <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
         <Box className={classes.picture}>
-          <Image src={project.img} alt="Picture of the author" width={500} height={500} />
+          <Image src={project.img} alt="Picture of the author" width={500} height={500} loading="eager" />
         </Box>
       </motion.div>
       <Box className={classes.link}>
