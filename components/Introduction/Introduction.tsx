@@ -52,10 +52,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       marginTop: '250px',
     },
-    [theme.breakpoints.down('sm')]: {
-      marginTop: '120px',
-      marginBottom: '70%',
-    },
   },
   button: {
     borderRadius: '5px',

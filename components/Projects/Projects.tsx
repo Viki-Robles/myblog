@@ -79,32 +79,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const useOnScreen = (options) => {
-  const ref = useRef<HTMLDivElement>();
-  const [visible, setVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting);
-    }, options);
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref, options]);
-
-  return [ref, visible];
-};
-
 export const Projects = ({ projects }): JSX.Element => {
-  const [ref, visible] = useOnScreen({ rootMargin: '-300px' });
-
   const classes = useStyles();
 
   return (
@@ -112,17 +87,15 @@ export const Projects = ({ projects }): JSX.Element => {
       {projects.map(({ title, details, id }) => {
         return (
           <Fragment>
-            {!visible && (
-              <Grid container className={classes.swipe} direction="column" id="projects">
-                <Typography className={classes.title}>{title}</Typography>
-                <Typography className={classes.details}>{details}</Typography>
-                <Typography className={classes.link}>
-                  <Link key={id} href={`/projects/${id}`}>
-                    CASE STUDY
-                  </Link>
-                </Typography>
-              </Grid>
-            )}
+            <Grid container className={classes.swipe} direction="column" id="projects">
+              <Typography className={classes.title}>{title}</Typography>
+              <Typography className={classes.details}>{details}</Typography>
+              <Typography className={classes.link}>
+                <Link key={id} href={`/projects/${id}`}>
+                  CASE STUDY
+                </Link>
+              </Typography>
+            </Grid>
           </Fragment>
         );
       })}
