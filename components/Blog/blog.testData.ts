@@ -12,10 +12,4 @@ export const blogData: BlogDataProps[] = [
     link: '/blog/my-journey-to-software-engineering',
     image: '',
   },
-  {
-    id: 2,
-    title: 'REFLECTIONS ON 2021',
-    link: '/blog/my-journey-to-software-engineering',
-    image: '',
-  },
 ];

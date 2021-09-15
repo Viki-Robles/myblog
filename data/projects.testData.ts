@@ -34,7 +34,7 @@ export const projectsData: ProjectsProps[] = [
     id: 'hellohub',
     role: 'Responsible for the UI development of the new website.',
     subtitle:
-      'A responsive website where venues can sign up and login to their account and learn more about the latest new',
+      'A responsive website where venues can sign up and login to their account and learn more about the latest news in the neighborhood.',
   },
   {
     title: 'DrinkMeApp',
