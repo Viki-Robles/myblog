@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { projectsData } from '../../data/projects.testData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const projects = projectsData.filter((project) => project.id.toString() === params.id);
@@ -110,7 +111,7 @@ export default ({ project }) => {
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
       <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
         <Box className={classes.picture}>
-          <img src={project.img} className={classes.img} />
+          <Image src={project.img} alt="Picture of the author" width={500} height={500} />
         </Box>
       </motion.div>
       <Box className={classes.link}>
