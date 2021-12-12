@@ -8,9 +8,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     paddingRight: '30px',
     color: '#FFFF',
-    fontSize: '18px',
+    fontSize: '20px',
     letterSpacing: '0.05rem',
-    fontWeight: 400,
+    fontWeight: 200,
     '&:hover': {
       color: '#7F7FF8',
     },
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontSize: '20px',
     letterSpacing: '0.1rem',
+    justifyContent: 'flex-end',
     [theme.breakpoints.down('sm')]: {
       margin: '0 auto',
       marginBottom: '15px',
@@ -42,22 +43,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   linkContainer: {
+    paddingLeft: '50px',
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
       margin: '0 auto',
       alignItems: 'center',
     },
     [theme.breakpoints.up('md')]: {
-      justifyContent: 'flex-end',
+      justifyContent: 'flex-start',
     },
   },
   logoText: {
     alignSelf: 'center',
-    marginLeft: '15px',
-  },
-  logoImage: {
-    marginLeft: '10px',
-    marginRight: '10px',
   },
   contactButton: {
     borderRadius: '5px',
@@ -81,20 +78,20 @@ export const NavBar = (): JSX.Element => {
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
+        <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
+          <Box className={classes.link}>
+            <Link href="/">home</Link>
+          </Box>
+          <Box className={classes.link}>
+            <Link href="/writing">blog</Link>
+          </Box>
+          <Box className={classes.link}>
+            <Link href="/#projects">work</Link>
+          </Box>
+        </Grid>
         <Grid container md={5} className={classes.logo}>
           <Box className={classes.logoText}>
             <Link href="/">VICKY.</Link>
-          </Box>
-        </Grid>
-        <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
-          <Box className={classes.link}>
-            <Link href="/writing">WRITING</Link>
-          </Box>
-          <Box className={classes.link}>
-            <Link href="/#about">ABOUT</Link>
-          </Box>
-          <Box className={classes.contactButton}>
-            <Link href="vasiliki.robles@gmail.com">Let's chat</Link>
           </Box>
         </Grid>
       </Grid>

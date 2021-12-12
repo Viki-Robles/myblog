@@ -11,47 +11,25 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFF',
     [theme.breakpoints.up('md')]: {
       fontSize: '4.6em',
-      textAlign: 'left',
+      textAlign: 'right',
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '4.3em',
-      textAlign: 'left',
+      textAlign: 'right',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.4rem',
       textAlign: 'center',
     },
   },
-  title: {
-    color: '#FFFF',
-    marginBottom: '10px',
-    fontWeight: 300,
-    [theme.breakpoints.up('md')]: {
-      fontSize: '3em',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '3em',
-      textAlign: 'left',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '25px',
-      textAlign: 'center',
-    },
-  },
 
-  socialMedia: {
-    color: '#FFFF',
-  },
   name: {
-    marginBottom: '25%',
-    [theme.breakpoints.up('md')]: {
-      marginTop: '250px',
-      margin: '0 50px',
-    },
-    [theme.breakpoints.down('md')]: {
-      marginTop: '250px',
-    },
+    paddingTop: '20%',
+    paddingBottom: '35%',
+  },
+  description: {
+    color: '#FFFF',
+    fontWeight: 200,
   },
   button: {
     borderRadius: '5px',
@@ -73,24 +51,18 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
     },
   },
-  image: {
-    position: 'absolute',
-    [theme.breakpoints.down('sm')]: {
-      opacity: '0.4',
-    },
-  },
   item: {
-    [theme.breakpoints.down('sm')]: {
-      margin: '0 auto',
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      zIndex: 8,
-      marginTop: '50px',
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: '8%',
-    },
+    // [theme.breakpoints.down('sm')]: {
+    //   margin: '0 auto',
+    //   position: 'absolute',
+    //   left: 0,
+    //   right: 0,
+    //   zIndex: 8,
+    //   marginTop: '50px',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   paddingLeft: '8%',
+    // },
   },
 }));
 
@@ -98,23 +70,18 @@ export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.name} md={12} xl={12}>
+    <Grid container className={classes.name} md={12} xl={12} spacing={8}>
       <Grid item md={6} xl={6} className={classes.item}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
-          <Typography className={classes.occupation}>Vicky Vasilopoulou</Typography>
+          <Typography className={classes.occupation}>blueMonkey.</Typography>
         </motion.div>
-        <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
-          <Typography className={classes.title}>Front-End Developer</Typography>
-          <SocialMedia />
-          <Box className={classes.button}>
-            <Link href="/#projects">Projects</Link>
-          </Box>
-        </motion.div>
+        <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>
-      <Grid item md={6} xl={6}>
-        <motion.div initial={{ y: 0 }} animate={{ y: -100 }} transition={{ duration: 2, type: 'spring' }}>
-          <Image src="/cyborg-131.svg" width={500} height={700} className={classes.image} loading="eager" />
-        </motion.div>
+      <Grid item md={4} xl={5} className={classes.description}>
+        Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦝. In the evenings you can find me working on open
+        source software, like NextAuth.js🔒 , or catching up on the latest Netflix series. I‘m based in London, United
+        Kingdom where I occasionally write about my adventures in tech on my blog📓 and if you like memes, movies, and
+        web development you might also enjoy following me on Twitter🐦
       </Grid>
     </Grid>
   );

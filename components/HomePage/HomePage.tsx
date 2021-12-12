@@ -9,7 +9,6 @@ export const HomePage = (): JSX.Element => {
     <Grid>
       <Introduction />
       <Projects projects={projectsData} />
-      <About />
     </Grid>
   );
 };
