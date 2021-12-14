@@ -39,6 +39,7 @@
     "rebass": "^4.0.7",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
+    "use-local-storage-state": "^13.0.0",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {

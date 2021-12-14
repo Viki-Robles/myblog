@@ -1,8 +1,14 @@
 import React, { Fragment } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { changeTheme } from '../../utils/changeTheme';
+import Switch from '@material-ui/core/Switch';
 import { Button } from '../Button/Button';
 import Link from 'next/link';
+
+interface NavBarProps {
+  onClick: () => void;
+}
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -74,7 +80,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const NavBar = (): JSX.Element => {
+  const { handleThemeChange, darkState } = changeTheme();
   const classes = useStyles();
+
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
@@ -91,7 +99,7 @@ export const NavBar = (): JSX.Element => {
         </Grid>
         <Grid container md={5} className={classes.logo}>
           <Box className={classes.logoText}>
-            <Link href="/">VICKY.</Link>
+            <Switch checked={darkState} onChange={handleThemeChange} />
           </Box>
         </Grid>
       </Grid>

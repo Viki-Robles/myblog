@@ -79,9 +79,9 @@ export const Introduction = (): JSX.Element => {
       </Grid>
       <Grid item md={4} xl={5} className={classes.description}>
         Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦝. In the evenings you can find me working on open
-        source software, like NextAuth.js🔒 , or catching up on the latest Netflix series. I‘m based in London, United
+        source projects, like WeAreNews🔒 , or catching up on the latest Netflix series. I‘m based in London, United
         Kingdom where I occasionally write about my adventures in tech on my blog📓 and if you like memes, movies, and
-        web development you might also enjoy following me on Twitter🐦
+        web development you might also enjoy following me on DEV🐦
       </Grid>
     </Grid>
   );
