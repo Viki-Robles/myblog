@@ -1,19 +1,14 @@
-import React, { Fragment } from 'react';
-import { Grid, Box } from '@material-ui/core';
+import React, { Fragment, useEffect } from 'react';
+import { Grid, Typography, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { changeTheme } from '../../utils/changeTheme';
+import { useDarkMode } from '../../utils/useDarkMode';
 import Switch from '@material-ui/core/Switch';
 import { Button } from '../Button/Button';
 import Link from 'next/link';
 
-interface NavBarProps {
-  onClick: () => void;
-}
-
 const useStyles = makeStyles((theme) => ({
   link: {
     paddingRight: '30px',
-    color: '#FFFF',
     fontSize: '20px',
     letterSpacing: '0.05rem',
     fontWeight: 200,
@@ -80,27 +75,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const NavBar = (): JSX.Element => {
-  const { handleThemeChange, darkState } = changeTheme();
+  const { darkState, setDarkState } = useDarkMode();
   const classes = useStyles();
+
+  // useEffect(() => {
+  //   setDarkState(darkState);
+  //   console.log('update state', darkState);
+  // }, [darkState]);
 
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
-          <Box className={classes.link}>
+          <Typography className={classes.link}>
             <Link href="/">home</Link>
-          </Box>
-          <Box className={classes.link}>
+          </Typography>
+          <Typography className={classes.link}>
             <Link href="/writing">blog</Link>
-          </Box>
-          <Box className={classes.link}>
+          </Typography>
+          <Typography className={classes.link}>
             <Link href="/#projects">work</Link>
-          </Box>
+          </Typography>
         </Grid>
         <Grid container md={5} className={classes.logo}>
-          <Box className={classes.logoText}>
-            <Switch checked={darkState} onChange={handleThemeChange} />
-          </Box>
+          <Typography className={classes.logoText}>
+            <Switch checked={darkState} onChange={() => setDarkState(!darkState)} />
+          </Typography>
         </Grid>
       </Grid>
     </Fragment>

@@ -1,14 +1,10 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { SocialMedia } from '../SocialMedia/SocialMedia';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   occupation: {
-    color: '#FFFF',
     [theme.breakpoints.up('md')]: {
       fontSize: '4.6em',
       textAlign: 'right',
@@ -28,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '35%',
   },
   description: {
-    color: '#FFFF',
     fontWeight: 200,
   },
   button: {
@@ -73,15 +68,19 @@ export const Introduction = (): JSX.Element => {
     <Grid container className={classes.name} md={12} xl={12} spacing={8}>
       <Grid item md={6} xl={6} className={classes.item}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
-          <Typography className={classes.occupation}>blueMonkey.</Typography>
+          <Typography variant="h1" className={classes.occupation}>
+            blueMonkey.
+          </Typography>
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>
-      <Grid item md={4} xl={5} className={classes.description}>
-        Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦝. In the evenings you can find me working on open
-        source projects, like WeAreNews🔒 , or catching up on the latest Netflix series. I‘m based in London, United
-        Kingdom where I occasionally write about my adventures in tech on my blog📓 and if you like memes, movies, and
-        web development you might also enjoy following me on DEV🐦
+      <Grid item md={5} xl={4}>
+        <Typography variant="h5" className={classes.description}>
+          Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🐵. In the evenings you can find me working on
+          open source projects, like WeAreNews🔒 , or catching up on the latest Netflix series. I‘m based in London,
+          United Kingdom where I occasionally write about my adventures in tech on my blog📓 and if you like memes,
+          movies, and web development you might also enjoy following me on DEV🐦
+        </Typography>
       </Grid>
     </Grid>
   );
