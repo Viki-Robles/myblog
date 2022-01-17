@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     textAlign: 'center',
-    color: 'white',
     fontSize: '1.8rem',
     fontWeight: 300,
     padding: '10px',
@@ -67,9 +66,9 @@ const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '5px',
     border: '1px solid #7F7FF8',
+    color: '#7F7FF8',
     padding: '10px 22px',
-    color: 'white',
-    boxShadow: '2px 5px 10px 2px #000',
+    boxShadow: '2px 2px 8px 0px #000',
     fontSize: '16px',
     maxWidth: '240px',
     textAlign: 'center',
@@ -96,11 +95,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#AB0552',
     padding: '12px 20px',
     color: 'white',
-    boxShadow: '2px 5px 10px 2px #000',
+    boxShadow: '2px 2px 8px 0px #000',
     maxWidth: '200px',
     textAlign: 'center',
     margin: '0 auto',
   },
+  buttonText: {},
 }));
 export default ({ project }) => {
   const classes = useStyles();

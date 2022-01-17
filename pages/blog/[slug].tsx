@@ -3,6 +3,8 @@ import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -67,31 +69,44 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const CodeBlock = {
+  code({ node, inline, className, children, ...props }) {
+    const match = /language-(\w+)/.exec(className || '');
+    return !inline && match ? (
+      <SyntaxHighlighter style={dracula} language={match[1]} PreTag="div" {...props}>
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    ) : (
+      <code className={className} {...props}>
+        {children}
+      </code>
+    );
+  },
+};
+
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
   const classes = useStyles();
   return (
-    <>
-      <Grid container direction="column" className={classes.container}>
-        <Typography variant="h4" className={classes.title}>
-          {frontmatter.icon} {frontmatter.title}
-        </Typography>
-        <Grid container className={classes.details}>
-          <Grid item className={classes.pictureContainer}>
-            <Image src="/avatar.png" width={50} height={50} className={classes.picture} />
-          </Grid>
-          <Grid item>
-            <Typography className={classes.author}>{frontmatter.author}</Typography>
-            <Typography className={classes.date}>10 Feb, 1 min read</Typography>
-          </Grid>
-          <Grid item className={classes.followMebutton}>
-            <Link href="https://dev.to/vikirobles">Follow</Link>
-          </Grid>
+    <Grid container direction="column" className={classes.container}>
+      <Typography variant="h4" className={classes.title}>
+        {frontmatter.icon} {frontmatter.title}
+      </Typography>
+      <Grid container className={classes.details}>
+        <Grid item className={classes.pictureContainer}>
+          <Image src="/avatar.png" width={50} height={50} className={classes.picture} />
         </Grid>
-        <Box className={classes.content}>
-          <ReactMarkdown source={content} />
-        </Box>
+        <Grid item>
+          <Typography className={classes.author}>{frontmatter.author}</Typography>
+          <Typography className={classes.date}>10 Feb, 1 min read</Typography>
+        </Grid>
+        <Grid item className={classes.followMebutton}>
+          <Link href="https://dev.to/vikirobles">Follow</Link>
+        </Grid>
       </Grid>
-    </>
+      <Box className={classes.content}>
+        <ReactMarkdown component={CodeBlock}>{content}</ReactMarkdown>
+      </Box>
+    </Grid>
   );
 };
 

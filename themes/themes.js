@@ -1,12 +1,31 @@
-export default {
-  direction: 'ltr',
+import { createMuiTheme } from '@material-ui/core/styles';
+import { grey, amber } from '@mui/material/colors';
+
+export const getDesignTokens = (mode) => ({
   palette: {
-    type: 'light',
-    primary: {
-      main: '#37b44e',
-    },
-    secondary: {
-      main: '#000',
-    },
+    mode,
+    ...(mode === 'light'
+      ? {
+          // palette values for light mode
+          primary: amber,
+          divider: amber[200],
+          text: {
+            primary: grey[900],
+            secondary: grey[800],
+          },
+        }
+      : {
+          // palette values for dark mode
+          primary: deepOrange,
+          divider: deepOrange[700],
+          background: {
+            default: deepOrange[900],
+            paper: deepOrange[900],
+          },
+          text: {
+            primary: '#fff',
+            secondary: grey[500],
+          },
+        }),
   },
-};
+});

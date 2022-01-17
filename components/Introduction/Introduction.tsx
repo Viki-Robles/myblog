@@ -20,52 +20,19 @@ const useStyles = makeStyles((theme) => ({
   },
 
   name: {
-    paddingTop: '20%',
-    paddingBottom: '35%',
+    padding: '20% 40px 35% 40px',
   },
   description: {
     fontWeight: 200,
   },
-  button: {
-    borderRadius: '5px',
-    border: '1px solid #7F7FF8',
-    padding: '9px 24px',
-    color: 'white',
-    boxShadow: '2px 5px 10px 2px #000',
-    fontSize: '18px',
-    maxWidth: '160px',
-    textAlign: 'center',
-    marginBottom: '20px',
-    zIndex: 4,
-    [theme.breakpoints.down('sm')]: {
-      margin: '0 auto',
-      marginBottom: '40px',
-      backgroundColor: '#7F7FF8',
-    },
-    [theme.breakpoints.up('md')]: {
-      margin: 0,
-    },
-  },
-  item: {
-    // [theme.breakpoints.down('sm')]: {
-    //   margin: '0 auto',
-    //   position: 'absolute',
-    //   left: 0,
-    //   right: 0,
-    //   zIndex: 8,
-    //   marginTop: '50px',
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   paddingLeft: '8%',
-    // },
-  },
+  item: {},
 }));
 
 export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.name} md={12} xl={12} spacing={8}>
+    <Grid container className={classes.name} md={12} xl={12} spacing={4}>
       <Grid item md={6} xl={6} className={classes.item}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
           <Typography variant="h1" className={classes.occupation}>
@@ -74,7 +41,7 @@ export const Introduction = (): JSX.Element => {
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>
-      <Grid item md={5} xl={4}>
+      <Grid item md={6} xl={6}>
         <Typography variant="h5" className={classes.description}>
           Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🐵. In the evenings you can find me working on
           open source projects, like WeAreNews🔒 , or catching up on the latest Netflix series. I‘m based in London,

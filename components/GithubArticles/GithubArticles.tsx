@@ -29,7 +29,6 @@ const useStyles = makeStyles(() => ({
   githubTitle: {
     fontSize: '24px',
     color: '#DCDBDB',
-    letterSpacing: 0,
   },
 }));
 

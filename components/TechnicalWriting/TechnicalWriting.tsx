@@ -2,44 +2,51 @@ import React, { Fragment } from 'react';
 import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { getTechnicalWritingData } from '../../data/technical.testData';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from 'next/link';
+
+interface Props {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window?: () => Window;
+  children?: React.ReactElement;
+}
 
 const useStyles = makeStyles((theme) => ({
   articlesListItem: {
     maxWidth: '800px',
     '&:hover': {
-      borderColor: '#7F7FF8',
+      borderColor: '#4A63D6',
     },
   },
   articlesHeader: {
-    color: '#B5B3B3',
     fontSize: '18px',
-    fontFamily: 'Cinzel',
     '&:hover': {
-      color: 'white',
+      color: '#4A63D6',
     },
   },
   articlesSubHeader: {
     fontFamily: 'Cinzel',
     fontSize: '16px',
-    color: '#b5b3b3',
+    color: '#4A63D6',
   },
   articlesContainer: {
     marginTop: '80px',
   },
   button: {
     borderRadius: '5px',
-    border: '1px solid #7F7FF8',
+    border: '1px solid #4A63D6',
     padding: '5px 20px',
-    color: '#7F7FF8',
-    boxShadow: '2px 5px 10px 2px #000',
+    boxShadow: '2px 2px 8px 0px #000',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',
@@ -69,11 +76,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Writing(): JSX.Element {
+export default function TechnicalWriting(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <Fragment>
+    <Box>
       {getTechnicalWritingData.map(({ id, article, href, published }) => {
         return (
           <Timeline>
@@ -95,6 +102,6 @@ export default function Writing(): JSX.Element {
           </Timeline>
         );
       })}
-    </Fragment>
+    </Box>
   );
 }

@@ -1,19 +1,15 @@
-import React, { Fragment, useEffect } from 'react';
-import { Grid, Typography, Paper } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useDarkMode } from '../../utils/useDarkMode';
-import Switch from '@material-ui/core/Switch';
-import { Button } from '../Button/Button';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   link: {
     paddingRight: '30px',
     fontSize: '20px',
-    letterSpacing: '0.05rem',
     fontWeight: 200,
     '&:hover': {
-      color: '#7F7FF8',
+      color: '#4A63D6',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '16px',
@@ -22,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     color: 'white',
     fontSize: '20px',
-    letterSpacing: '0.1rem',
     justifyContent: 'flex-end',
     [theme.breakpoints.down('sm')]: {
       margin: '0 auto',
@@ -35,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
-      border: '1px solid #222',
       padding: '25px',
     },
     [theme.breakpoints.up('md')]: {
@@ -59,14 +53,14 @@ const useStyles = makeStyles((theme) => ({
   },
   contactButton: {
     borderRadius: '5px',
-    border: '1px solid #7F7FF8',
+    border: '1px solid #4A63D6',
     padding: '11px 20px',
     boxShadow: '2px 5px 10px 2px #000',
     maxWidth: '140px',
     textAlign: 'center',
     color: '#ffff',
     marginTop: '-10px',
-    backgroundColor: '#7F7FF8',
+    backgroundColor: '#4A63D6',
     [theme.breakpoints.down('sm')]: { marginTop: '12px' },
     '&:hover': {
       backgroundColor: '#0000',
@@ -75,13 +69,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const NavBar = (): JSX.Element => {
-  const { darkState, setDarkState } = useDarkMode();
   const classes = useStyles();
-
-  // useEffect(() => {
-  //   setDarkState(darkState);
-  //   console.log('update state', darkState);
-  // }, [darkState]);
 
   return (
     <Fragment>
@@ -91,17 +79,13 @@ export const NavBar = (): JSX.Element => {
             <Link href="/">home</Link>
           </Typography>
           <Typography className={classes.link}>
-            <Link href="/writing">blog</Link>
+            <Link href="/writing">posts</Link>
           </Typography>
           <Typography className={classes.link}>
             <Link href="/#projects">work</Link>
           </Typography>
         </Grid>
-        <Grid container md={5} className={classes.logo}>
-          <Typography className={classes.logoText}>
-            <Switch checked={darkState} onChange={() => setDarkState(!darkState)} />
-          </Typography>
-        </Grid>
+        <Grid container md={5} className={classes.logo}></Grid>
       </Grid>
     </Fragment>
   );

@@ -9,7 +9,7 @@ import Link from 'next/link';
 const useStyles = makeStyles((theme) => ({
   swipe: {
     borderRadius: '5px',
-    border: '1px solid #7F7FF8',
+    border: '1px solid #003892',
     padding: '20px',
     width: '80%',
     margin: '0 auto',
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
       width: '0%',
       bottom: 0,
       zIndex: 1,
-      backgroundColor: '#7F7FF8',
+      backgroundColor: '#003892',
       animation: `$swipe-in-text 3000ms ${theme.transitions.easing.easeInOut}`,
     },
   },
@@ -52,10 +52,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.625rem',
   },
   details: {
-    color: 'white',
     marginTop: '5px',
     fontSize: '1.2rem',
-    letterSpacing: '.04rem',
     fontWeight: 300,
   },
   technologies: {
