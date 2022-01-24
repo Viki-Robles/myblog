@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import { Layout } from '../components/Layout.tsx/Layout';
 import NotFound from './notFound';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { ColorModeContext } from 'react-color-mode';
 import Brightness4Rounded from '@material-ui/icons/Brightness4Rounded';
 import Brightness7Rounded from '@material-ui/icons/Brightness7Rounded';
 import { grey } from '@material-ui/core/colors';
 import { createTheme, IconButton } from '@mui/material';
-import useSound from 'use-sound';
-import ReactHowler from 'react-howler';
 import { blue } from '@mui/material/colors';
 import '../styles/globals.css';
+
+const useStyles = makeStyles((theme) => ({
+  iconButton: {
+    float: 'right',
+  },
+}));
 
 function MyApp({ Component, pageProps }): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
   const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+  const classes = useStyles();
 
   const colorMode = React.useMemo(
     () => ({
@@ -69,7 +74,12 @@ function MyApp({ Component, pageProps }): JSX.Element {
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <Paper>
-            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={colorMode.toggleColorMode}
+              color="inherit"
+              className={classes.iconButton}
+            >
               {theme.palette.mode === 'dark' ? <Brightness7Rounded /> : <Brightness4Rounded />}
             </IconButton>
             <Layout>
