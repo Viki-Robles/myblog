@@ -43,9 +43,9 @@ export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
     published: 'Published on Feb 16, 2021',
   },
   {
-    id: 1,
-    article: 'Firebase Analytics Guide',
-    href: 'https://dev.to/vikirobles/simplest-firebase-analytics-guide-for-your-project-2kj6',
-    published: 'Published on Feb 4, 2021',
+    id: 2,
+    article: 'How to make a password validation with Regex or Yup',
+    href: 'https://dev.to/vikirobles/how-to-make-a-password-validation-with-regex-or-yup-4eh3',
+    published: 'Published on Jul 20, 2021',
   },
 ];

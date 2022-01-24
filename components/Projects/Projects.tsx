@@ -1,10 +1,10 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
-import { Grid, Typography, Box } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projects.testData';
 import { GetStaticProps } from 'next';
-import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
+import styles from '../../styles/projects.module.css';
 
 const useStyles = makeStyles((theme) => ({
   swipe: {
@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   details: {
     marginTop: '5px',
     fontSize: '1.2rem',
+    marginBottom: '20px',
     fontWeight: 300,
   },
   technologies: {
@@ -93,9 +94,13 @@ export const Projects = ({ projects }): JSX.Element => {
             <Grid container className={classes.swipe} direction="column" id="projects">
               <Typography className={classes.title}>{title}</Typography>
               <Typography className={classes.details}>{details}</Typography>
-              <Typography className={classes.link}>
+              <Typography>
                 <Link key={id} href={`/projects/${id}`}>
-                  Read more
+                  <button className={styles.buttonPushable}>
+                    <span className={styles.buttonShadow}></span>
+                    <span className={styles.buttonEdge}></span>
+                    <span className={styles.buttonText}>Read more</span>
+                  </button>
                 </Link>
               </Typography>
             </Grid>
