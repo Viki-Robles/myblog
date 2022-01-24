@@ -73,6 +73,10 @@ const useStyles = makeStyles((theme) => ({
   },
   timelineSeparator: {
     width: '1px',
+    backgroundColor: '#4A63D6',
+  },
+  timelineDot: {
+    borderColor: '#4A63D6',
   },
 }));
 
@@ -86,7 +90,7 @@ export default function TechnicalWriting(): JSX.Element {
           <Timeline>
             <TimelineItem className={classes.timelineItem}>
               <TimelineSeparator>
-                <TimelineDot variant="outlined" />
+                <TimelineDot variant="outlined" className={classes.timelineDot} />
                 <TimelineConnector className={classes.timelineSeparator} />
               </TimelineSeparator>
               <TimelineContent>

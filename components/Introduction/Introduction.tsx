@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { SocialMedia } from '../SocialMedia/SocialMedia';
 import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,17 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 200,
   },
   item: {},
+  socialMedia: {
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'right',
+    },
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'right',
+    },
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
+  },
 }));
 
 export const Introduction = (): JSX.Element => {
@@ -37,6 +49,9 @@ export const Introduction = (): JSX.Element => {
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
           <Typography variant="h1" className={classes.occupation}>
             blueMonkey.
+          </Typography>
+          <Typography className={classes.socialMedia}>
+            <SocialMedia />
           </Typography>
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>

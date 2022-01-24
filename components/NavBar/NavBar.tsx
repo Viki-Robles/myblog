@@ -4,27 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
-  link: {
-    paddingRight: '30px',
-    fontSize: '20px',
-    fontWeight: 200,
-    '&:hover': {
-      color: '#4A63D6',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
-    },
-  },
-  logo: {
-    color: 'white',
-    fontSize: '20px',
-    justifyContent: 'flex-end',
-    [theme.breakpoints.down('sm')]: {
-      margin: '0 auto',
-      marginBottom: '15px',
-      justifyContent: 'center',
-    },
-  },
   navBar: {
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
@@ -37,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '50px',
     },
   },
+
   linkContainer: {
     paddingLeft: '50px',
     [theme.breakpoints.down('sm')]: {
@@ -48,22 +28,15 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'flex-start',
     },
   },
-  logoText: {
-    alignSelf: 'center',
-  },
-  contactButton: {
-    borderRadius: '5px',
-    border: '1px solid #4A63D6',
-    padding: '11px 20px',
-    boxShadow: '2px 5px 10px 2px #000',
-    maxWidth: '140px',
-    textAlign: 'center',
-    color: '#ffff',
-    marginTop: '-10px',
-    backgroundColor: '#4A63D6',
-    [theme.breakpoints.down('sm')]: { marginTop: '12px' },
+  link: {
+    paddingRight: '30px',
+    fontSize: '20px',
+    fontWeight: 300,
     '&:hover': {
-      backgroundColor: '#0000',
+      color: '#4A63D6',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '20px',
     },
   },
 }));
@@ -85,7 +58,7 @@ export const NavBar = (): JSX.Element => {
             <Link href="/#projects">work</Link>
           </Typography>
         </Grid>
-        <Grid container md={5} className={classes.logo}></Grid>
+        <Grid container md={5}></Grid>
       </Grid>
     </Fragment>
   );

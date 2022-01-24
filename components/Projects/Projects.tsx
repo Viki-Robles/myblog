@@ -9,7 +9,7 @@ import Link from 'next/link';
 const useStyles = makeStyles((theme) => ({
   swipe: {
     borderRadius: '5px',
-    border: '1px solid #003892',
+    border: '1px solid #4A63D6',
     padding: '20px',
     width: '80%',
     margin: '0 auto',
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
       width: '0%',
       bottom: 0,
       zIndex: 1,
-      backgroundColor: '#003892',
+      backgroundColor: '#4A63D6',
       animation: `$swipe-in-text 3000ms ${theme.transitions.easing.easeInOut}`,
     },
   },
@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    color: 'white',
     fontSize: '1.625rem',
   },
   details: {
@@ -61,10 +60,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '20px',
   },
   link: {
-    color: '#AB0552',
-    fontWeight: 500,
-    fontSize: '1.2rem',
+    borderRadius: '5px',
     marginTop: '10px',
+    backgroundColor: '#AB0552',
+    padding: '5px 12px',
+    color: 'white',
+    boxShadow: '2px 2px 8px 0px #000',
+    fontSize: '14px',
+    maxWidth: '100px',
+    textAlign: 'center',
+    fontWeight: 500,
   },
   description: {
     padding: '0 30px',
@@ -90,7 +95,7 @@ export const Projects = ({ projects }): JSX.Element => {
               <Typography className={classes.details}>{details}</Typography>
               <Typography className={classes.link}>
                 <Link key={id} href={`/projects/${id}`}>
-                  CASE STUDY
+                  Read more
                 </Link>
               </Typography>
             </Grid>

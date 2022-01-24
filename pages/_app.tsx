@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { Layout } from '../components/Layout.tsx/Layout';
-import { styled } from '@mui/material/styles';
 import NotFound from './notFound';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import Switch from '@material-ui/core/Switch';
 import { ColorModeContext } from 'react-color-mode';
-// import { getDesignTokens } from '../themes/themes';
 import Brightness4Rounded from '@material-ui/icons/Brightness4Rounded';
 import Brightness7Rounded from '@material-ui/icons/Brightness7Rounded';
 import { grey } from '@material-ui/core/colors';
-import { createTheme, IconButton, PaletteMode } from '@mui/material';
+import { createTheme, IconButton } from '@mui/material';
+import useSound from 'use-sound';
+import ReactHowler from 'react-howler';
 import { blue } from '@mui/material/colors';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
   const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -41,6 +40,12 @@ function MyApp({ Component, pageProps }): JSX.Element {
             background: {
               default: blue[300],
               paper: '#0E161E',
+            },
+          }),
+          ...(mode === 'light' && {
+            background: {
+              default: blue[300],
+              paper: '#ebf1fa',
             },
           }),
           text: {

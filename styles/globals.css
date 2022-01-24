@@ -4,8 +4,9 @@ html,
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   /* background-color: #141618; */
-  letter-spacing: 0.06rem;
+  line-height: 'calc(1em + 0.625rem)';
   scroll-behavior: smooth;
 }
 

@@ -6,11 +6,9 @@ icon: 👋
 
 ## Step by step Guide to create your own Context and Provider by creating a Favouriting feature
 
-[UselocalStorageState package](https://www.npmjs.com/package/use-local-storage-state)
-
 ### Create the initial state
 
-- useContext hook is creating the default/ initial state of
+We are using [UselocalStorageState package](https://www.npmjs.com/package/use-local-storage-state)
 
 ```js
 interface FavouriteProps {
@@ -33,9 +31,9 @@ interface UseFavouriteReturn {
 
 ### We create the Context where we initialise the values that we want as we would do with the useState hook, and then we exporting those values so that we can use them to different places
 
-- The way it works is that when we click the favourite button that will add the item to the array. When we click again is gonna remove it. So we initialise the empty array and also we set the state.
+The way it works is that when we click the favourite button that will add the item to the array. When we click again is gonna remove it. So we initialise the empty array and also we set the state.
 
-- isFaved is a function that returns true if the item we clicked is included in the array.
+isFaved is a function that returns true if the item we clicked is included in the array.
 
 ```
 const FavouritedContext = React.createContext<FavouriteContextProps>({

@@ -24,12 +24,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    color: '#7F7FF8',
     textAlign: 'center',
     fontSize: '2.2rem',
     fontWeight: 300,
   },
   subtitle: {
+    color: '#4A63D6',
     textAlign: 'center',
     fontSize: '1.8rem',
     fontWeight: 300,
@@ -37,11 +37,10 @@ const useStyles = makeStyles((theme) => ({
   },
   container: { marginTop: '10%', marginBottom: '50px', padding: '20px' },
   role: {
-    color: '#7F7FF8',
+    color: '#4A63D6',
     fontSize: '1.8rem',
   },
   technologies: {
-    color: 'white',
     fontSize: '1.8rem',
     fontWeight: 300,
   },
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '50px',
   },
   stack: {
-    color: 'white',
     fontSize: '2.1rem',
   },
   stackContainer: {
@@ -65,14 +63,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     borderRadius: '5px',
-    border: '1px solid #7F7FF8',
-    color: '#7F7FF8',
-    padding: '10px 22px',
-    boxShadow: '2px 2px 8px 0px #000',
-    fontSize: '16px',
-    maxWidth: '240px',
+    marginBottom: '50px',
+    backgroundColor: '#AB0552',
+    padding: '12px 20px',
+    color: 'white',
+    // boxShadow: '2px 2px 8px 0px #000',
+    maxWidth: '200px',
     textAlign: 'center',
-    marginBottom: '20px',
     margin: '0 auto',
   },
   buttonContainer: {
@@ -95,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#AB0552',
     padding: '12px 20px',
     color: 'white',
-    boxShadow: '2px 2px 8px 0px #000',
+    // boxShadow: '2px 2px 8px 0px #000',
     maxWidth: '200px',
     textAlign: 'center',
     margin: '0 auto',

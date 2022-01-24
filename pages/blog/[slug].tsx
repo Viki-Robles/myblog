@@ -27,26 +27,29 @@ const useStyles = makeStyles(() => ({
     marginTop: '40px',
     textAlign: 'center',
     fontFamily: 'Inter, sans-serif',
+    letterSpacing: 0,
   },
   content: {
-    color: 'white',
     fontFamily: 'Inter, sans-serif',
+    letterSpacing: 0,
+    fontWeight: 400,
+    fontSize: '1.1875rem',
   },
   author: {
-    color: 'white',
     alignSelf: 'center',
+    letterSpacing: 0,
   },
   date: {
     alignSelf: 'center',
+    letterSpacing: 0,
     color: '#C0C0C0',
   },
   container: {
-    border: '1px',
-    borderRadius: '5px',
-    maxWidth: '800px',
-    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '40px',
     marginTop: '40px',
-    padding: '20px',
+    letterSpacing: 0,
   },
   details: {
     marginTop: '10px',
@@ -69,19 +72,19 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const CodeBlock = {
-  code({ node, inline, className, children, ...props }) {
-    const match = /language-(\w+)/.exec(className || '');
-    return !inline && match ? (
-      <SyntaxHighlighter style={dracula} language={match[1]} PreTag="div" {...props}>
-        {String(children).replace(/\n$/, '')}
+type CodeBlockProps = {
+  language: string;
+  value: React.ReactNode;
+};
+
+const CodeBlock = ({ language, value }: CodeBlockProps) => {
+  return (
+    <div className="code-block">
+      <SyntaxHighlighter language={language} style={dracula}>
+        {String(value).replace(/\n$/, '')}
       </SyntaxHighlighter>
-    ) : (
-      <code className={className} {...props}>
-        {children}
-      </code>
-    );
-  },
+    </div>
+  );
 };
 
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
@@ -104,7 +107,12 @@ const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
         </Grid>
       </Grid>
       <Box className={classes.content}>
-        <ReactMarkdown component={CodeBlock}>{content}</ReactMarkdown>
+        <ReactMarkdown
+          source={content}
+          renderers={{
+            code: CodeBlock,
+          }}
+        />
       </Box>
     </Grid>
   );
