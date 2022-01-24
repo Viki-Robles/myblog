@@ -50,8 +50,8 @@
 
 @media (min-width: 768px) {
   .buttonText {
-    font-size: 1.25rem;
-    padding: 12px 42px;
+    font-size: 1rem;
+    padding: 12px 32px;
   }
 }
 
