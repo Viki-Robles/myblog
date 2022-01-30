@@ -20,20 +20,26 @@ interface BlogPostProps {
   };
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   title: {
     color: '#FEDE00',
     fontWeight: 'bold',
+    marginBottom: '40px',
     marginTop: '40px',
     textAlign: 'center',
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Inter',
     letterSpacing: 0,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+    },
   },
   content: {
-    fontFamily: 'Inter, sans-serif',
-    letterSpacing: 0,
-    fontWeight: 400,
-    fontSize: '1.1875rem',
+    fontFamily: 'Inter',
+    letterSpacing: '0.03rem',
+    fontWeight: 300,
+    fontSize: '1.1rem',
+    lineHeight: 'calc(1em + 0.625rem)',
+    width: 'inherit',
   },
   author: {
     alignSelf: 'center',
@@ -67,7 +73,6 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#AB0552',
     borderRadius: '10px',
     padding: '8px',
-    boxShadow: '2px 5px 10px 2px #000',
     marginLeft: '10px',
   },
 }));
