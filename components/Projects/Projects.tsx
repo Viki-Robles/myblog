@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     margin: '0 auto',
     marginTop: '45px',
+    marginBottom: '45px',
     position: 'relative',
     '&:before': {
       position: 'absolute',

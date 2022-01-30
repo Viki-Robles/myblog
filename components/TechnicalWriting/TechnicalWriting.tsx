@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '5px',
     border: '1px solid #4A63D6',
     padding: '5px 20px',
-    boxShadow: '2px 2px 8px 0px #000',
+    // boxShadow: '2px 2px 8px 0px #000',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',

@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontSize: '2.2rem',
     fontWeight: 300,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.8rem',
+    },
   },
   subtitle: {
     color: '#4A63D6',
@@ -34,15 +37,24 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.8rem',
     fontWeight: 300,
     padding: '10px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+    },
   },
   container: { marginTop: '10%', marginBottom: '50px', padding: '20px' },
   role: {
     color: '#4A63D6',
     fontSize: '1.8rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+    },
   },
   technologies: {
     fontSize: '1.8rem',
     fontWeight: 300,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+    },
   },
   roleBox: {
     maxWidth: '700px',
@@ -52,7 +64,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '50px',
   },
   stack: {
-    fontSize: '2.1rem',
+    fontSize: '2.2rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.8rem',
+    },
   },
   stackContainer: {
     maxWidth: '700px',
@@ -67,10 +82,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#AB0552',
     padding: '12px 20px',
     color: 'white',
-    // boxShadow: '2px 2px 8px 0px #000',
     maxWidth: '200px',
     textAlign: 'center',
     margin: '0 auto',
+    cursor: 'pointer',
+    [theme.breakpoints.down('sm')]: {
+      padding: '8px 12px',
+      fontSize: '1rem',
+      maxWidth: '150px',
+    },
   },
   buttonContainer: {
     display: 'flex',
@@ -92,12 +112,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#AB0552',
     padding: '12px 20px',
     color: 'white',
-    // boxShadow: '2px 2px 8px 0px #000',
     maxWidth: '200px',
     textAlign: 'center',
     margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      padding: '8px 12px',
+      fontSize: '1rem',
+      maxWidth: '150px',
+    },
   },
-  buttonText: {},
 }));
 export default ({ project }) => {
   const classes = useStyles();
@@ -108,12 +131,21 @@ export default ({ project }) => {
       <Typography className={classes.subtitle}>{project.subtitle}</Typography>
       <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
         <Box className={classes.picture}>
-          <Image src={project.img} alt="Picture of the author" width={500} height={500} loading="eager" />
+          <Image
+            src={project.img}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            loading="eager"
+            priority={true}
+          />
         </Box>
       </motion.div>
-      <Box className={classes.link}>
-        <Link href={project.link}>View Website</Link>
-      </Box>
+
+      <Link href={project.link}>
+        <Typography className={classes.link}>View Website</Typography>
+      </Link>
+
       <Box className={classes.roleBox}>
         <Typography className={classes.role}>Role: {project.role}</Typography>
       </Box>
@@ -123,7 +155,7 @@ export default ({ project }) => {
       </Grid>
       <Box className={classes.buttonContainer}>
         <Box className={classes.button}>
-          <Link href="/">Back to Home Page</Link>
+          <Link href="/">Home Page</Link>
         </Box>
       </Box>
     </Grid>

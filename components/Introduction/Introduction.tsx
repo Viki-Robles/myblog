@@ -27,17 +27,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 200,
   },
   item: {},
-  socialMedia: {
-    [theme.breakpoints.up('md')]: {
-      textAlign: 'right',
-    },
-    [theme.breakpoints.down('md')]: {
-      textAlign: 'right',
-    },
-    [theme.breakpoints.down('sm')]: {
-      textAlign: 'center',
-    },
-  },
 }));
 
 export const Introduction = (): JSX.Element => {
@@ -50,9 +39,7 @@ export const Introduction = (): JSX.Element => {
           <Typography variant="h1" className={classes.occupation}>
             blueMonkey.
           </Typography>
-          <Typography className={classes.socialMedia}>
-            <SocialMedia />
-          </Typography>
+          <SocialMedia />
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>

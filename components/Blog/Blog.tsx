@@ -52,6 +52,7 @@ const useStyles = makeStyles(() => ({
   blogDetails: {
     marginTop: '20px',
     fontSize: '1rem',
+    color: 'white',
   },
 }));
 

@@ -14,6 +14,15 @@ import '../styles/globals.css';
 const useStyles = makeStyles((theme) => ({
   iconButton: {
     float: 'right',
+    [theme.breakpoints.down('sm')]: {
+      float: 'none',
+    },
+  },
+  paper: {
+    height: 'auto',
+    [theme.breakpoints.up('xl')]: {
+      height: '100vh',
+    },
   },
 }));
 
@@ -50,7 +59,8 @@ function MyApp({ Component, pageProps }): JSX.Element {
           ...(mode === 'light' && {
             background: {
               default: blue[300],
-              paper: '#ebf1fa',
+              paper: '#ffff',
+              // paper: '#ebf1fa',
             },
           }),
           text: {
@@ -73,7 +83,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
     return (
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <Paper>
+          <Paper className={classes.paper}>
             <IconButton
               sx={{ ml: 1 }}
               onClick={colorMode.toggleColorMode}
