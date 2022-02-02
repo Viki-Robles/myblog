@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     height: 'auto',
+    boxShadow: 'none',
     [theme.breakpoints.up('xl')]: {
       height: '100vh',
     },
