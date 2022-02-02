@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   description: {
     fontWeight: 200,
   },
-  item: {},
+  blog: { color: '#4A63D6', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
 
 export const Introduction = (): JSX.Element => {
@@ -34,7 +34,7 @@ export const Introduction = (): JSX.Element => {
 
   return (
     <Grid container className={classes.name} md={12} xl={12} spacing={4}>
-      <Grid item md={6} xl={6} className={classes.item}>
+      <Grid item md={6} xl={6}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
           <Typography variant="h1" className={classes.occupation}>
             blueMonkey.
@@ -45,10 +45,12 @@ export const Introduction = (): JSX.Element => {
       </Grid>
       <Grid item md={6} xl={6}>
         <Typography variant="h5" className={classes.description}>
-          Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🐵. In the evenings you can find me working on
-          open source projects, like WeAreNews🔒 , or catching up on the latest Netflix series. I‘m based in London,
-          United Kingdom where I occasionally write about my adventures in tech on my blog📓 and if you like memes,
-          movies, and web development you might also enjoy following me on DEV🐦
+          Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦄. In the evenings you can find me working on
+          personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom where
+          I occasionally write about my personal coding experience on my
+          <a href="https://dev.to/vikirobles" className={classes.blog}>
+            Blog📓.
+          </a>
         </Typography>
       </Grid>
     </Grid>

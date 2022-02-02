@@ -1,4 +1,4 @@
-export interface ProjectsProps {
+export interface ProjectsDataModel {
   title: string;
   details: string;
   link?: string;
@@ -9,7 +9,7 @@ export interface ProjectsProps {
   subtitle?: string;
 }
 
-export const projectsData: ProjectsProps[] = [
+export const projectsData: ProjectsDataModel[] = [
   {
     title: 'DFX by Digital Futures',
     subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',

@@ -17,18 +17,14 @@ const useStyles = makeStyles(() => ({
     },
   },
   button: {
-    borderRadius: '5px',
-    marginTop: '10px',
     backgroundColor: '#AB0552',
-    padding: '5px 12px',
-    color: 'white',
-    fontSize: '14px',
-    maxWidth: '100px',
+    borderRadius: '5px',
+    padding: '5px 20px',
+    // boxShadow: '2px 2px 8px 0px #000',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
     textAlign: 'center',
-    transition: 'transform 0.3s ease',
-    '&:after, &:before': {
-      background: 'black',
-    },
   },
   blog: {
     marginBottom: '40px',
@@ -84,7 +80,7 @@ export const Blog = (): JSX.Element => {
                 return val;
               }
             })
-            .map(({ title, link, id, details }) => {
+            .map(({ title, link, details }) => {
               return (
                 <Paper className={classes.blog}>
                   <Typography className={classes.blogTitle} variant="h5">
@@ -92,7 +88,7 @@ export const Blog = (): JSX.Element => {
                   </Typography>
                   <Typography className={classes.blogDetails}>{details}</Typography>
                   <Box className={classes.button}>
-                    <Link href={link}>Read more</Link>
+                    <Link href={link}>READ MORE</Link>
                   </Box>
                 </Paper>
               );

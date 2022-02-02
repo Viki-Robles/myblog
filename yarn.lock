@@ -4978,6 +4978,13 @@ react-howler@^5.2.0:
     howler "^2.2.0"
     prop-types "^15.5.6"
 
+react-in-viewport@^1.0.0-alpha.20:
+  version "1.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/react-in-viewport/-/react-in-viewport-1.0.0-alpha.20.tgz#f68aa2a72671e9ec12319c33a6483747b2893444"
+  integrity sha512-AW9kns8advQqY0CnBt6ZRgkvYp0Xxzqhd8ey0hjGTk5obGl4ZdxG3XMnHYmCjpsDYxQ1CPGqRf9VchL1VmIfhg==
+  dependencies:
+    hoist-non-react-statics "^3.0.0"
+
 react-intersection-observer@^8.33.1:
   version "8.33.1"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.33.1.tgz#8e6442cac7052ed63056e191b7539e423e7d5c64"
@@ -6184,7 +6191,7 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-loader@^4.0.0:
+url-loader@^4.0.0, url-loader@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-4.1.1.tgz#28505e905cae158cf07c92ca622d7f237e70a4e2"
   integrity sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA==

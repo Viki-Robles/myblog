@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projects.testData';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import styles from '../../styles/projects.module.css';
+import handleViewport from 'react-in-viewport';
 
 const useStyles = makeStyles((theme) => ({
   swipe: {
@@ -95,15 +96,15 @@ export const Projects = ({ projects }): JSX.Element => {
             <Grid container className={classes.swipe} direction="column" id="projects">
               <Typography className={classes.title}>{title}</Typography>
               <Typography className={classes.details}>{details}</Typography>
-              <Typography>
+              <div>
                 <Link key={id} href={`/projects/${id}`}>
                   <button className={styles.buttonPushable}>
                     <span className={styles.buttonShadow}></span>
                     <span className={styles.buttonEdge}></span>
-                    <span className={styles.buttonText}>Read more</span>
+                    <span className={styles.buttonText}>READ MORE</span>
                   </button>
                 </Link>
-              </Typography>
+              </div>
             </Grid>
           </Fragment>
         );
