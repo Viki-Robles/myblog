@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   container: { marginTop: '80px' },
   blog: {
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '30px',
+      margin: '10px',
       padding: '5px',
     },
     [theme.breakpoints.up('sm')]: {
