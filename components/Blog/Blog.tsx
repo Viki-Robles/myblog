@@ -17,10 +17,9 @@ const useStyles = makeStyles(() => ({
     },
   },
   button: {
-    backgroundColor: '#AB0552',
+    border: '1px solid #4A63D6',
     borderRadius: '5px',
-    padding: '5px 20px',
-    // boxShadow: '2px 2px 8px 0px #000',
+    padding: '0.6rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',
@@ -48,7 +47,7 @@ const useStyles = makeStyles(() => ({
   blogDetails: {
     marginTop: '20px',
     fontSize: '1rem',
-    color: 'white',
+    color: '#8998a7',
   },
 }));
 
@@ -87,9 +86,11 @@ export const Blog = (): JSX.Element => {
                     {title}
                   </Typography>
                   <Typography className={classes.blogDetails}>{details}</Typography>
-                  <Box className={classes.button}>
-                    <Link href={link}>READ MORE</Link>
-                  </Box>
+                  <div>
+                    <Box className={classes.button}>
+                      <Link href={link}>READ MORE</Link>
+                    </Box>
+                  </div>
                 </Paper>
               );
             })}

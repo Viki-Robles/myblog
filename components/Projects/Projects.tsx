@@ -5,14 +5,13 @@ import { Grid, Typography } from '@material-ui/core';
 import Box from '@mui/material/Box';
 import { projectsData } from '../../data/projects.testData';
 import Image from 'next/image';
-
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '5px',
     border: '1px solid #4A63D6',
-    padding: '8px 20px',
+    padding: '0.75rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',
@@ -57,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#5d75e7',
     [theme.breakpoints.down('sm')]: { fontSize: '28px' },
   },
+  projectBox: {
+    paddingBottom: '25%',
+  },
 }));
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -69,7 +71,7 @@ export const Projects = ({ projects }): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box className={classes.projectBox}>
       <Typography className={classes.projectTitle} variant="h4">
         Some Archive projects
       </Typography>

@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     fontWeight: 200,
+    maxWidth: '600px',
   },
   blog: { color: '#4A63D6', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
@@ -43,7 +44,7 @@ export const Introduction = (): JSX.Element => {
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>
-      <Grid item md={6} xl={6}>
+      <Grid item md={6} xl={6} className={classes.description}>
         <Typography variant="h5" className={classes.description}>
           Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦄. In the evenings you can find me working on
           personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom where

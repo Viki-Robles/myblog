@@ -1,9 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { getTechnicalWritingData } from '../../data/technical.testData';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -13,10 +11,6 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Link from 'next/link';
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
   children?: React.ReactElement;
 }
@@ -45,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '5px',
     border: '1px solid #4A63D6',
-    padding: '5px 20px',
-    // boxShadow: '2px 2px 8px 0px #000',
+    padding: '0.6rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',

@@ -1,24 +1,31 @@
-import { Grid, Typography, TextField, Button, Box } from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
   typography: {
-    color: '#7F7FF8',
-    fontSize: '40px',
+    color: '#5d75e7',
+    fontWeight: 300,
+  },
+  contactContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '600px',
     justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
   },
-  textfield: {
-    maxWidth: '400px',
-    margin: '10px',
-    color: '#7F7FF8',
-  },
-  textfieldContainer: {},
-  contactContainer: {},
   button: {
     borderRadius: '5px',
-    backgroundColor: '#7F7FF8',
-    color: 'black',
+    border: '1px solid #4A63D6',
+    padding: '0.75rem 1rem',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
+    textAlign: 'center',
+    margin: '0 auto',
   },
+  content: { color: '#8998a7', textAlign: 'center', fontSize: '20px', padding: '20px 0 20px 0', fontWeight: 300 },
 }));
 
 export const Contact = (): JSX.Element => {
@@ -26,14 +33,18 @@ export const Contact = (): JSX.Element => {
 
   return (
     <Grid container className={classes.contactContainer}>
-      <Typography className={classes.typography}>Let's chat!</Typography>
-      <Grid container direction="column" className={classes.textfieldContainer}>
-        <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.textfield} />
-        <TextField id="outlined-basic" label="Message" variant="outlined" className={classes.textfield} />
-      </Grid>
-      <Button variant="contained" color={'primary'} className={classes.button}>
-        Submit
-      </Button>
+      <Typography className={classes.typography} variant="h4">
+        Get In Touch
+      </Typography>
+      <Typography className={classes.content}>
+        Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a
+        question or just want to say hi, I’ll try my best to get back to you!
+      </Typography>
+      <div>
+        <Box className={classes.button}>
+          <Link href={'/'}>Let's chat</Link>
+        </Box>
+      </div>
     </Grid>
   );
 };
