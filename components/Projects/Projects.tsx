@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '5px',
     fontWeight: 300,
     color: '#5d75e7',
-    [theme.breakpoints.down('sm')]: { fontSize: '28px' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
   },
   projectBox: {
     paddingBottom: '25%',
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '40px',
     fontWeight: 300,
     color: 'white',
-    [theme.breakpoints.down('sm')]: { fontSize: '26px' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
 }));
 

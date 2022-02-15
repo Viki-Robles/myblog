@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
-      padding: '25px',
+      padding: '25px 0 25px 0',
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#4A63D6',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '20px',
+      fontSize: '18px',
     },
   },
 }));

@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   description: {
     fontWeight: 200,
     maxWidth: '600px',
+    [theme.breakpoints.down('sm')]: { fontSize: '1.3rem' },
   },
   blog: { color: '#4A63D6', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));

@@ -2,10 +2,11 @@ import { Grid, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   typography: {
     color: '#5d75e7',
     fontWeight: 300,
+    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
   },
   contactContainer: {
     display: 'flex',
@@ -25,7 +26,14 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     margin: '0 auto',
   },
-  content: { color: '#8998a7', textAlign: 'center', fontSize: '20px', padding: '20px 0 20px 0', fontWeight: 300 },
+  content: {
+    color: '#8998a7',
+    textAlign: 'center',
+    fontSize: '20px',
+    padding: '20px 10px 20px 10px',
+    fontWeight: 300,
+    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
+  },
 }));
 
 export const Contact = (): JSX.Element => {
