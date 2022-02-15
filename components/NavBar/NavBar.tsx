@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
-import useSound from 'use-sound';
-// import click from '../../public/static/click.mp4';
 
 const useStyles = makeStyles((theme) => ({
   navBar: {
@@ -45,8 +43,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const NavBar = (): JSX.Element => {
-  // const [play] = useSound(click);
-
   const classes = useStyles();
 
   return (

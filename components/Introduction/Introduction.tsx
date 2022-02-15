@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   name: {
-    padding: '20% 40px 35% 40px',
+    padding: '20% 40px 25% 40px',
   },
   description: {
     fontWeight: 200,

@@ -14,7 +14,7 @@ export const projectsData: ProjectsDataModel[] = [
     title: 'DFX by Digital Futures',
     subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
     details:
-      'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients.',
+      'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients. It contains a pool of candidates with very diverse backgrounds.',
     link: 'https://hellohub.com/',
     role:
       'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
@@ -48,5 +48,18 @@ export const projectsData: ProjectsDataModel[] = [
     subtitle:
       'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
     role: 'Responsible for the design and the implementation of the details page of each cocktail.',
+  },
+  {
+    title: 'Commento',
+    details:
+      'A complete Firebase signup and signin form with password validation and Authentication using Firebase console and functions.',
+    link: 'https://commentto.vercel.app/',
+    technologies: 'React, JavaScript, Material UI, Web API',
+    img:
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/5acf796822d73d3828d3da4706ce2aa7067eb4a7/media/projects/portfoliodrinkmeapp.svg',
+    id: 'drinkmeapp',
+    subtitle:
+      'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
+    role: '',
   },
 ];
