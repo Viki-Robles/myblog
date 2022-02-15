@@ -127,7 +127,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync('./_posts');
   const paths = files.map((fname) => ({
     params: {
-      slug: fname.replace('.md', ''),
+      slug: fname.replace('.mdx', ''),
     },
   }));
   return {
@@ -138,7 +138,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) => {
   const slug = params?.slug;
-  const md = fs.readFileSync(path.join('./_posts', `${slug}.md`)).toString();
+  const md = fs.readFileSync(path.join('./_posts', `${slug}.mdx`)).toString();
   const { data, content } = matter(md);
   const date = data.date?.toLocaleDateString('en-US', {
     year: 'numeric',

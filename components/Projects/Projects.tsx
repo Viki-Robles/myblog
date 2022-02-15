@@ -1,82 +1,49 @@
-import React, { Fragment, useRef, useState } from 'react';
-import { Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { projectsData } from '../../data/projects.testData';
+import React, { Fragment } from 'react';
 import { GetStaticProps } from 'next';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+import Box from '@mui/material/Box';
+import { projectsData } from '../../data/projects.testData';
+
 import Link from 'next/link';
-import styles from '../../styles/projects.module.css';
-import handleViewport from 'react-in-viewport';
 
 const useStyles = makeStyles((theme) => ({
-  swipe: {
+  button: {
     borderRadius: '5px',
     border: '1px solid #4A63D6',
-    padding: '20px',
-    width: '80%',
-    margin: '0 auto',
-    marginTop: '45px',
-    marginBottom: '45px',
-    position: 'relative',
-    '&:before': {
-      position: 'absolute',
-      display: 'block',
-      content: '""',
-      top: 0,
-      left: 0,
-      right: '100%',
-      width: '0%',
-      bottom: 0,
-      zIndex: 1,
-      backgroundColor: '#4A63D6',
-      animation: `$swipe-in-text 3000ms ${theme.transitions.easing.easeInOut}`,
+    padding: '5px 20px',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
+    textAlign: 'center',
+  },
+  projects: {
+    width: '300px',
+    height: '300px',
+    marginBottom: '40px',
+    background: '#161e26',
+    padding: '32px',
+    maxWidth: '400px',
+    borderRadius: '10px',
+    top: 0,
+    cursor: 'pointer',
+    transition: 'ease 0.5s',
+    '&:hover': {
+      transform: ' translate(0, -20px)',
     },
   },
 
-  '@keyframes swipe-in-text': {
-    '0%': {
-      width: '0%',
-      right: '100%',
-      left: 0,
-    },
-    '50%': {
-      left: 0,
-
-      width: '100%',
-      right: '0%',
-    },
-    '100%': {
-      width: '0%',
-      left: '100%',
-    },
-  },
   title: {
-    fontSize: '1.625rem',
+    margin: '0px 0px 10px',
+    fontWeight: 600,
+    fontSize: '1.3rem',
+    lineHeight: '1.1rem',
   },
   details: {
-    marginTop: '5px',
-    fontSize: '1.2rem',
-    marginBottom: '20px',
     fontWeight: 300,
+    color: '#8998a7',
   },
-  technologies: {
-    color: 'white',
-    paddingTop: '20px',
-  },
-  link: {
-    borderRadius: '5px',
-    marginTop: '10px',
-    backgroundColor: '#AB0552',
-    padding: '5px 12px',
-    color: 'white',
-    boxShadow: '2px 2px 8px 0px #000',
-    fontSize: '14px',
-    maxWidth: '100px',
-    textAlign: 'center',
-    fontWeight: 500,
-  },
-  description: {
-    padding: '0 30px',
-  },
+  projectTitle: { textAlign: 'center', marginBottom: '40px', fontWeight: 300, color: '#5d75e7' },
 }));
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -90,25 +57,26 @@ export const Projects = ({ projects }): JSX.Element => {
 
   return (
     <Fragment>
-      {projects.map(({ title, details, id }) => {
-        return (
-          <Fragment>
-            <Grid container className={classes.swipe} direction="column" id="projects">
-              <Typography className={classes.title}>{title}</Typography>
-              <Typography className={classes.details}>{details}</Typography>
-              <div>
-                <Link key={id} href={`/projects/${id}`}>
-                  <button className={styles.buttonPushable}>
-                    <span className={styles.buttonShadow}></span>
-                    <span className={styles.buttonEdge}></span>
-                    <span className={styles.buttonText}>READ MORE</span>
-                  </button>
-                </Link>
-              </div>
-            </Grid>
-          </Fragment>
-        );
-      })}
+      <Typography className={classes.projectTitle} variant="h4">
+        Some Archive projects
+      </Typography>
+      <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+        {projects.map(({ title, details, id }) => {
+          return (
+            <Fragment>
+              <Grid container className={classes.projects} id="projects">
+                <Typography className={classes.title}>{title}</Typography>
+                <Typography className={classes.details}>{details}</Typography>
+                <Box className={classes.button}>
+                  <Link key={id} href={`/projects/${id}`}>
+                    Read more
+                  </Link>
+                </Box>
+              </Grid>
+            </Fragment>
+          );
+        })}
+      </Box>
     </Fragment>
   );
 };

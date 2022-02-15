@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   },
   blog: {
     marginBottom: '40px',
-    background: '#1A222A',
+    background: '#161e26',
     padding: '32px',
     maxWidth: '400px',
     borderRadius: '10px',

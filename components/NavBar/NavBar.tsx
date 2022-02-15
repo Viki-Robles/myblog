@@ -8,6 +8,7 @@ import useSound from 'use-sound';
 const useStyles = makeStyles((theme) => ({
   navBar: {
     width: 'auto',
+    fontFamily: 'Inter',
     [theme.breakpoints.down('sm')]: {
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',

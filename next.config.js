@@ -5,3 +5,5 @@ module.exports = {
     domains: ['raw.githubusercontent.com'],
   },
 };
+
+// ![image](./eclipse.svg)
