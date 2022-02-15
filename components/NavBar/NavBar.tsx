@@ -58,6 +58,9 @@ export const NavBar = (): JSX.Element => {
           <Typography className={classes.link}>
             <Link href="/#projects">work</Link>
           </Typography>
+          <Typography className={classes.link}>
+            <Link href="/goodies">goodies</Link>
+          </Typography>
         </Grid>
         <Grid container md={5}></Grid>
       </Grid>

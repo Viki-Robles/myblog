@@ -85,14 +85,14 @@ function MyApp({ Component, pageProps }): JSX.Element {
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <Paper className={classes.paper}>
-            <IconButton
+            {/* <IconButton
               sx={{ ml: 1 }}
               onClick={colorMode.toggleColorMode}
               color="inherit"
               className={classes.iconButton}
             >
               {theme.palette.mode === 'dark' ? <Brightness7Rounded /> : <Brightness4Rounded />}
-            </IconButton>
+            </IconButton> */}
             <Layout>
               <Component {...pageProps} />
             </Layout>
