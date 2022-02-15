@@ -9,28 +9,28 @@ import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   button: {
+    textAlign: 'center',
+    position: 'absolute',
     borderRadius: '5px',
     border: '1px solid #4A63D6',
     padding: '0.75rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',
-    textAlign: 'center',
-    position: 'absolute',
     left: '27px',
     bottom: '10px',
   },
   projects: {
-    gap: 4,
     position: 'relative',
     flexDirection: 'column',
     width: '300px',
     height: '300px',
+    maxWidth: '400px',
+    borderRadius: '8px',
+    padding: '25px',
     marginBottom: '40px',
     background: '#161e26',
-    padding: '25px',
-    maxWidth: '400px',
-    borderRadius: '10px',
+    gap: 4,
     top: 0,
     cursor: 'pointer',
     transition: 'ease 0.5s',
@@ -51,13 +51,21 @@ const useStyles = makeStyles((theme) => ({
   },
   projectTitle: {
     textAlign: 'center',
-    marginBottom: '40px',
+    marginBottom: '5px',
     fontWeight: 300,
     color: '#5d75e7',
     [theme.breakpoints.down('sm')]: { fontSize: '28px' },
   },
   projectBox: {
     paddingBottom: '25%',
+  },
+  projectsubTitle: {
+    fontSize: '18px',
+    textAlign: 'center',
+    marginBottom: '40px',
+    fontWeight: 300,
+    color: 'white',
+    [theme.breakpoints.down('sm')]: { fontSize: '26px' },
   },
 }));
 
@@ -75,6 +83,7 @@ export const Projects = ({ projects }): JSX.Element => {
       <Typography className={classes.projectTitle} variant="h4">
         Some Archive projects
       </Typography>
+      <Typography className={classes.projectsubTitle}>view projects</Typography>
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {projects.map(({ title, details, id }) => {
           return (
