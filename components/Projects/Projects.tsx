@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: 'pointer',
     transition: 'ease 0.5s',
     boxShadow:
-      'rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset',
+      'rgb(0 0 0 / 20%) 0px 12px 28px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(116 116 116 / 5%) 0px 0px 0px 1px inset',
     '&:hover': {
       transform: ' translate(0, -20px)',
     },
