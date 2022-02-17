@@ -16,15 +16,7 @@ const useStyles = makeStyles(() => ({
       color: '#4A63D6',
     },
   },
-  button: {
-    border: '1px solid #4A63D6',
-    borderRadius: '5px',
-    padding: '0.6rem 1rem',
-    fontSize: '13px',
-    maxWidth: '140px',
-    marginTop: '10px',
-    textAlign: 'center',
-  },
+
   blog: {
     marginBottom: '40px',
     background: '#161e26',
@@ -49,6 +41,16 @@ const useStyles = makeStyles(() => ({
     fontSize: '1rem',
     color: '#8998a7',
   },
+
+  button: {
+    border: '1px solid #4A63D6',
+    borderRadius: '5px',
+    padding: '0.6rem 1rem',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
+    textAlign: 'center',
+  },
 }));
 
 export interface BlogProps {
@@ -64,7 +66,7 @@ export const Blog = (): JSX.Element => {
 
   const totalBlogPosts = blogData.length;
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', padding: '20px' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography className={classes.blogHeader}>Blog Posts</Typography>
         <Typography className={classes.totalPosts}>{totalBlogPosts} Articles</Typography>

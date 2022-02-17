@@ -86,6 +86,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
           <Image src="/instagram.svg" width={22} height={22} />
           <Image src="/linkedin.svg" width={22} height={22} />
           <Image src="/github.svg" width={22} height={22} />
+          <Image src="/sandbox.svg" width={22} height={22} />
         </Box>
       </Box>
     </Box>
