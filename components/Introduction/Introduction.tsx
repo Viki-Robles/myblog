@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { SocialMedia } from '../SocialMedia/SocialMedia';
 import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,8 +19,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  name: {
+  introduction: {
     padding: '20% 40px 25% 40px',
+    [theme.breakpoints.up('lg')]: { paddingBottom: '15%' },
   },
   description: {
     fontWeight: 200,
@@ -35,13 +35,12 @@ export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.name} md={12} xl={12} spacing={4}>
+    <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
       <Grid item md={6} xl={6}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
           <Typography variant="h1" className={classes.occupation}>
             blueMonkey.
           </Typography>
-          <SocialMedia />
         </motion.div>
         <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
       </Grid>

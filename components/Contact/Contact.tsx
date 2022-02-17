@@ -3,27 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
-  typography: {
-    color: '#5d75e7',
-    fontWeight: 300,
-    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
-  },
   contactContainer: {
     display: 'flex',
     flexDirection: 'column',
     maxWidth: '600px',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '0 auto',
-  },
-  button: {
-    borderRadius: '5px',
-    border: '1px solid #4A63D6',
-    padding: '0.75rem 1rem',
-    fontSize: '13px',
-    maxWidth: '140px',
-    marginTop: '10px',
-    textAlign: 'center',
     margin: '0 auto',
   },
   content: {
@@ -34,6 +19,22 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
+  contactHeader: {
+    color: '#5d75e7',
+    fontWeight: 300,
+    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
+  },
+  button: {
+    borderRadius: '5px',
+    border: '1px solid #4A63D6',
+    padding: '0.75rem 1rem',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
+    textAlign: 'center',
+    margin: '0 auto',
+    [theme.breakpoints.up('lg')]: { fontSize: '15px' },
+  },
 }));
 
 export const Contact = (): JSX.Element => {
@@ -41,7 +42,7 @@ export const Contact = (): JSX.Element => {
 
   return (
     <Grid container className={classes.contactContainer}>
-      <Typography className={classes.typography} variant="h4">
+      <Typography className={classes.contactHeader} variant="h4">
         Get In Touch
       </Typography>
       <Typography className={classes.content}>

@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '10px',
     left: '27px',
     bottom: '10px',
+    [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
   projects: {
     position: 'relative',
@@ -60,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projectBox: {
     paddingBottom: '25%',
+    [theme.breakpoints.up('lg')]: { paddingBottom: '14%' },
   },
   projectsubTitle: {
     fontSize: '18px',
