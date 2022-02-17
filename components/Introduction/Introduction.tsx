@@ -4,6 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
+  introduction: {
+    padding: '20% 40px 25% 40px',
+    [theme.breakpoints.up('lg')]: { paddingBottom: '15%' },
+  },
   occupation: {
     [theme.breakpoints.up('md')]: {
       fontSize: '4.6em',
@@ -18,16 +22,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
-
-  introduction: {
-    padding: '20% 40px 25% 40px',
-    [theme.breakpoints.up('lg')]: { paddingBottom: '15%' },
-  },
   description: {
     fontWeight: 200,
     maxWidth: '600px',
     [theme.breakpoints.down('sm')]: { fontSize: '1.3rem' },
   },
+
   blog: { color: '#4A63D6', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
 

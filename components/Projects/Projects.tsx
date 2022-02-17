@@ -8,20 +8,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
-  button: {
-    textAlign: 'center',
-    position: 'absolute',
-    borderRadius: '5px',
-    border: '1px solid #4A63D6',
-    padding: '0.75rem 1rem',
-    fontSize: '13px',
-    maxWidth: '140px',
-    marginTop: '10px',
-    left: '27px',
-    bottom: '10px',
-    [theme.breakpoints.up('lg')]: { fontSize: '15px' },
+  projectBox: {
+    paddingBottom: '25%',
+    [theme.breakpoints.up('lg')]: { paddingBottom: '14%' },
   },
-  projects: {
+
+  projectTitle: {
+    textAlign: 'center',
+    marginBottom: '5px',
+    fontWeight: 300,
+    color: '#5d75e7',
+    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
+  },
+
+  projectsubTitle: {
+    fontSize: '18px',
+    textAlign: 'center',
+    marginBottom: '40px',
+    fontWeight: 300,
+    color: 'white',
+    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
+  },
+
+  project: {
     position: 'relative',
     flexDirection: 'column',
     width: '300px',
@@ -48,28 +57,24 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.3rem',
     lineHeight: '1.1rem',
   },
+
   details: {
     fontWeight: 300,
     color: '#8998a7',
   },
-  projectTitle: {
+
+  button: {
     textAlign: 'center',
-    marginBottom: '5px',
-    fontWeight: 300,
-    color: '#5d75e7',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
-  },
-  projectBox: {
-    paddingBottom: '25%',
-    [theme.breakpoints.up('lg')]: { paddingBottom: '14%' },
-  },
-  projectsubTitle: {
-    fontSize: '18px',
-    textAlign: 'center',
-    marginBottom: '40px',
-    fontWeight: 300,
-    color: 'white',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
+    position: 'absolute',
+    borderRadius: '5px',
+    border: '1px solid #4A63D6',
+    padding: '0.75rem 1rem',
+    fontSize: '13px',
+    maxWidth: '140px',
+    marginTop: '10px',
+    left: '27px',
+    bottom: '10px',
+    [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
 }));
 
@@ -92,7 +97,7 @@ export const Projects = ({ projects }): JSX.Element => {
         {projects.map(({ title, details, id }) => {
           return (
             <Fragment>
-              <Grid container className={classes.projects} id="projects">
+              <Grid container className={classes.project} id="projects">
                 <div>
                   <Image src="/folder.svg" width={30} height={30} />
                 </div>

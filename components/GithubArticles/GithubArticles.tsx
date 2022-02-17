@@ -11,24 +11,29 @@ const useStyles = makeStyles(() => ({
       backgroundColor: '#1E1E1B',
     },
   },
-  line: {
-    borderBottom: '1px solid #232b2b',
-    padding: '10px',
+
+  githubsubTitle: {
+    marginTop: '10px',
   },
+
+  githubTitle: {
+    fontSize: '24px',
+    color: '#DCDBDB',
+  },
+
   githubItemDetails: {
     alignSelf: 'center',
     color: '#7F7FF8',
     fontSize: '16px',
   },
+
+  line: {
+    borderBottom: '1px solid #232b2b',
+    padding: '10px',
+  },
+
   starIcon: {
     marginRight: '10px',
-  },
-  githubsubTitle: {
-    marginTop: '10px',
-  },
-  githubTitle: {
-    fontSize: '24px',
-    color: '#DCDBDB',
   },
 }));
 
