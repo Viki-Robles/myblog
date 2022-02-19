@@ -90,23 +90,23 @@ export const Projects = ({ projects }): JSX.Element => {
   return (
     <Box className={classes.projectBox}>
       <Typography className={classes.projectTitle} variant="h4">
-        Some Archive projects
+        Some archive projects
       </Typography>
-      <Typography className={classes.projectsubTitle}>view projects</Typography>
+      <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {projects.map(({ title, details, id }) => {
           return (
             <Fragment>
               <Grid container className={classes.project} id="projects">
                 <div>
-                  <Image src="/folder.svg" width={30} height={30} />
+                  <Image src="/folder.svg" width={30} height={30} alt="project" />
                 </div>
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 <div>
                   <Box className={classes.button}>
                     <Link key={id} href={`/projects/${id}`}>
-                      Read more
+                      Open project
                     </Link>
                   </Box>
                 </div>

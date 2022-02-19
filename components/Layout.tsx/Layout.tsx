@@ -86,10 +86,15 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
       </Box>
       <Box className={classes.socialMediaContainer}>
         <Box display="flex" className={classes.socialMedia}>
-          <Image src="/instagram.svg" width={22} height={22} className={classes.socialMediaItem} />
-          <Image src="/linkedin.svg" width={22} height={22} className={classes.socialMediaItem} />
-          <Image src="/github.svg" width={22} height={22} className={classes.socialMediaItem} />
-          <Image src="/sandbox.svg" width={22} height={22} className={classes.socialMediaItem} />
+          <Link href="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/" passHref>
+            <Image src="/linkedin.svg" width={22} height={22} className={classes.socialMediaItem} />
+          </Link>
+          <Link href="https://github.com/Viki-Robles" passHref>
+            <Image src="/github.svg" width={22} height={22} className={classes.socialMediaItem} />
+          </Link>
+          <Link href="https://codesandbox.io/u/Viki-Robles" passHref>
+            <Image src="/sandbox.svg" width={22} height={22} className={classes.socialMediaItem} />
+          </Link>
         </Box>
       </Box>
     </Box>
