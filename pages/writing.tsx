@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
+    marginRight: '25px',
     fontSize: '40px',
     textOrientation: 'sideways',
     writingMode: 'vertical-lr',
