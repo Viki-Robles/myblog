@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#484d68',
     lineHeight: '1.3rem',
     writingMode: 'vertical-lr',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   sideElemenetItem: {
     display: 'flex',
@@ -50,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#484d68',
     lineHeight: '1.3rem',
     writingMode: 'vertical-lr',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   socialMedia: {
     position: 'relative',
