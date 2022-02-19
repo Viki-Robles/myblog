@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   sideElemenetItem: {
     display: 'flex',
@@ -54,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '1.3rem',
     writingMode: 'vertical-lr',
     [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
