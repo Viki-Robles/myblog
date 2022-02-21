@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '20% 40px 25% 40px',
     [theme.breakpoints.up('lg')]: { paddingBottom: '15%' },
   },
-  occupation: {
-    [theme.breakpoints.up('md')]: {
-      fontSize: '4.6em',
+  name: {
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '8em',
       textAlign: 'right',
     },
     [theme.breakpoints.down('md')]: {
@@ -52,8 +52,8 @@ export const Introduction = (): JSX.Element => {
     <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
       <Grid item md={6} xl={6}>
         <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
-          <Typography variant="h1" className={classes.occupation}>
-            blueMonkey.
+          <Typography variant="h1" className={classes.name}>
+            Vasiliki.V
           </Typography>
           {/* <Box className={classes.button}>
             <Link href="/">Check my course</Link>
@@ -63,7 +63,7 @@ export const Introduction = (): JSX.Element => {
       </Grid>
       <Grid item md={6} xl={6} className={classes.description}>
         <Typography variant="h5" className={classes.description}>
-          Hi! My name's Vicky Vasilopoulou and I‘m a frontend developer🦄. In the evenings you can find me working on
+          Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
           personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom where
           I occasionally write about my personal coding experience on my
           <a href="https://dev.to/vikirobles" className={classes.blog}>
