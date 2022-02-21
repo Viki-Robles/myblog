@@ -45,23 +45,29 @@ const useStyles = makeStyles((theme) => ({
 
 export const NavBar = (): JSX.Element => {
   const classes = useStyles();
+  // https://github.com/atlassian/react-beautiful-dnd
 
   return (
     <Fragment>
       <Grid container className={classes.navBar}>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
-          <Typography className={classes.link}>
-            <Link href="/">home</Link>
-          </Typography>
-          <Typography className={classes.link}>
-            <Link href="/writing">posts</Link>
-          </Typography>
-          <Typography className={classes.link}>
-            <Link href="/#projects">work</Link>
-          </Typography>
-          {/* <Typography className={classes.link}>
-            <Link href="/goodies">goodies</Link>
-          </Typography> */}
+          <div>
+            <Typography className={classes.link}>
+              <Link href="/">home</Link>
+            </Typography>
+          </div>
+
+          <div>
+            <Typography className={classes.link}>
+              <Link href="/writing">posts</Link>
+            </Typography>
+          </div>
+
+          <div>
+            <Typography className={classes.link}>
+              <Link href="/#projects">work</Link>
+            </Typography>
+          </div>
         </Grid>
         <Grid container md={5}></Grid>
       </Grid>
