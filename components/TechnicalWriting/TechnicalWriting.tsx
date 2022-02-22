@@ -1,14 +1,14 @@
 import React from 'react';
-import { Typography, Box } from '@material-ui/core';
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
-import { getTechnicalWritingData } from '../../data/technical.testData';
-import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import Link from 'next/link';
+import Timeline from '@material-ui/lab/Timeline';
+import { Typography, Box } from '@material-ui/core';
+import { getTechnicalWritingData } from '../../data/technical.testData';
 
 interface Props {
   window?: () => Window;

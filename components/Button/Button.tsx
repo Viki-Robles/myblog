@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   button: {

@@ -1,8 +1,9 @@
-import { Grid, Typography, Box } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { githubData } from '../GithubArticles/github.testData';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Grid, Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { githubData } from '../GithubArticles/github.testData';
 
 const useStyles = makeStyles(() => ({
   githubItem: {

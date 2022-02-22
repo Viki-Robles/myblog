@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import Box from '@mui/material/Box';
 import { projectsData } from '../../data/projects.testData';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
-import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 import { ScaleBox } from '../ScaleBox/ScaleBox';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   projectBox: {

@@ -2,12 +2,7 @@ import React, { useMemo, useContext } from 'react';
 import { IntersectionContext } from '../StaggerWrap/intersectionObserver';
 import { MotionBox } from '../MotionBox/MotionBox';
 
-export const ScaleBox = ({
-  children,
-  delayOrder, // order of appearance
-  duration = 0.4,
-  easing = [0.42, 0, 0.58, 1], // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
-}) => {
+export const ScaleBox = ({ children, delayOrder, duration = 0.4, easing = [0.42, 0, 0.58, 1] }) => {
   const { inView } = useContext(IntersectionContext);
   const transition = useMemo(
     () => ({

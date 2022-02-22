@@ -1,14 +1,15 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { Grid, Typography, Box } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import { makeStyles } from '@material-ui/core/styles';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { Grid, Typography, Box } from '@material-ui/core';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 interface BlogPostProps {
   content: string;

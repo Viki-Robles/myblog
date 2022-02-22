@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Grid, Typography, Paper } from '@material-ui/core';
-import Box from '@mui/material/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import { blogData } from '../Blog/blog.testData';
 import Link from 'next/link';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Paper } from '@material-ui/core';
+import Box from '@mui/material/Box';
+import { blogData } from '../Blog/blog.testData';
 
 const useStyles = makeStyles(() => ({
   blogHeader: {

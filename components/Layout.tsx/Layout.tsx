@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import { NavBar } from '../NavBar/NavBar';
-import Link from 'next/link';
-import Image from 'next/image';
 
 interface LayoutProps {
   children: ReactNode;

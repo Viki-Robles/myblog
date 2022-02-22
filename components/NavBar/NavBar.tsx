@@ -1,9 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
-import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   navBar: {

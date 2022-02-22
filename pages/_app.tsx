@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Layout } from '../components/Layout.tsx/Layout';
-import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import Box from '@mui/material/Box';
-import Paper from '@material-ui/core/Paper';
 import { ColorModeContext } from 'react-color-mode';
 import FillCircleLoader from 'react-loaders-kit/lib/fillCircle/FillCircleLoader';
-// import { WifiLoader } from 'react-awesome-loaders';
-// import Brightness4Rounded from '@material-ui/icons/Brightness4Rounded';
-// import Brightness7Rounded from '@material-ui/icons/Brightness7Rounded';
+import Paper from '@material-ui/core/Paper';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 import { createTheme } from '@mui/material';
 import { blue } from '@mui/material/colors';
+import Box from '@mui/material/Box';
+import { Layout } from '../components/Layout.tsx/Layout';
 import '../styles/globals.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -108,14 +105,6 @@ function MyApp({ Component, pageProps }): JSX.Element {
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <Paper className={classes.paper}>
-              {/* <IconButton
-              sx={{ ml: 1 }}
-              onClick={colorMode.toggleColorMode}
-              color="inherit"
-              className={classes.iconButton}
-            >
-              {theme.palette.mode === 'dark' ? <Brightness7Rounded /> : <Brightness4Rounded />}
-            </IconButton> */}
               <Layout>
                 <Component {...pageProps} />
               </Layout>
