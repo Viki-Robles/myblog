@@ -1,17 +1,20 @@
 import React from 'react';
-import { Typography, Grid, Box } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
+import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 
 const useStyles = makeStyles((theme) => ({
   introduction: {
+    display: 'flex',
+    alignItems: 'flex-end',
     padding: '20% 40px 25% 40px',
-    [theme.breakpoints.up('lg')]: { paddingBottom: '15%' },
+    [theme.breakpoints.up('lg')]: { paddingBottom: '15%', justifyContent: 'center', alignItems: 'center' },
   },
   name: {
+    marginRight: '20px',
     [theme.breakpoints.up('lg')]: {
-      fontSize: '8em',
+      fontSize: '7em',
       textAlign: 'right',
     },
     [theme.breakpoints.down('md')]: {
@@ -49,28 +52,28 @@ export const Introduction = (): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
-      <Grid item md={6} xl={6}>
-        <motion.div initial={{ x: 250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}>
-          <Typography variant="h1" className={classes.name}>
-            Vasiliki.V
-          </Typography>
-          {/* <Box className={classes.button}>
-            <Link href="/">Check my course</Link>
-          </Box> */}
-        </motion.div>
-        <motion.div initial={{ x: -250 }} animate={{ x: 0 }} transition={{ duration: 1, type: 'spring' }}></motion.div>
+    <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
+      <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
+        <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
+          <Grid item md={6} xl={6}>
+            <Typography variant="h1" className={classes.name}>
+              blueMonkey.
+            </Typography>
+          </Grid>
+        </FadeInUpBox>
+        <FadeInUpBox yOffset={48} duration={1} delayOrder={1}>
+          <Grid item md={6} xl={6} className={classes.description}>
+            <Typography variant="h5" className={classes.description}>
+              Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
+              personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom
+              where I occasionally write about my personal coding experience on my
+              <a href="https://dev.to/vikirobles" className={classes.blog}>
+                Blog📓.
+              </a>
+            </Typography>
+          </Grid>
+        </FadeInUpBox>
       </Grid>
-      <Grid item md={6} xl={6} className={classes.description}>
-        <Typography variant="h5" className={classes.description}>
-          Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
-          personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom where
-          I occasionally write about my personal coding experience on my
-          <a href="https://dev.to/vikirobles" className={classes.blog}>
-            Blog📓.
-          </a>
-        </Typography>
-      </Grid>
-    </Grid>
+    </StaggerWrap>
   );
 };

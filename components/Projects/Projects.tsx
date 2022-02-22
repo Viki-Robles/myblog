@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import Box from '@mui/material/Box';
 import { projectsData } from '../../data/projects.testData';
+import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
+import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
+import { ScaleBox } from '../ScaleBox/ScaleBox';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -87,16 +90,22 @@ export const getStaticProps: GetStaticProps = async () => {
 export const Projects = ({ projects }): JSX.Element => {
   const classes = useStyles();
 
+  const rand = (min, max) => {
+    return Math.floor(Math.random() * (+max - +min)) + +min;
+  };
+
   return (
     <Box className={classes.projectBox}>
-      <Typography className={classes.projectTitle} variant="h4">
-        Some archive projects
-      </Typography>
-      <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
+      <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
+        <Typography className={classes.projectTitle} variant="h4">
+          Some archive projects
+        </Typography>
+        <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
+      </StaggerWrap>
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {projects.map(({ title, details, id }) => {
           return (
-            <Fragment>
+            <ScaleBox duration={1} delayOrder={rand(1, 12)}>
               <Grid container className={classes.project} id="projects">
                 <div>
                   <Image src="/folder.svg" width={30} height={30} alt="project" />
@@ -111,7 +120,7 @@ export const Projects = ({ projects }): JSX.Element => {
                   </Box>
                 </div>
               </Grid>
-            </Fragment>
+            </ScaleBox>
           );
         })}
       </Box>

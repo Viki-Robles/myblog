@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
+import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,32 +47,29 @@ const useStyles = makeStyles((theme) => ({
 
 export const NavBar = (): JSX.Element => {
   const classes = useStyles();
-  // https://github.com/atlassian/react-beautiful-dnd
 
   return (
-    <Fragment>
+    <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
       <Grid container className={classes.navBar}>
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
-          <div>
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Typography className={classes.link}>
               <Link href="/">home</Link>
             </Typography>
-          </div>
-
-          <div>
+          </FadeInUpBox>
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={2}>
             <Typography className={classes.link}>
               <Link href="/writing">posts</Link>
             </Typography>
-          </div>
-
-          <div>
+          </FadeInUpBox>
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
             <Typography className={classes.link}>
               <Link href="/#projects">work</Link>
             </Typography>
-          </div>
+          </FadeInUpBox>
         </Grid>
         <Grid container md={5}></Grid>
       </Grid>
-    </Fragment>
+    </StaggerWrap>
   );
 };
