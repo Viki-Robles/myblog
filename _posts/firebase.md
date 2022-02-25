@@ -8,25 +8,37 @@ Hi guys,
 
 This is a step by step guide on how you can build and authentication login form with firebase and react. I have done it a couple of times and I want to share my experience as I struggled when I first did it.
 
-So if you dont know how to use Firebase is fine they have really good documentation but first you go to their website make an account and I will show you the steps...
+You can also access some parts of the code on these links:
 
-Once you create an account you can go to the console and create a new project as picture shows below
+- [Github Link](https://github.com/Viki-Robles/commentto)
+- [CodesAndSandbox](https://codesandbox.io/s/form-yup-typescript-e7yum)
 
-Insert the name of your project and the rest of the details that it requests once you are here:
+So if you dont know how to use Firebase is fine they have really good documentation but first you need to create a new project on the ewebsite and also create your account.
 
-Then on the right side below the subheader 'Get started by adding Firebase to your app' click the third icon which is the web(</>) symbol.
+Once you create an account you can go to the console and create a new project as picture shows below.
 
-You should be seeing this:
+![Alt Text](/picsone.png)
 
-What you see are the keys that you are going to use on your react app to connect it with firebase.
+Insert the name of your project and the rest of the details that it requests.
+
+Then on the right side below the subheader 'Get started by adding Firebase to your app' click the third icon which is the web(</>) symbol. Click to create a web app in this case.
 
 You can access those keys anytime simply when you click on project settings as you see below.
 
-You need to enable on the project the email and password authentication for email/password:
+![Alt Text](/firebase.svg)
 
-I am assuming you know how to create a react app but if not you can check documentation here but make sure you have TypeScript installed.
+You need to enable on the project the email and password authentication for email/password.
+Simply click on the `Authentication` tab and select email/password `Enabled`.
 
-Then based on firebase documentation you need to link and connect your project. You can create on your root of your project first a .env file and you have to add those variables:
+For our project we will use React and TypeScript.
+
+Then based on firebase documentation you need to link and connect your project.
+For this app I am using firebase v9.
+
+Now on your react app you need to install Firebase SDK and login. Install firebase and firebase tools on your machine.Then you initialise your app with firebase -init and follow the instructions from their documentation so that you can initialise your project that is on the cloud, is quite simple and straightforward. Then try and do firebase login it should redirect you and then it will mean that you are connected.
+Once this is done, create a firebase.ts file.
+
+Once you have properly connect your project to firebase you can create on your root of your project first a .env file and you have to add those variables:
 
 Each value corresponds to the values you see from the picture above.
 
@@ -39,14 +51,9 @@ REACT_APP_FIREBASE_MESSAGING_SENDER_ID = '';
 REACT_APP_FIREBASE_STORAGE_BUCKET = '';
 ```
 
-For this app I am using firebase v9.
-
-Now on your react app you need to install Firebase SDK and login. Install firebase and firebase tools on your machine.Then you initialise your app with firebase -init and follow the instructions from their documentation so that you can initialise your project that is on the cloud, is quite simple and straightforward. Then try and do firebase login it should redirect you and then it will mean that you are connected.
-Once this is done, create a firebase.ts file.
-
 ```js
-mport { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 const FIREBASE_CONFIG = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -55,14 +62,14 @@ const FIREBASE_CONFIG = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-}
+};
 
-const firebaseApp = initializeApp(FIREBASE_CONFIG)
+const firebaseApp = initializeApp(FIREBASE_CONFIG);
 
-export const auth = getAuth(firebaseApp)
+export const auth = getAuth(firebaseApp);
 ```
 
-Then you create an AuthProvider file Authprovider.ts
+Then you create an AuthProvider file `Authprovider.ts`
 
 ```js
 
@@ -168,7 +175,7 @@ function App(): JSX.Element {
 
 ```
 
-Now are signUp.tsx file:
+Now are `signUp.tsx` file:
 
 ```js
 

@@ -35,12 +35,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   content: {
+    width: 'inherit',
+    maxWidth: '900px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingLeft: '32px',
+    paddingRight: '32px',
     fontFamily: 'Inter',
     letterSpacing: '0.03rem',
-    fontWeight: 300,
     fontSize: '1.1rem',
     lineHeight: 'calc(1em + 0.625rem)',
-    width: 'inherit',
   },
   author: {
     alignSelf: 'center',
@@ -59,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0,
   },
   details: {
+    justifyContent: 'center',
     marginTop: '10px',
   },
   picture: {
@@ -75,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     padding: '8px',
     marginLeft: '10px',
+  },
+  authorBox: {
+    justifyContent: 'center',
   },
 }));
 
@@ -104,7 +112,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
         <Grid item className={classes.pictureContainer}>
           <Image src="/avatar.png" width={50} height={50} className={classes.picture} />
         </Grid>
-        <Grid item>
+        <Grid item className={classes.authorBox}>
           <Typography className={classes.author}>{frontmatter.author}</Typography>
           <Typography className={classes.date}>10 Feb, 1 min read</Typography>
         </Grid>
@@ -128,7 +136,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync('./_posts');
   const paths = files.map((fname) => ({
     params: {
-      slug: fname.replace('.mdx', ''),
+      slug: fname.replace('.md', ''),
     },
   }));
   return {
@@ -139,7 +147,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) => {
   const slug = params?.slug;
-  const md = fs.readFileSync(path.join('./_posts', `${slug}.mdx`)).toString();
+  const md = fs.readFileSync(path.join('./_posts', `${slug}.md`)).toString();
   const { data, content } = matter(md);
   const date = data.date?.toLocaleDateString('en-US', {
     year: 'numeric',

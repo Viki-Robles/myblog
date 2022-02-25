@@ -4,6 +4,8 @@ author: 'Vicky Vasilopoulou'
 icon: ✅
 ---
 
+![Alt Text](/form.svg)
+
 ## For the currrent project I am using Yup, Firebase for login and TypeScript.
 
 ```js

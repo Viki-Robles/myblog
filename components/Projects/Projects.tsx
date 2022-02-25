@@ -104,7 +104,7 @@ export const Projects = ({ projects }): JSX.Element => {
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {projects.map(({ title, details, id }) => {
           return (
-            <ScaleBox duration={1.5} delayOrder={rand(1, 12)}>
+            <ScaleBox duration={1} delayOrder={rand(1, 12)}>
               <Grid container className={classes.project} id="projects">
                 <div>
                   <Image src="/folder.svg" width={30} height={30} alt="project" />

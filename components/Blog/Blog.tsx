@@ -90,7 +90,9 @@ export const Blog = (): JSX.Element => {
                   <Typography className={classes.blogDetails}>{details}</Typography>
                   <div>
                     <Box className={classes.button}>
-                      <Link href={link}>READ MORE</Link>
+                      <Link href={link} shallow={true}>
+                        READ MORE
+                      </Link>
                     </Box>
                   </div>
                 </Paper>
