@@ -10,7 +10,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-end',
     gap: '10px',
     padding: '20% 40px 25% 40px',
-    [theme.breakpoints.up('lg')]: { paddingBottom: '15%', justifyContent: 'center', alignItems: 'center' },
+    [theme.breakpoints.up('lg')]: {
+      paddingBottom: '15%',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   name: {
     marginRight: '20px',
