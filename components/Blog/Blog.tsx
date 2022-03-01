@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Paper } from '@material-ui/core';
 import Box from '@mui/material/Box';
 import { blogData } from '../Blog/blog.testData';
+import { ScaleBox } from '../ScaleBox/ScaleBox';
 
 const useStyles = makeStyles((theme) => ({
   blogHeader: {
@@ -25,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     borderRadius: '8px',
     height: '400px',
-    // transition: 'all 0.8s cubic-bezier(0.045, 0.52, 0.165, 1) 0s',
-    // '&:hover': {
-    //   transform: 'scale(1,1)',
-    // },
   },
   square: {
     width: '100px',
@@ -72,8 +69,11 @@ export interface BlogProps {
 }
 
 export const Blog = (): JSX.Element => {
-  const [searchTerm, setSearchTerm] = useState('');
   const classes = useStyles();
+
+  const rand = (min, max) => {
+    return Math.floor(Math.random() * (+max - +min)) + +min;
+  };
 
   const totalBlogPosts = blogData.length;
   return (
@@ -82,18 +82,12 @@ export const Blog = (): JSX.Element => {
         <Typography className={classes.blogHeader}>Blog Posts</Typography>
         <Typography className={classes.totalPosts}>{totalBlogPosts} Articles</Typography>
       </Box>
+
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
         {blogData &&
-          blogData
-            ?.filter((val) => {
-              if (searchTerm === '') {
-                return val;
-              } else if (val.tags.includes(searchTerm.toLocaleLowerCase())) {
-                return val;
-              }
-            })
-            .map(({ title, link, details }) => {
-              return (
+          blogData.map(({ title, link, details }) => {
+            return (
+              <ScaleBox duration={1} delayOrder={rand(1, 12)}>
                 <Paper className={classes.blog}>
                   <Typography className={classes.blogTitle} variant="h5">
                     {title}
@@ -106,8 +100,9 @@ export const Blog = (): JSX.Element => {
                     </Link>
                   </Box>
                 </Paper>
-              );
-            })}
+              </ScaleBox>
+            );
+          })}
       </Box>
     </Box>
   );
