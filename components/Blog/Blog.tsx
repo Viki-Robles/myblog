@@ -5,7 +5,7 @@ import { Typography, Paper } from '@material-ui/core';
 import Box from '@mui/material/Box';
 import { blogData } from '../Blog/blog.testData';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   blogHeader: {
     fontSize: '40px',
   },

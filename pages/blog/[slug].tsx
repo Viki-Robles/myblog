@@ -45,6 +45,11 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '0.03rem',
     fontSize: '1.1rem',
     lineHeight: 'calc(1em + 0.625rem)',
+    [theme.breakpoints.down('sm')]: {
+      width: 'inherit',
+      padding: 0,
+      margin: 0,
+    },
   },
   author: {
     alignSelf: 'center',
@@ -61,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '40px',
     marginTop: '40px',
     letterSpacing: 0,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1em',
+      padding: '10px',
+    },
   },
   details: {
     justifyContent: 'center',
