@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.3rem',
     },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.6rem',
+    },
   },
 
   blog: {
