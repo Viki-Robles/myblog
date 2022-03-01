@@ -8,9 +8,8 @@ import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 const useStyles = makeStyles((theme) => ({
   navBar: {
     fontFamily: 'Inter',
-
     [theme.breakpoints.down('sm')]: {
-      height: '15vw',
+      height: '25vw',
       display: 'grid',
       boxShadow: '0 2px 10px 0 #000',
       padding: '25px 0 25px 0',
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     paddingLeft: '50px',
     [theme.breakpoints.down('sm')]: {
+      paddingLeft: 0,
       justifyContent: 'center',
       margin: '0 auto',
       alignItems: 'center',

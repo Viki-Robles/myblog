@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: '#4A63D6',
     },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.3rem',
+    },
   },
 
   blog: {
@@ -26,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     borderRadius: '8px',
     height: '400px',
+    [theme.breakpoints.down('sm')]: {
+      height: '450px',
+    },
   },
   square: {
     width: '100px',
@@ -77,7 +83,7 @@ export const Blog = (): JSX.Element => {
 
   const totalBlogPosts = blogData.length;
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', padding: '20px' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography className={classes.blogHeader}>Blog Posts</Typography>
         <Typography className={classes.totalPosts}>{totalBlogPosts} Articles</Typography>
@@ -89,9 +95,7 @@ export const Blog = (): JSX.Element => {
             return (
               <ScaleBox duration={1} delayOrder={rand(1, 12)}>
                 <Paper className={classes.blog}>
-                  <Typography className={classes.blogTitle} variant="h5">
-                    {title}
-                  </Typography>
+                  <Typography className={classes.blogTitle}>{title}</Typography>
                   <Typography className={classes.blogDetails}>{details}</Typography>
 
                   <Box className={classes.button}>

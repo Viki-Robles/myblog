@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   introduction: {
     display: 'flex',
     alignItems: 'flex-end',
+    gap: '10px',
     padding: '20% 40px 25% 40px',
     [theme.breakpoints.up('lg')]: { paddingBottom: '15%', justifyContent: 'center', alignItems: 'center' },
   },
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '7em',
       textAlign: 'right',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: '4.3em',
       textAlign: 'right',
     },
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   description: {
     fontWeight: 200,
     maxWidth: '600px',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.3rem' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
 
   button: {
@@ -57,7 +58,7 @@ export const Introduction = (): JSX.Element => {
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6}>
             <Typography variant="h1" className={classes.name}>
-              blueMonkey.
+              VaSiliki.R
             </Typography>
           </Grid>
         </FadeInUpBox>
