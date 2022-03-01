@@ -36,18 +36,11 @@ const useStyles = makeStyles((theme) => ({
 
   link: {
     width: '100%',
-    marginRight: '30px',
-    backgroundColor: 'transparent',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '18px',
-    },
-  },
-  button: {
     fontSize: '20px',
     fontWeight: 300,
     color: 'white',
+    padding: '10px 20px',
     backgroundColor: 'transparent',
-    padding: '8px 20px',
     border: '1px solid transparent',
     '&:hover': {
       boxShadow:
@@ -56,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '10px',
       borderColor: '#383d42',
       backgroundColor: '#161e26',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
     },
   },
 }));
@@ -69,23 +65,17 @@ export const NavBar = (): JSX.Element => {
         <Grid container md={6} direction="row" justify="flex-end" className={classes.linkContainer}>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Typography className={classes.link}>
-              <Link href="/">
-                <button className={classes.button}>home</button>
-              </Link>
+              <Link href="/">home</Link>
             </Typography>
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={2}>
             <Typography className={classes.link}>
-              <Link href="/">
-                <button className={classes.button}>posts</button>
-              </Link>
+              <Link href="/writing">posts</Link>
             </Typography>
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
             <Typography className={classes.link}>
-              <Link href="/">
-                <button className={classes.button}>work</button>
-              </Link>
+              <Link href="/#projects">work</Link>
             </Typography>
           </FadeInUpBox>
         </Grid>
