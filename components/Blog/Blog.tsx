@@ -18,11 +18,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   blog: {
+    position: 'relative',
     marginBottom: '40px',
     background: '#161e26',
     padding: '32px',
     maxWidth: '400px',
     borderRadius: '8px',
+    height: '400px',
+    // transition: 'all 0.8s cubic-bezier(0.045, 0.52, 0.165, 1) 0s',
+    // '&:hover': {
+    //   transform: 'scale(1,1)',
+    // },
   },
   square: {
     width: '100px',
@@ -43,13 +49,18 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
+    position: 'absolute',
+    left: '30px',
+    bottom: '20px',
     border: '1px solid #4A63D6',
     borderRadius: '5px',
     padding: '0.6rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
-    marginTop: '10px',
     textAlign: 'center',
+  },
+  buttonContainer: {
+    position: 'relative',
   },
 }));
 
@@ -88,13 +99,12 @@ export const Blog = (): JSX.Element => {
                     {title}
                   </Typography>
                   <Typography className={classes.blogDetails}>{details}</Typography>
-                  <div>
-                    <Box className={classes.button}>
-                      <Link href={link} shallow={true}>
-                        READ MORE
-                      </Link>
-                    </Box>
-                  </div>
+
+                  <Box className={classes.button}>
+                    <Link href={link} shallow={true}>
+                      READ MORE
+                    </Link>
+                  </Box>
                 </Paper>
               );
             })}

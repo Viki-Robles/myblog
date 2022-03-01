@@ -4,6 +4,8 @@ author: 'Vicky Vasilopoulou'
 icon: 👋
 ---
 
+![Alt Text](/form.svg)
+
 Hi guys,
 
 This is a step by step guide on how you can build and authentication login form with firebase and react. I have done it a couple of times and I want to share my experience as I struggled when I first did it.

@@ -11,7 +11,7 @@ export const blogData: BlogDataProps[] = [
     id: 1,
     title: 'My journey from sales to software engineering',
     details:
-      'I never studied CS or any STEM degree but I believe persistence, passion and love for what you do it will allow you to achieve anything you put in your mind. Is not impossible but is hard work. Thats my story.',
+      'I never studied CS or any STEM degree but I believe persistence, passion and love for what you do it will allow you to achieve anything you put in your mind. Is not impossible but like with everything it needs patience and hard work.',
     link: '/blog/my-journey-to-software-engineering',
     tags: ['javascript', 'typescript'],
   },
@@ -30,14 +30,14 @@ export const blogData: BlogDataProps[] = [
     link: '/blog/firebase',
     tags: ['javascript'],
     details:
-      'Thats a solo project that showcases who to authenticate with Firebase and using TypeScript. It also has some cool links that you can use.',
+      'This is a step by step guide that showcases the process on authenticating users with Firebase. It contains the steps to set up your project in Firebase console and then on your machine. The project contains a sign-in sign-out form using Yup library, Theme UI, TypeScript.',
   },
   {
     id: 3,
-    title: 'React Form with Yup and TypeScript',
-    link: '/blog/form',
+    title: 'React Query and TypeScript Data Structures ',
+    link: '/blog/query',
     tags: ['javascript'],
     details:
-      'This is a full guide on building a beautiful form using React, yup library and typeScript. I am sure you can enjoy it and you can use it on your personal projects or interview tests.',
+      'Here you find some pre-maid TypeScript modelling schemas for data fetching with React Query, JWT, and mutations. It also includes some tips.You can use the scripts as you like.',
   },
 ];

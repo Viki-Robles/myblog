@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px 20px',
     backgroundColor: 'transparent',
     border: '1px solid transparent',
+    cursor: 'pointer',
     '&:hover': {
       boxShadow:
         'rgb(31 47 71 / 15%) 0px 20px 40px, rgb(0 0 0 / 5%) 0px 1px 5px, rgb(255 255 255 / 10%) 0px 0px 0px 0.5px inset',
