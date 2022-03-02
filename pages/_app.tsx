@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   const colorMode = React.useMemo(
