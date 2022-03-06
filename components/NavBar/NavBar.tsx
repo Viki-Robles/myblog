@@ -87,7 +87,7 @@ const Line = styled.span`
 
 const Overlay = styled.div`
   position: absolute;
-  height: ${(props) => (props.open ? '91vh' : 0)};
+  height: ${(props) => (props.open ? '100vh' : 0)};
   width: 100vw;
   background: #0e161e;
   transition: height 0.4s ease-in-out;
@@ -101,7 +101,7 @@ const OverlayMenu = styled.ul`
   list-style: none;
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 20%;
   transform: translate(-50%, -50%);
 
   li {
