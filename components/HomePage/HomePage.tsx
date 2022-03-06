@@ -1,5 +1,5 @@
-import { Introduction } from '../Introduction/Introduction';
 import { Grid } from '@material-ui/core';
+import { Introduction } from '../Introduction/Introduction';
 import { Projects } from '../Projects/Projects';
 import { projectsData } from '../../data/projects.testData';
 import { Contact } from 'components/Contact/Contact';
