@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import useSound from 'use-sound';
 import styled from 'styled-components';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
+import pop from '../../public/assets/pop.mp3';
 
 const Nav = styled.nav`
   padding: 0 20px;
@@ -118,7 +120,12 @@ const OverlayMenu = styled.ul`
 `;
 
 export const NavBar = () => {
+  const [play, { stop }] = useSound(pop);
+
+  // const [play, { stop }] = useSound(pop, { volume: 0.5 });
+  // const [isHovering, setIsHovering] = React.useState(false);
   const [toggle, toggleNav] = useState(false);
+
   return (
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
       <Nav>
@@ -127,7 +134,7 @@ export const NavBar = () => {
         </FadeInUpBox>
         <Menu>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
-            <Item>
+            <Item onMouseEnter={() => play()} onMouseLeave={() => stop()}>
               <Link href="/">home</Link>
             </Item>
           </FadeInUpBox>
