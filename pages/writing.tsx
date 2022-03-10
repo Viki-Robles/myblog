@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '5px',
     },
     [theme.breakpoints.up('sm')]: {
-      padding: '40px',
+      padding: '40px 40px 40px 70px',
     },
   },
   title: {

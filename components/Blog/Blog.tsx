@@ -87,10 +87,6 @@ export interface BlogProps {
 export const Blog = (): JSX.Element => {
   const classes = useStyles();
 
-  const rand = (min, max) => {
-    return Math.floor(Math.random() * (+max - +min)) + +min;
-  };
-
   const totalBlogPosts = blogData.length;
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -106,7 +102,6 @@ export const Blog = (): JSX.Element => {
               <Paper className={classes.blog}>
                 <Typography className={classes.blogTitle}>{title}</Typography>
                 <Typography className={classes.blogDetails}>{details}</Typography>
-
                 <Box className={classes.button}>
                   <Link href={link} shallow={true}>
                     READ MORE
