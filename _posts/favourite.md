@@ -4,7 +4,7 @@ author: 'Vicky Vasilopoulou'
 icon: 👋
 ---
 
-## Step by step Guide to create your own Context and Provider by creating a Favouriting feature
+### Step by step Guide to create your own Context and Provider by creating a Favouriting feature
 
 ### Create the initial state
 
@@ -29,7 +29,7 @@ interface UseFavouriteReturn {
 }
 ```
 
-### We create the Context where we initialise the values that we want as we would do with the useState hook, and then we exporting those values so that we can use them to different places
+We create the Context where we initialise the values that we want as we would do with the useState hook, and then we exporting those values so that we can use them to different places
 
 The way it works is that when we click the favourite button that will add the item to the array. When we click again is gonna remove it. So we initialise the empty array and also we set the state.
 

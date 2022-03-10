@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import useSound from 'use-sound';
 import styled from 'styled-components';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
@@ -17,7 +18,6 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.h1`
-  font-size: 25px;
   color: white;
 `;
 
@@ -130,13 +130,15 @@ export const NavBar = () => {
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
       <Nav>
         <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
-          <Logo>Logo</Logo>
+          <Logo>VickyRobles</Logo>
         </FadeInUpBox>
         <Menu>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
-            <Item onMouseEnter={() => play()} onMouseLeave={() => stop()}>
+            {/* <button onMouseEnter={() => play()} onMouseLeave={() => stop()}> */}
+            <Item>
               <Link href="/">home</Link>
             </Item>
+            {/* </button> */}
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
             <Item>

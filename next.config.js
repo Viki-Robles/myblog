@@ -4,11 +4,18 @@ module.exports = {
   images: withImages({
     domains: ['raw.githubusercontent.com'],
   }),
+  experimental: {
+    outputStandalone: true,
+  },
   reactStrictMode: true, // was there by default
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config) => {
     config.module.rules.push({
-      test: /\.mp3$/i,
-      loader: 'file-loader',
+      test: /\.mp3$/,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
     });
 
     // Important: return the modified config

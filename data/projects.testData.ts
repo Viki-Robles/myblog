@@ -11,6 +11,16 @@ export interface ProjectsDataModel {
 
 export const projectsData: ProjectsDataModel[] = [
   {
+    title: 'Commento',
+    details:
+      'This is Firebase authentication register/ sign-in form application build in React & TypeScript.  You can also check on my blog post for more details.',
+    link: 'https://commentto.vercel.app/',
+    technologies: 'Firebase v9, React, TypeScript, Theme UI',
+    img:
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/5acf796822d73d3828d3da4706ce2aa7067eb4a7/media/projects/portfoliodrinkmeapp.svg',
+    id: 'commento',
+  },
+  {
     title: 'DFX by Digital Futures',
     subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
     details:

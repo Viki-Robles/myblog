@@ -16,7 +16,7 @@ export const Footer = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Box className={classes.footer}>
-      <Typography>Copywrite &copy; 2022. All right reserved. Designed & Built by Vicky Vasilopoulou</Typography>
+      <Typography>Copywrite &copy; 2022. All right reserved. Designed & Built with ❤️ by Vicky Vasilopoulou</Typography>
     </Box>
   );
 };

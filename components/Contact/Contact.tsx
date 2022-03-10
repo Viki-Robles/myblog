@@ -52,7 +52,7 @@ export const Contact = (): JSX.Element => {
       </Typography>
       <div>
         <Box className={classes.button}>
-          <Link href={'/'}>Let's chat</Link>
+          <Link href="vasiliki.robles@gmail.com">Let's chat</Link>
         </Box>
       </div>
     </Grid>

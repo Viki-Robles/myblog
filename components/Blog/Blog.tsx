@@ -35,6 +35,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '450px',
     },
+    cursor: 'pointer',
+    transition: 'ease 0.5s',
+    boxShadow:
+      'rgb(0 0 0 / 20%) 0px 12px 28px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(116 116 116 / 5%) 0px 0px 0px 1px inset',
+    '&:hover': {
+      transform: ' translate(0, -20px)',
+    },
   },
   square: {
     width: '100px',
@@ -96,18 +103,16 @@ export const Blog = (): JSX.Element => {
         {blogData &&
           blogData.map(({ title, link, details }) => {
             return (
-              <ScaleBox duration={1} delayOrder={rand(1, 12)}>
-                <Paper className={classes.blog}>
-                  <Typography className={classes.blogTitle}>{title}</Typography>
-                  <Typography className={classes.blogDetails}>{details}</Typography>
+              <Paper className={classes.blog}>
+                <Typography className={classes.blogTitle}>{title}</Typography>
+                <Typography className={classes.blogDetails}>{details}</Typography>
 
-                  <Box className={classes.button}>
-                    <Link href={link} shallow={true}>
-                      READ MORE
-                    </Link>
-                  </Box>
-                </Paper>
-              </ScaleBox>
+                <Box className={classes.button}>
+                  <Link href={link} shallow={true}>
+                    READ MORE
+                  </Link>
+                </Box>
+              </Paper>
             );
           })}
       </Box>

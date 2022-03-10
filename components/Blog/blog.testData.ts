@@ -33,11 +33,27 @@ export const blogData: BlogDataProps[] = [
       'This is a step by step guide that showcases the process on authenticating users with Firebase. It contains the steps to set up your project in Firebase console and then on your machine. The project contains a sign-in sign-out form using Yup library, Theme UI, TypeScript.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'React Query and TypeScript Data Structures ',
     link: '/blog/query',
     tags: ['javascript'],
     details:
       'Here you find some pre-maid TypeScript modelling schemas for data fetching with React Query, JWT, and mutations. It also includes some tips.You can use the scripts as you like.',
+  },
+  {
+    id: 5,
+    title: 'Generate Components automatically with plop.js',
+    link: '/blog/generate',
+    tags: ['javascript'],
+    details:
+      'Have you ever wished a way to generate automatically components or hooks or pages, that has the same structure without repeating yourself over and over ? I didnt know that this amazing tool existed but I am so happy to share it with you and I hope it will bring you joy as it did to me.',
+  },
+  {
+    id: 6,
+    title: 'Create your own Cookie Banner in 5 mins',
+    link: '/blog/cookie',
+    tags: ['javascript'],
+    details:
+      'That is a short demonstation on how easy and fast you can build a cookie banner for your website or any application. Bear in mind you will need policy or terms and conditions on top.',
   },
 ];
