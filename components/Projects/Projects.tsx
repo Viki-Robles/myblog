@@ -112,21 +112,13 @@ export const Projects = ({ projects }): JSX.Element => {
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 {id === 'commento' ? (
-                  <div>
-                    <Box className={classes.button}>
-                      <Link key={id} href="https://commentto.vercel.app/">
-                        Open project
-                      </Link>
-                    </Box>
-                  </div>
+                  <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
+                    Open project
+                  </a>
                 ) : (
-                  <div>
-                    <Box className={classes.button}>
-                      <Link key={id} href={`/projects/${id}`}>
-                        Open project
-                      </Link>
-                    </Box>
-                  </div>
+                  <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
+                    Open project
+                  </a>
                 )}
               </Grid>
             </ScaleBox>
