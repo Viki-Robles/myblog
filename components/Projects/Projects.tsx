@@ -102,9 +102,10 @@ export const Projects = ({ projects }): JSX.Element => {
         <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
       </StaggerWrap>
       <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-        {projects.map(({ title, details, id }) => {
+        {projects.map(({ title, details, id, img }) => {
           return (
             <ScaleBox duration={1} delayOrder={rand(1, 12)}>
+              <Image src={img} alt="Picture of the author" width={500} height={500} loading="eager" priority={true} />
               <Grid container className={classes.project} id="projects">
                 <div>
                   <Image src="/folder.svg" width={30} height={30} alt="project" />

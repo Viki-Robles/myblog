@@ -122,15 +122,13 @@ const OverlayMenu = styled.ul`
 export const NavBar = () => {
   const [play, { stop }] = useSound(pop);
 
-  // const [play, { stop }] = useSound(pop, { volume: 0.5 });
-  // const [isHovering, setIsHovering] = React.useState(false);
   const [toggle, toggleNav] = useState(false);
 
   return (
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
       <Nav>
         <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
-          <Logo>VickyRobles</Logo>
+          <Logo>V.V</Logo>
         </FadeInUpBox>
         <Menu>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
