@@ -62,7 +62,7 @@ export const Introduction = (): JSX.Element => {
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6}>
             <Typography variant="h1" className={classes.name}>
-              VaSiliki.R
+              blueMonkey.
             </Typography>
           </Grid>
         </FadeInUpBox>

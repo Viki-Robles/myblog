@@ -1,20 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
-import Box from '@mui/material/Box';
+import { Typography } from '@material-ui/core';
 import { projectsData } from '../../data/projects.testData';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { ScaleBox } from '../ScaleBox/ScaleBox';
+import styles from './Projects.module.css';
 
 const useStyles = makeStyles((theme) => ({
-  projectBox: {
-    paddingBottom: '25%',
-    [theme.breakpoints.up('lg')]: { paddingBottom: '14%' },
-  },
-
   projectTitle: {
     textAlign: 'center',
     marginBottom: '5px',
@@ -32,27 +26,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
 
-  project: {
-    position: 'relative',
-    flexDirection: 'column',
-    width: '300px',
-    height: '300px',
-    maxWidth: '400px',
-    borderRadius: '8px',
-    padding: '25px',
-    marginBottom: '40px',
-    background: '#161e26',
-    gap: 4,
-    top: 0,
-    cursor: 'pointer',
-    transition: 'ease 0.5s',
-    boxShadow:
-      'rgb(0 0 0 / 20%) 0px 12px 28px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(116 116 116 / 5%) 0px 0px 0px 1px inset',
-    '&:hover': {
-      transform: ' translate(0, -20px)',
-    },
-  },
-
   title: {
     marginTop: '10px',
     fontWeight: 550,
@@ -63,6 +36,15 @@ const useStyles = makeStyles((theme) => ({
   details: {
     fontWeight: 300,
     color: '#8998a7',
+  },
+
+  img: {
+    opacity: 0.5,
+    position: 'relative',
+    '&:hover': {
+      opacity: 0.9,
+      cursor: 'pointer',
+    },
   },
 
   button: {
@@ -94,22 +76,29 @@ export const Projects = ({ projects }): JSX.Element => {
   };
 
   return (
-    <Box className={classes.projectBox}>
+    <div>
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
           Some archive projects
         </Typography>
         <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
       </StaggerWrap>
-      <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-        {projects.map(({ title, details, id, img }) => {
-          return (
-            <ScaleBox duration={1} delayOrder={rand(1, 12)}>
-              <Image src={img} alt="Picture of the author" width={500} height={500} loading="eager" priority={true} />
-              <Grid container className={classes.project} id="projects">
-                <div>
-                  <Image src="/folder.svg" width={30} height={30} alt="project" />
-                </div>
+
+      {projects.map(({ title, details, id, img }) => {
+        return (
+          <ScaleBox duration={1} delayOrder={rand(1, 12)}>
+            <div className={styles.projects} key={id}>
+              <Image
+                src={img}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                loading="eager"
+                priority={true}
+                className={classes.img}
+              />
+              <div className={styles.project}>
+                <Image src="/folder.svg" width={30} height={30} alt="project" />
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 {id === 'commento' ? (
@@ -121,11 +110,11 @@ export const Projects = ({ projects }): JSX.Element => {
                     Open project
                   </a>
                 )}
-              </Grid>
-            </ScaleBox>
-          );
-        })}
-      </Box>
-    </Box>
+              </div>
+            </div>
+          </ScaleBox>
+        );
+      })}
+    </div>
   );
 };

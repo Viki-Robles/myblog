@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ColorModeContext } from 'react-color-mode';
-import FillCircleLoader from 'react-loaders-kit/lib/fillCircle/FillCircleLoader';
-import Paper from '@material-ui/core/Paper';
+import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 import { createTheme } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import Box from '@mui/material/Box';
+import { ColorModeContext } from 'react-color-mode';
+import FillCircleLoader from 'react-loaders-kit/lib/fillCircle/FillCircleLoader';
+import Paper from '@material-ui/core/Paper';
 import { Layout } from '../components/Layout.tsx/Layout';
 import '../styles/globals.css';
 
@@ -100,7 +101,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
   };
 
   return (
-    <>
+    <ScopedCssBaseline>
       {!loading ? (
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
@@ -116,7 +117,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
           <FillCircleLoader {...loaderProps} />
         </Box>
       )}
-    </>
+    </ScopedCssBaseline>
   );
 }
 

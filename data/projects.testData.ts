@@ -4,7 +4,7 @@ export interface ProjectsDataModel {
   link?: string;
   technologies?: string;
   img?: string;
-  id: string;
+  id: number;
   role?: string;
   subtitle?: string;
 }
@@ -17,21 +17,20 @@ export const projectsData: ProjectsDataModel[] = [
     link: 'https://commentto.vercel.app/',
     technologies: 'Firebase v9, React, TypeScript, Theme UI',
     img: '/comm.svg',
-    id: 'commento',
+    id: 1,
   },
-  // {
-  //   title: 'DFX by Digital Futures',
-  //   subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
-  //   details:
-  //     'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients. It contains a pool of candidates with very diverse backgrounds.',
-  //   link: 'https://hellohub.com/',
-  //   role:
-  //     'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
-  //   technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',
-  //   img:
-  //     'https://raw.githubusercontent.com/Viki-Robles/myblog/5edd5b2e4e247fca9cf48a14ef81e0f49a9b3136/media/projects/portfoliodfx.svg',
-  //   id: 'digital-futures',
-  // },
+  {
+    title: 'DFX by Digital Futures',
+    subtitle: 'A recruitment platfrom that promotes diversity in the tech community.',
+    details:
+      'DFX is a recruitment web application that presents the skills and capabilites of Academy engineers to potential clients. It contains a pool of candidates with very diverse backgrounds.',
+    link: 'https://hellohub.com/',
+    role:
+      'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
+    technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',
+    img: '/dfx.svg',
+    id: 2,
+  },
   // {
   //   title: 'Hellohub Website',
   //   details:
@@ -40,7 +39,7 @@ export const projectsData: ProjectsDataModel[] = [
   //   technologies: 'JavaScript, React, Material UI',
   //   img:
   //     'https://raw.githubusercontent.com/Viki-Robles/myblog/95300411ce17b06c92a23d6057496512ae47728e/media/projects/hellohub.svg',
-  //   id: 'hellohub',
+  //   id: 3,
   //   role: 'Responsible for the UI development of the new website.',
   //   subtitle:
   //     'A responsive website where venues can sign up and login to their account and learn more about the latest news in the neighborhood.',
@@ -53,7 +52,7 @@ export const projectsData: ProjectsDataModel[] = [
   //   technologies: 'React, JavaScript, Material UI, Web API',
   //   img:
   //     'https://raw.githubusercontent.com/Viki-Robles/myblog/5acf796822d73d3828d3da4706ce2aa7067eb4a7/media/projects/portfoliodrinkmeapp.svg',
-  //   id: 'drinkmeapp',
+  //   id: 4,
   //   subtitle:
   //     'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
   //   role: 'Responsible for the design and the implementation of the details page of each cocktail.',
