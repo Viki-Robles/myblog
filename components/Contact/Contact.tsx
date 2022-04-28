@@ -50,11 +50,9 @@ export const Contact = (): JSX.Element => {
         Although I’m not currently looking for any new opportunities, I am always open to hear something new. Whether
         you have a question or just want to say hi, I’ll try my best to get back to you!
       </Typography>
-      <div>
-        <Box className={classes.button}>
-          <Link href="vasiliki.robles@gmail.com">Let's chat</Link>
-        </Box>
-      </div>
+      <Box className={classes.button}>
+        <a href="mailto:vasiliki.robles@gmail.com">Say hello</a>
+      </Box>
     </Grid>
   );
 };

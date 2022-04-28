@@ -28,9 +28,17 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     marginTop: '10px',
+    marginBottom: '5px',
     fontWeight: 550,
     fontSize: '1.3rem',
     lineHeight: '1.1rem',
+    paddingBottom: '5px',
+  },
+
+  featured: {
+    fontSize: '1.1rem',
+    color: '#4a63d6',
+    paddingBottom: '5px',
   },
 
   details: {
@@ -44,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       opacity: 0.9,
       cursor: 'pointer',
+    },
+    [theme.breakpoints.down('sm')]: {
+      opacity: 0.1,
+      '&:hover': {
+        opacity: 0.1,
+      },
     },
   },
 
@@ -76,7 +90,7 @@ export const Projects = ({ projects }): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className="projects-container">
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
           Some archive projects
@@ -99,6 +113,7 @@ export const Projects = ({ projects }): JSX.Element => {
               />
               <div className={styles.project}>
                 <Image src="/folder.svg" width={30} height={30} alt="project" />
+                <Typography className={classes.featured}>Featured Project</Typography>
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 {id === 'commento' ? (

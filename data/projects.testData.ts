@@ -4,7 +4,7 @@ export interface ProjectsDataModel {
   link?: string;
   technologies?: string;
   img?: string;
-  id: number;
+  id: string;
   role?: string;
   subtitle?: string;
 }
@@ -17,7 +17,7 @@ export const projectsData: ProjectsDataModel[] = [
     link: 'https://commentto.vercel.app/',
     technologies: 'Firebase v9, React, TypeScript, Theme UI',
     img: '/comm.svg',
-    id: 1,
+    id: 'commento',
   },
   {
     title: 'DFX by Digital Futures',
@@ -29,7 +29,7 @@ export const projectsData: ProjectsDataModel[] = [
       'Working with the tech team and contributing to build new features, refactoring code, working with integrations (for instance Firebase, Hasura GraphQl), working with APIS, TDD and reviewing code of younger members of the team ',
     technologies: 'TypeScript, React / Vite, GraphQL, Firebase, Hasura, Theme UI',
     img: '/dfx.svg',
-    id: 2,
+    id: 'dfx',
   },
   // {
   //   title: 'Hellohub Website',
