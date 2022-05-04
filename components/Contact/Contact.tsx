@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 auto',
+    marginTop: '100px',
+    border: '1px dashed',
+    borderColor: '#ff61be',
+    borderRadius: '5px',
+    padding: '15px 10px',
   },
   content: {
     color: '#8998a7',
@@ -21,20 +26,25 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
   contactHeader: {
-    color: '#5d75e7',
-    fontWeight: 300,
+    color: '#fff',
+    fontSize: '2.2rem',
+    fontWeight: 700,
+    border: '0 solid #e2e8f0',
     [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
   },
   button: {
     borderRadius: '5px',
-    border: '1px solid #4A63D6',
+    backgroundColor: '#ff61be',
+    color: 'white',
+    border: '1px solid #ff61be',
     padding: '0.75rem 1rem',
-    fontSize: '13px',
+    fontSize: '18px',
     maxWidth: '140px',
     marginTop: '10px',
     textAlign: 'center',
     margin: '0 auto',
-    [theme.breakpoints.up('lg')]: { fontSize: '15px' },
+    fontWeight: 500,
+    [theme.breakpoints.up('lg')]: { fontSize: '18px' },
   },
 }));
 
@@ -51,7 +61,7 @@ export const Contact = (): JSX.Element => {
         you have a question or just want to say hi, I’ll try my best to get back to you!
       </Typography>
       <Box className={classes.button}>
-        <a href="mailto:vasiliki.robles@gmail.com">Say hello</a>
+        <a href="mailto:vasiliki.robles@gmail.com">Say hello 🤗</a>
       </Box>
     </Grid>
   );

@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     left: '30px',
     bottom: '20px',
-    border: '1px solid #4A63D6',
+    border: '1px solid #ff61be',
     borderRadius: '5px',
     padding: '0.6rem 1rem',
     fontSize: '13px',

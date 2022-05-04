@@ -10,10 +10,12 @@ import styles from './Projects.module.css';
 
 const useStyles = makeStyles((theme) => ({
   projectTitle: {
+    fontSize: '2.2rem',
     textAlign: 'center',
     marginBottom: '5px',
-    fontWeight: 300,
-    color: '#5d75e7',
+    fontWeight: 700,
+    color: '#ffff',
+    border: '0 solid #e2e8f0',
     [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
   },
 
@@ -37,11 +39,12 @@ const useStyles = makeStyles((theme) => ({
 
   featured: {
     fontSize: '1.1rem',
-    color: '#4a63d6',
+    color: '#ff61be',
     paddingBottom: '5px',
   },
 
   details: {
+    fontSize: '16px',
     fontWeight: 300,
     color: '#8998a7',
   },
@@ -62,12 +65,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
+    fontWeight: 500,
     textAlign: 'center',
     position: 'absolute',
     borderRadius: '5px',
-    border: '1px solid #4A63D6',
-    padding: '0.75rem 1rem',
-    fontSize: '13px',
+    border: '1px solid #ff61be',
+    padding: '0.75rem 1.2rem',
+    fontSize: '16px',
     maxWidth: '140px',
     marginTop: '10px',
     left: '27px',
@@ -93,9 +97,9 @@ export const Projects = ({ projects }): JSX.Element => {
     <div className="projects-container">
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
-          Some archive projects
+          Small builds
         </Typography>
-        <Typography className={classes.projectsubTitle}>view manuscripts</Typography>
+        {/* <Typography className={classes.projectsubTitle}>view manuscripts</Typography> */}
       </StaggerWrap>
 
       {projects.map(({ title, details, id, img }) => {
@@ -113,7 +117,7 @@ export const Projects = ({ projects }): JSX.Element => {
               />
               <div className={styles.project}>
                 <Image src="/folder.svg" width={30} height={30} alt="project" />
-                <Typography className={classes.featured}>Featured Project</Typography>
+                {/* <Typography className={classes.featured}>Featured Project</Typography> */}
                 <Typography className={classes.title}>{title}</Typography>
                 <Typography className={classes.details}>{details}</Typography>
                 {id === 'commento' ? (

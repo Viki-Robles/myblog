@@ -48,7 +48,7 @@ const Item = styled.li`
       rgb(255 255 255 / 10%) 0px 0px 0px 0.5px inset;
     border: 1px solid;
     border-radius: 10px;
-    border-color: #383d42;
+    border-color: #ff61be;
     background-color: #161e26;
   }
 `;
@@ -56,7 +56,7 @@ const Item = styled.li`
 const Link = styled.a`
   color: white;
   text-decoration: none;
-
+  border: 0 solid #e2e8f0;
   :hover {
     text-decoration: none;
   }

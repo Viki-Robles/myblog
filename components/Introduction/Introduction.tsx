@@ -37,11 +37,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
 
+  descriptionText: {
+    border: '0 solid #e2e8f0',
+  },
   button: {
     textAlign: 'center',
     position: 'absolute',
     borderRadius: '5px',
-    border: '1px solid #4A63D6',
+    border: '1px solid #ff61be',
     padding: '0.75rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
@@ -50,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
 
-  blog: { color: '#4A63D6', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
+  blog: { color: '#ff61be', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
 
 export const Introduction = (): JSX.Element => {
@@ -68,7 +71,7 @@ export const Introduction = (): JSX.Element => {
         </FadeInUpBox>
         <FadeInUpBox yOffset={48} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6} className={classes.description}>
-            <Typography variant="h5" className={classes.description}>
+            <Typography variant="h5" className={classes.descriptionText}>
               Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
               personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom
               where I occasionally write about my personal coding experience on my

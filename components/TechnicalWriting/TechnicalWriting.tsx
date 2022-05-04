@@ -19,26 +19,26 @@ const useStyles = makeStyles((theme) => ({
   articlesListItem: {
     maxWidth: '800px',
     '&:hover': {
-      borderColor: '#4A63D6',
+      borderColor: '#ff61be',
     },
   },
   articlesHeader: {
     fontSize: '18px',
     '&:hover': {
-      color: '#4A63D6',
+      color: '#ff61be',
     },
   },
   articlesSubHeader: {
     fontFamily: 'Cinzel',
     fontSize: '16px',
-    color: '#4A63D6',
+    color: '#ff61be',
   },
   articlesContainer: {
     marginTop: '80px',
   },
   button: {
     borderRadius: '5px',
-    border: '1px solid #4A63D6',
+    border: '1px solid #ff61be',
     padding: '0.6rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
@@ -66,10 +66,10 @@ const useStyles = makeStyles((theme) => ({
   },
   timelineSeparator: {
     width: '1px',
-    backgroundColor: '#4A63D6',
+    backgroundColor: '#ff61be',
   },
   timelineDot: {
-    borderColor: '#4A63D6',
+    borderColor: '#ff61be',
   },
 }));
 
