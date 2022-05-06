@@ -13,9 +13,6 @@ const useStyles = makeStyles((theme) => ({
   blogTitle: {
     lineHeight: 'calc(1em + 0.625rem)',
     color: 'white',
-    '&:hover': {
-      color: '#4A63D6',
-    },
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.3rem',
     },
@@ -31,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     padding: '32px',
     maxWidth: '400px',
     borderRadius: '8px',
-    height: '400px',
     [theme.breakpoints.down('sm')]: {
       height: '450px',
     },
@@ -56,19 +52,20 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
   },
   blogDetails: {
+    paddingBottom: '10px',
     marginTop: '20px',
     fontSize: '1rem',
     color: '#8998a7',
   },
 
   button: {
-    position: 'absolute',
     left: '30px',
     bottom: '20px',
-    border: '1px solid #ff61be',
+    border: '2px solid #e35085',
     borderRadius: '5px',
     padding: '0.6rem 1rem',
-    fontSize: '13px',
+    fontSize: '14px',
+    fontWeight: 500,
     maxWidth: '140px',
     textAlign: 'center',
   },

@@ -36,7 +36,7 @@ const Menu = styled.ul`
 
 const Item = styled.li`
   width: 100%;
-  font-size: 20px;
+  font-size: 22px;
   fontweight: 300;
   color: white;
   padding: 10px 20px;
@@ -48,7 +48,8 @@ const Item = styled.li`
       rgb(255 255 255 / 10%) 0px 0px 0px 0.5px inset;
     border: 1px solid;
     border-radius: 10px;
-    border-color: #ff61be;
+    box-shadow: 0 0 0.2em 0 var(--clr-neon);
+    border-color: #e35085;
     background-color: #161e26;
   }
 `;

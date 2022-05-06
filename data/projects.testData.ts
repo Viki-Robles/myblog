@@ -13,7 +13,7 @@ export const projectsData: ProjectsDataModel[] = [
   {
     title: 'Commento',
     details:
-      'One of my small achievements. This is Firebase authentication register form application build in React & TypeScript.  Is using firebase authentication and some other bits and pieces. You can also check on my blog post for more details.',
+      'One of my small achievements. This is Firebase authentication register form application build in React & TypeScript.  Is using firebase authentication and some other bits and pieces.',
     link: 'https://commentto.vercel.app/',
     technologies: 'Firebase v9, React, TypeScript, Theme UI',
     img: '/comm.svg',

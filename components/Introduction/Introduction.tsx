@@ -7,11 +7,19 @@ import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 const useStyles = makeStyles((theme) => ({
   introduction: {
     display: 'flex',
-    alignItems: 'flex-end',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
+    padding: '15px',
+    marginTop: '10%',
+    marginBottom: '10%',
     gap: '10px',
-    padding: '20% 40px 25% 40px',
+    width: '60%',
+    border: '2px dashed',
+    borderRadius: '15px',
+    borderColor: '#e35085',
+    boxShadow: '0 0 1em 0 var(--clr-neon)',
     [theme.breakpoints.up('lg')]: {
-      paddingBottom: '15%',
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -44,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     position: 'absolute',
     borderRadius: '5px',
-    border: '1px solid #ff61be',
+    border: '1px solid #e35085',
     padding: '0.75rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
@@ -53,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
 
-  blog: { color: '#ff61be', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
+  blog: { color: '#e35085', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
 
 export const Introduction = (): JSX.Element => {

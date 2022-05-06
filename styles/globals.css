@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  font-family: 'Inter';
+  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   font-weight: 300;
   background-color: #0e161e;
   line-height: 'calc(1em + 0.625rem)';
@@ -19,3 +19,10 @@ a {
   box-sizing: border-box;
   font-family: 'Inter';
 }
+
+:root {
+  --clr-neon:hsl(338, 72%, 60%);
+  --clr-bg:hsl(323 21% 16%)
+}
+
+/* #ff61be */

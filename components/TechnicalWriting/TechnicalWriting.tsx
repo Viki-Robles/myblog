@@ -16,31 +16,42 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    display: 'grid',
+    padding: '10px',
+    border: '2px dashed',
+    borderColor: '#E35085',
+    borderRadius: '5px',
+    marginBottom: '20px',
+  },
   articlesListItem: {
     maxWidth: '800px',
     '&:hover': {
-      borderColor: '#ff61be',
+      borderColor: '#E35085',
     },
   },
   articlesHeader: {
     fontSize: '18px',
     '&:hover': {
-      color: '#ff61be',
+      color: '#E35085',
     },
   },
   articlesSubHeader: {
     fontFamily: 'Cinzel',
     fontSize: '16px',
-    color: '#ff61be',
+    color: '#b8bedd',
   },
   articlesContainer: {
     marginTop: '80px',
   },
   button: {
     borderRadius: '5px',
-    border: '1px solid #ff61be',
+    backgroundColor: '#E35085',
+    fontWeight: 600,
+    color: 'white',
+    border: '1px solid #E35085',
     padding: '0.6rem 1rem',
-    fontSize: '13px',
+    fontSize: '16px',
     maxWidth: '140px',
     marginTop: '10px',
     textAlign: 'center',
@@ -80,23 +91,15 @@ export default function TechnicalWriting(): JSX.Element {
     <Box>
       {getTechnicalWritingData.map(({ id, article, href, published }) => {
         return (
-          <Timeline>
-            <TimelineItem className={classes.timelineItem}>
-              <TimelineSeparator>
-                <TimelineDot variant="outlined" className={classes.timelineDot} />
-                <TimelineConnector className={classes.timelineSeparator} />
-              </TimelineSeparator>
-              <TimelineContent>
-                <Box className={classes.articlesHeader} key={id}>
-                  <Link href={href}>{article}</Link>
-                </Box>
-                <Typography className={classes.articlesSubHeader}>{published}</Typography>
-                <Box className={classes.button}>
-                  <Link href={href}>SEE POST</Link>
-                </Box>
-              </TimelineContent>
-            </TimelineItem>
-          </Timeline>
+          <div className={classes.container}>
+            <Box className={classes.articlesHeader} key={id}>
+              <Link href={href}>{article}</Link>
+            </Box>
+            <Typography className={classes.articlesSubHeader}>{published}</Typography>
+            <Box className={classes.button}>
+              <Link href={href}>SEE POST</Link>
+            </Box>
+          </div>
         );
       })}
     </Box>

@@ -3,7 +3,6 @@
   .project:nth-child(2) {
     left:12%;
     max-width:497px;
-    height:370px;
     background:#1b2b4587;
     top:13%;
  }
@@ -13,7 +12,6 @@
 @media(max-width:600px) {
   .project:nth-child(2) {
     left:7%;
-   height: 364px;
   }
 }
 
@@ -27,7 +25,6 @@
 @media (max-width: 420px) {
   .project:nth-child(2) {
     left:4%;
-    height: 300px;
   }
 }
 
@@ -43,10 +40,9 @@
 
 .project {
   position: absolute;
-  left: 55%;
+  left: 48%;
   flex-direction: column;
   max-width: 600px;
-  height: 320px;
   border-radius: 8px;
   padding: 25px;
   background: #161e26;

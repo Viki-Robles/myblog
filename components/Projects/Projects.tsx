@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
+    textAlign: 'left',
     marginTop: '10px',
     marginBottom: '5px',
     fontWeight: 550,
@@ -38,19 +39,24 @@ const useStyles = makeStyles((theme) => ({
   },
 
   featured: {
-    fontSize: '1.1rem',
+    fontSize: '1.5rem',
     color: '#ff61be',
     paddingBottom: '5px',
   },
 
   details: {
-    fontSize: '16px',
+    lineHeight: '1.3',
+    textAlign: 'left',
+    position: 'relative',
+    paddingBottom: '20px',
+    fontSize: '18px',
     fontWeight: 300,
     color: '#8998a7',
   },
 
   img: {
     opacity: 0.5,
+    boxShadow: '0 10px 30px -15px var(--navy-shadow)',
     position: 'relative',
     '&:hover': {
       opacity: 0.9,
@@ -67,14 +73,14 @@ const useStyles = makeStyles((theme) => ({
   button: {
     fontWeight: 500,
     textAlign: 'center',
-    position: 'absolute',
     borderRadius: '5px',
-    border: '1px solid #ff61be',
+    border: '1px solid #e35085',
+    background: '#e35085',
     padding: '0.75rem 1.2rem',
     fontSize: '16px',
     maxWidth: '140px',
     marginTop: '10px',
-    left: '27px',
+    right: '47px',
     bottom: '10px',
     [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
@@ -99,39 +105,39 @@ export const Projects = ({ projects }): JSX.Element => {
         <Typography className={classes.projectTitle} variant="h4">
           Small builds
         </Typography>
-        {/* <Typography className={classes.projectsubTitle}>view manuscripts</Typography> */}
       </StaggerWrap>
 
-      {projects.map(({ title, details, id, img }) => {
+      {projects.map(({ title, details, id, img }, index) => {
+        const isReversed = index % 2 === 0;
         return (
-          <ScaleBox duration={1} delayOrder={rand(1, 12)}>
-            <div className={styles.projects} key={id}>
-              <Image
-                src={img}
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                loading="eager"
-                priority={true}
-                className={classes.img}
-              />
-              <div className={styles.project}>
-                <Image src="/folder.svg" width={30} height={30} alt="project" />
-                {/* <Typography className={classes.featured}>Featured Project</Typography> */}
-                <Typography className={classes.title}>{title}</Typography>
-                <Typography className={classes.details}>{details}</Typography>
-                {id === 'commento' ? (
-                  <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
-                    Open project
-                  </a>
-                ) : (
-                  <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
-                    Open project
-                  </a>
-                )}
+          <div>
+            <ScaleBox duration={1} delayOrder={rand(1, 12)}>
+              <div className={styles.projects} key={id}>
+                <Image
+                  src={img}
+                  alt="Picture of the author"
+                  width={500}
+                  height={450}
+                  loading="eager"
+                  priority={true}
+                  className={classes.img}
+                />
+                <div className={styles.project}>
+                  <Typography className={classes.title}>{title}</Typography>
+                  <Typography className={classes.details}>{details}</Typography>
+                  {id === 'commento' ? (
+                    <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
+                      Open project
+                    </a>
+                  ) : (
+                    <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
+                      Open project
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          </ScaleBox>
+            </ScaleBox>
+          </div>
         );
       })}
     </div>
