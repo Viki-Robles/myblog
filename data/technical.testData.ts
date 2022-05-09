@@ -8,6 +8,12 @@ export interface TechnicalWritingDataProps {
 export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
   {
     id: 7,
+    article: 'How to create an auth login system with axios interceptors (TypeScript) PART I',
+    href: 'https://dev.to/vikirobles/how-to-create-an-auth-login-system-with-axios-interceptors-typescript-2k11',
+    published: 'Published on Apr 29, 2022',
+  },
+  {
+    id: 7,
     article: 'Cookie Policy Banner with localStorage',
     href: 'https://dev.to/vikirobles/how-to-make-a-cookie-policy-banner-without-any-npm-package-12j5',
     published: 'Published on Apr 7, 2021',

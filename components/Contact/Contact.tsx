@@ -11,12 +11,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 auto',
-    marginTop: '100px',
+    marginTop: '20%',
     border: '2px dashed',
     borderColor: '#e35085',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     borderRadius: '5px',
     padding: '20px 10px',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '40%',
+    },
   },
   content: {
     color: '#8998a7',

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
@@ -88,6 +89,9 @@ function MyApp({ Component, pageProps }): JSX.Element {
                   secondary: grey[500],
                 }),
           },
+        },
+        typography: {
+          fontFamily: 'Wotfard,Futura,-apple-system,sans-serif',
         },
       }),
     [mode],

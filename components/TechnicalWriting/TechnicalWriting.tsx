@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   articlesSubHeader: {
-    fontFamily: 'Cinzel',
     fontSize: '16px',
     color: '#b8bedd',
   },

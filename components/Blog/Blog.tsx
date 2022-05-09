@@ -88,7 +88,9 @@ export const Blog = (): JSX.Element => {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <Typography className={classes.blogHeader}>Blog Posts</Typography>
+        <Typography className={classes.blogHeader} variant="h4">
+          Blog Posts
+        </Typography>
         <Typography className={classes.totalPosts}>{totalBlogPosts} Articles</Typography>
       </Box>
 
@@ -97,7 +99,9 @@ export const Blog = (): JSX.Element => {
           blogData.map(({ title, link, details }) => {
             return (
               <Paper className={classes.blog}>
-                <Typography className={classes.blogTitle}>{title}</Typography>
+                <Typography className={classes.blogTitle} variant="h4">
+                  {title}
+                </Typography>
                 <Typography className={classes.blogDetails}>{details}</Typography>
                 <Box className={classes.button}>
                   <Link href={link} shallow={true}>

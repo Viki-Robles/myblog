@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
   font-weight: 300;
   background-color: #0e161e;
   line-height: 'calc(1em + 0.625rem)';
@@ -12,12 +12,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  font-family: 'Inter';
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
+
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Inter';
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
 }
 
 :root {
@@ -26,3 +27,16 @@ a {
 }
 
 /* #ff61be */
+
+h1,h2,h3,h4,h5 {
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
+}
+
+p {
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
+}
+
+.body1 {
+  font-family: "Wotfard",Futura,-apple-system,sans-serif;
+
+}

@@ -7,14 +7,15 @@ import { projectsData } from '../../data/projects.testData';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { ScaleBox } from '../ScaleBox/ScaleBox';
 import styles from './Projects.module.css';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   projectTitle: {
     fontSize: '2.2rem',
     textAlign: 'center',
     marginBottom: '5px',
-    fontWeight: 700,
-    color: '#ffff',
+    fontWeight: 600,
+    color: '#4A63D6',
     border: '0 solid #e2e8f0',
     [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
   },
@@ -71,12 +72,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
-    fontWeight: 500,
+    fontWeight: 600,
     textAlign: 'center',
     borderRadius: '5px',
     border: '1px solid #e35085',
     background: '#e35085',
-    padding: '0.75rem 1.2rem',
+    padding: '0.6rem 1.6rem',
     fontSize: '16px',
     maxWidth: '140px',
     marginTop: '10px',
@@ -103,16 +104,18 @@ export const Projects = ({ projects }): JSX.Element => {
     <div className="projects-container">
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
-          Small builds
+          Some Things I’ve Built
         </Typography>
       </StaggerWrap>
 
       {projects.map(({ title, details, id, img }, index) => {
-        const isReversed = index % 2 === 0;
+        const isMarginRight = index % 2 === 0;
+        const mobile = useMediaQuery('(max-width:600px)');
+
         return (
           <div>
             <ScaleBox duration={1} delayOrder={rand(1, 12)}>
-              <div className={styles.projects} key={id}>
+              <div className={styles.projects} key={id} style={{ marginRight: isMarginRight && !mobile ? '20%' : '0' }}>
                 <Image
                   src={img}
                   alt="Picture of the author"
@@ -127,11 +130,11 @@ export const Projects = ({ projects }): JSX.Element => {
                   <Typography className={classes.details}>{details}</Typography>
                   {id === 'commento' ? (
                     <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
-                      Open project
+                      VIEW
                     </a>
                   ) : (
                     <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
-                      Open project
+                      VIEW
                     </a>
                   )}
                 </div>

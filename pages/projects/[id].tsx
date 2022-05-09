@@ -81,7 +81,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '5px',
     marginBottom: '50px',
-    backgroundColor: '#AB0552',
+    backgroundColor: '#ff61be',
+    boxShadow: '0 0 1em 0 var(--clr-neon)',
     padding: '12px 20px',
     color: 'white',
     maxWidth: '200px',
@@ -111,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     borderRadius: '5px',
     marginBottom: '50px',
-    backgroundColor: '#AB0552',
+    backgroundColor: '#ff61be',
     padding: '12px 20px',
     color: 'white',
     maxWidth: '200px',

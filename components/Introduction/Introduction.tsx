@@ -6,13 +6,13 @@ import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
 
 const useStyles = makeStyles((theme) => ({
   introduction: {
-    display: 'flex',
+    display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 auto',
     padding: '15px',
-    marginTop: '10%',
-    marginBottom: '10%',
+    marginTop: '12%',
+    marginBottom: '14%',
     gap: '10px',
     width: '60%',
     border: '2px dashed',
@@ -20,33 +20,45 @@ const useStyles = makeStyles((theme) => ({
     borderColor: '#e35085',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     [theme.breakpoints.up('lg')]: {
-      justifyContent: 'center',
-      alignItems: 'center',
+      width: '60%',
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '50%',
+    },
+  },
+  title: {
+    display: 'flex',
+    marginTop: '30%',
+    fontSize: '1.6rem',
+    fontWeight: 500,
+    color: '#4A63D6',
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
     },
   },
   name: {
-    marginRight: '20px',
+    fontWeight: 600,
     [theme.breakpoints.up('lg')]: {
       fontSize: '7em',
-      textAlign: 'right',
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '4.3em',
-      textAlign: 'right',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2.4rem',
-      textAlign: 'center',
+      fontSize: '1.6rem',
     },
   },
   description: {
     fontWeight: 200,
     maxWidth: '600px',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
   },
 
   descriptionText: {
     border: '0 solid #e2e8f0',
+    [theme.breakpoints.down('sm')]: { fontSize: '1.1rem', lineHeight: 'calc(1em + 0.725rem)' },
   },
   button: {
     textAlign: 'center',
@@ -57,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '13px',
     maxWidth: '140px',
     marginTop: '10px',
-
     [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
 
@@ -69,17 +80,20 @@ export const Introduction = (): JSX.Element => {
 
   return (
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
+      <Typography className={classes.title} variant="h4">
+        Introduction
+      </Typography>
       <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6}>
-            <Typography variant="h1" className={classes.name}>
-              blueMonkey.
+            <Typography variant="h2" className={classes.name}>
+              Vasiliki.
             </Typography>
           </Grid>
         </FadeInUpBox>
         <FadeInUpBox yOffset={48} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6} className={classes.description}>
-            <Typography variant="h5" className={classes.descriptionText}>
+            <Typography className={classes.descriptionText} variant="h5">
               Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
               personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom
               where I occasionally write about my personal coding experience on my
