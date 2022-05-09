@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 40px;
   gap: 4px;
 }
 

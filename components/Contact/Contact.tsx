@@ -61,8 +61,8 @@ export const Contact = (): JSX.Element => {
         Get In Touch
       </Typography>
       <Typography className={classes.content}>
-        Although I’m not currently looking for any new opportunities, I am always open to hear something new. Whether
-        you have a question or just want to say hi, I’ll try my best to get back to you!
+        Even if I’m not currently looking for new opportunities, I am always open to have a chat. Whether you have a
+        question or just want to say hi, I’ll try my best to get back to you! Till then speak to you soon.
       </Typography>
       <Box className={classes.button}>
         <a href="mailto:vasiliki.robles@gmail.com">Say hello 🤗</a>

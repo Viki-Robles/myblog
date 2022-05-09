@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     marginTop: '30%',
     fontSize: '1.6rem',
-    fontWeight: 500,
+    fontWeight: 700,
     color: '#4A63D6',
     [theme.breakpoints.up('sm')]: {
       display: 'none',
