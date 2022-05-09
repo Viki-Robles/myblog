@@ -31,19 +31,19 @@ export const projectsData: ProjectsDataModel[] = [
     img: '/dfx.svg',
     id: 'dfx',
   },
-  // {
-  //   title: 'Hellohub Website',
-  //   details:
-  //     'An interactive marketing website which assists venue users, to register with Hellohub, and also providing them with information about the events that happening in their neighborhood.',
-  //   link: 'https://hellohub.com/',
-  //   technologies: 'JavaScript, React, Material UI',
-  //   img:
-  //     'https://raw.githubusercontent.com/Viki-Robles/myblog/95300411ce17b06c92a23d6057496512ae47728e/media/projects/hellohub.svg',
-  //   id: 3,
-  //   role: 'Responsible for the UI development of the new website.',
-  //   subtitle:
-  //     'A responsive website where venues can sign up and login to their account and learn more about the latest news in the neighborhood.',
-  // },
+  {
+    title: 'Hellohub',
+    details:
+      'An interactive marketing website which assists venue users, to register with Hellohub, and also providing them with information about the events that happening in their neighborhood.',
+    link: 'https://hellohub.com/',
+    technologies: 'JavaScript, React, Material UI',
+    img:
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/95300411ce17b06c92a23d6057496512ae47728e/media/projects/hellohub.svg',
+    id: 'hellohub',
+    role: 'Responsible for the UI development of the new website.',
+    subtitle:
+      'A responsive website where venues can sign up and login to their account and learn more about the latest news in the neighborhood.',
+  },
   // {
   //   title: 'DrinkMeApp',
   //   details:
