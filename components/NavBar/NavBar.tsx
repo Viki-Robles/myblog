@@ -126,25 +126,23 @@ export const NavBar = () => {
   const [toggle, toggleNav] = useState(false);
 
   return (
-    <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
+    <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
       <Nav>
-        <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
+        <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
           <Logo>V.V</Logo>
         </FadeInUpBox>
         <Menu>
-          <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
-            {/* <button onMouseEnter={() => play()} onMouseLeave={() => stop()}> */}
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Item>
               <Link href="/">home</Link>
             </Item>
-            {/* </button> */}
           </FadeInUpBox>
-          <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Item>
               <Link href="/#projects">work</Link>
             </Item>
           </FadeInUpBox>
-          <FadeInUpBox yOffset={34} duration={1} delayOrder={3}>
+          <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Item>
               <Link href="/writing">posts</Link>
             </Item>
