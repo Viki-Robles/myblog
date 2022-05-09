@@ -38,23 +38,11 @@ export const projectsData: ProjectsDataModel[] = [
     link: 'https://hellohub.com/',
     technologies: 'JavaScript, React, Material UI',
     img:
-      'https://raw.githubusercontent.com/Viki-Robles/myblog/95300411ce17b06c92a23d6057496512ae47728e/media/projects/hellohub.svg',
+      'https://raw.githubusercontent.com/Viki-Robles/myblog/ef4c7c9840e7d99aa17f6c7279c97ee0196d4b53/public/hellohub-emu.svg',
     id: 'hellohub',
-    role: 'Responsible for the UI development of the new website.',
+    role:
+      'Responsible for the UI development of the new website and the implementation of a new user authentication system.',
     subtitle:
       'A responsive website where venues can sign up and login to their account and learn more about the latest news in the neighborhood.',
   },
-  // {
-  //   title: 'DrinkMeApp',
-  //   details:
-  //     'That was the first team project I build during the bootcamp. The application collects 3.000+ of cocktail recipes for users to choose from based on ingredients or other preferences.',
-  //   link: 'https://drink-me-app.vercel.app/',
-  //   technologies: 'React, JavaScript, Material UI, Web API',
-  //   img:
-  //     'https://raw.githubusercontent.com/Viki-Robles/myblog/5acf796822d73d3828d3da4706ce2aa7067eb4a7/media/projects/portfoliodrinkmeapp.svg',
-  //   id: 4,
-  //   subtitle:
-  //     'An intercative application where users can get inspired on making cocktail or drinks during the days of COVID.',
-  //   role: 'Responsible for the design and the implementation of the details page of each cocktail.',
-  // },
 ];
