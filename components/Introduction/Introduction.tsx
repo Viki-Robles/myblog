@@ -14,19 +14,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '12%',
     marginBottom: '14%',
     gap: '10px',
-    width: '60%',
+    width: '800px',
     border: '2px dashed',
     borderRadius: '15px',
     borderColor: '#e35085',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
-    [theme.breakpoints.up('lg')]: {
-      width: '60%',
-    },
-    [theme.breakpoints.down('md')]: {
-      width: '100%',
-    },
     [theme.breakpoints.down('sm')]: {
       marginBottom: '50%',
+      width: 'auto',
+    },
+    [theme.breakpoints.down('md')]: {
+      width: 'auto',
     },
   },
   title: {
@@ -81,7 +79,7 @@ export const Introduction = (): JSX.Element => {
   return (
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
       <Typography className={classes.title} variant="h4">
-        Introduction
+        Who I am.
       </Typography>
       <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>

@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginTop: '40%',
     },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '10%',
+    },
   },
   content: {
     color: '#8998a7',

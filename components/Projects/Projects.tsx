@@ -13,20 +13,11 @@ const useStyles = makeStyles((theme) => ({
   projectTitle: {
     fontSize: '2.2rem',
     textAlign: 'center',
-    marginBottom: '5px',
+    marginBottom: '20px',
     fontWeight: 600,
     color: '#4A63D6',
     border: '0 solid #e2e8f0',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem' },
-  },
-
-  projectsubTitle: {
-    fontSize: '18px',
-    textAlign: 'center',
-    marginBottom: '40px',
-    fontWeight: 300,
-    color: 'white',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.2rem' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem', textAlign: 'left' },
   },
 
   title: {
@@ -36,12 +27,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 550,
     fontSize: '1.3rem',
     lineHeight: '1.1rem',
-    paddingBottom: '5px',
-  },
-
-  featured: {
-    fontSize: '1.5rem',
-    color: '#ff61be',
     paddingBottom: '5px',
   },
 
@@ -104,7 +89,7 @@ export const Projects = ({ projects }): JSX.Element => {
     <div className="projects-container">
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
-          Some Things I’ve Built
+          Some Things I’ve Built.
         </Typography>
       </StaggerWrap>
 
