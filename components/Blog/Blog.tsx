@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     borderRadius: '8px',
     [theme.breakpoints.down('sm')]: {
-      height: '450px',
+      height: 'auto',
     },
     cursor: 'pointer',
     transition: 'ease 0.5s',

@@ -88,7 +88,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <Box style={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
       <NavBar />
-      <Box style={{ padding: '25px' }}>{children}</Box>
+      <Box style={{ padding: '15px' }}>{children}</Box>
       <Box className={classes.sideElemenetContainer}>
         <Box className={classes.sideElemenetItem}>
           <Typography className={classes.emailLink}>
