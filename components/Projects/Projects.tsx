@@ -98,7 +98,7 @@ export const Projects = ({ projects }): JSX.Element => {
         const mobile = useMediaQuery('(max-width:600px)');
 
         return (
-          <div>
+          <div id="projects">
             <div
               className={styles.projects}
               key={id}

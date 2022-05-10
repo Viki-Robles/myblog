@@ -141,7 +141,7 @@ export const NavBar = () => {
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Item>
-              <Link href="/#projects">work</Link>
+              <Link href="#projects">work</Link>
             </Item>
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
@@ -162,7 +162,7 @@ export const NavBar = () => {
             <Link href="/">home</Link>
           </Item>
           <Item>
-            <Link href="/#projects">work</Link>
+            <Link href="#projects">work</Link>
           </Item>
           <Item>
             <Link href="/writing">posts</Link>
