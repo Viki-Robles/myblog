@@ -44,10 +44,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '7em',
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: '4.3em',
+      fontSize: '5em',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.6rem',
+      fontSize: '2.5rem',
     },
   },
   description: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
   descriptionText: {
     border: '0 solid #e2e8f0',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.1rem', lineHeight: 'calc(1em + 0.725rem)' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.25rem', lineHeight: 'calc(1em + 0.725rem)' },
   },
   button: {
     textAlign: 'center',
