@@ -129,7 +129,9 @@ export const NavBar = () => {
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
       <Nav>
         <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
-          <Logo>V.V</Logo>
+          <Link href="/">
+            <Image src="/logo.svg" width={42} height={42} />
+          </Link>
         </FadeInUpBox>
         <Menu>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>

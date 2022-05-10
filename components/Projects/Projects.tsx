@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { projectsData } from '../../data/projects.testData';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
-import { ScaleBox } from '../ScaleBox/ScaleBox';
 import styles from './Projects.module.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import AOS from 'aos';
 
 const useStyles = makeStyles((theme) => ({
   projectTitle: {
@@ -81,9 +81,9 @@ export const getStaticProps: GetStaticProps = async () => {
 export const Projects = ({ projects }): JSX.Element => {
   const classes = useStyles();
 
-  const rand = (min, max) => {
-    return Math.floor(Math.random() * (+max - +min)) + +min;
-  };
+  useEffect(() => {
+    AOS.init({ duration: 2000, delay: 0 });
+  }, []);
 
   return (
     <div className="projects-container">
@@ -99,32 +99,35 @@ export const Projects = ({ projects }): JSX.Element => {
 
         return (
           <div>
-            <ScaleBox duration={1} delayOrder={rand(1, 12)}>
-              <div className={styles.projects} key={id} style={{ marginRight: isMarginRight && !mobile ? '20%' : '0' }}>
-                <Image
-                  src={img}
-                  alt="Picture of the author"
-                  width={500}
-                  height={450}
-                  loading="eager"
-                  priority={true}
-                  className={classes.img}
-                />
-                <div className={styles.project}>
-                  <Typography className={classes.title}>{title}</Typography>
-                  <Typography className={classes.details}>{details}</Typography>
-                  {id === 'commento' ? (
-                    <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
-                      VIEW
-                    </a>
-                  ) : (
-                    <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
-                      VIEW
-                    </a>
-                  )}
-                </div>
+            <div
+              className={styles.projects}
+              key={id}
+              style={{ marginRight: isMarginRight && !mobile ? '20%' : '0' }}
+              data-aos="slide-up"
+            >
+              <Image
+                src={img}
+                alt="Picture of the author"
+                width={500}
+                height={450}
+                loading="eager"
+                priority={true}
+                className={classes.img}
+              />
+              <div className={styles.project}>
+                <Typography className={classes.title}>{title}</Typography>
+                <Typography className={classes.details}>{details}</Typography>
+                {id === 'commento' ? (
+                  <a key={id} href="https://commentto.vercel.app/" className={classes.button} target="_blank">
+                    VIEW
+                  </a>
+                ) : (
+                  <a key={id} href={`/projects/${id}`} className={classes.button} target="_blank">
+                    VIEW
+                  </a>
+                )}
               </div>
-            </ScaleBox>
+            </div>
           </div>
         );
       })}

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 auto',
-    padding: '15px',
+    padding: '45px',
     marginTop: '12%',
     marginBottom: '14%',
     gap: '10px',
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginBottom: '50%',
       width: 'auto',
+      padding: '18px',
     },
     [theme.breakpoints.down('md')]: {
       width: 'auto',
@@ -85,16 +86,16 @@ export const Introduction = (): JSX.Element => {
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6}>
             <Typography variant="h2" className={classes.name}>
-              Vasiliki.
+              Hello, I am Vasiliki.
             </Typography>
           </Grid>
         </FadeInUpBox>
         <FadeInUpBox yOffset={48} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6} className={classes.description}>
             <Typography className={classes.descriptionText} variant="h5">
-              Hi! My name's Vicky Vasilopoulou and I‘m a frontend engineer🦄. In the evenings you can find me working on
-              personal projects 🔒 , or catching up on the latest Netflix series. I‘m based in London, United Kingdom
-              where I occasionally write about my personal coding experience on my
+              I‘m a frontend engineer🦄. In the evenings you can find me working on personal projects 🔒 , or enjoying
+              food in a local pub. I‘m based in London, United Kingdom where I occasionally write about my personal
+              coding experience on my
               <a href="https://dev.to/vikirobles" className={classes.blog}>
                 Blog📓.
               </a>
