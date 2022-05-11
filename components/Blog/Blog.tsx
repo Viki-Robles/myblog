@@ -89,7 +89,7 @@ export const Blog = (): JSX.Element => {
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography className={classes.blogHeader} variant="h4">
-          Blog Posts
+          How to.
         </Typography>
         <Typography className={classes.totalPosts}>{totalBlogPosts} Articles</Typography>
       </Box>

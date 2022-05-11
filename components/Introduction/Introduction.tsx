@@ -3,6 +3,7 @@ import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
+import Bulb from 'components/Bulb/Bulb';
 
 const useStyles = makeStyles((theme) => ({
   introduction: {
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '5em',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2.5rem',
+      fontSize: '3.4rem',
     },
   },
   description: {

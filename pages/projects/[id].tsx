@@ -43,7 +43,22 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '1.4rem',
     },
   },
-  container: { marginTop: '10%', marginBottom: '50px', padding: '20px' },
+  container: {
+    width: '900px',
+    marginTop: '10%',
+    marginBottom: '50px',
+    padding: '20px',
+    border: '2px dashed',
+    borderRadius: '15px',
+    borderColor: '#e35085',
+    margin: '0 auto',
+    boxShadow: '0 0 1em 0 var(--clr-neon)',
+
+    [theme.breakpoints.down('md')]: {
+      width: 'auto',
+      padding: '18px',
+    },
+  },
   role: {
     color: '#4A63D6',
     fontSize: '1.8rem',
@@ -89,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     margin: '0 auto',
     cursor: 'pointer',
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       padding: '8px 12px',
       fontSize: '1rem',
@@ -118,6 +134,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '200px',
     textAlign: 'center',
     margin: '0 auto',
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       padding: '8px 12px',
       fontSize: '1rem',
@@ -125,6 +142,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 export default ({ project }) => {
   const classes = useStyles();
 
@@ -146,7 +164,7 @@ export default ({ project }) => {
       </motion.div>
 
       <Link href={project.link}>
-        <Typography className={classes.link}>View Website</Typography>
+        <Typography className={classes.link}>VIEW WEBSITE</Typography>
       </Link>
 
       <Box className={classes.roleBox}>
