@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     display: 'flex',
     marginTop: '30%',
-    fontSize: '1.6rem',
+    paddingBottom: '30px',
+    fontSize: '40px',
     fontWeight: 700,
     color: '#4A63D6',
     [theme.breakpoints.up('sm')]: {

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     color: '#4A63D6',
     border: '0 solid #e2e8f0',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.6rem', textAlign: 'left' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.7rem', textAlign: 'left' },
   },
 
   title: {

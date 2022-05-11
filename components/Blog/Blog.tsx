@@ -45,10 +45,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '53rem',
   },
   blogTag: {
-    color: '#B5B3B3',
     marginTop: '5px',
   },
   totalPosts: {
+    color: '#8998a7',
     marginBottom: '20px',
   },
   blogDetails: {
