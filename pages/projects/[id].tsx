@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textAlign: 'center',
     fontSize: '2.2rem',
-    fontWeight: 300,
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.8rem',
     },
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#4A63D6',
     textAlign: 'center',
     fontSize: '1.8rem',
-    fontWeight: 300,
+    fontWeight: 600,
     padding: '10px',
     maxWidth: '600px',
     margin: '0 auto',
@@ -62,13 +62,14 @@ const useStyles = makeStyles((theme) => ({
   role: {
     color: '#4A63D6',
     fontSize: '1.8rem',
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.4rem',
     },
   },
   technologies: {
     fontSize: '1.8rem',
-    fontWeight: 300,
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.4rem',
     },
@@ -79,9 +80,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     margin: '0 auto',
     marginBottom: '50px',
+    fontWeight: 600,
   },
   stack: {
     fontSize: '2.2rem',
+    fontWeight: 600,
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.8rem',
     },
@@ -92,11 +95,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     margin: '0 auto',
     marginBottom: '50px',
+    fontWeight: 600,
   },
   button: {
     borderRadius: '5px',
     marginBottom: '50px',
-    backgroundColor: '#ff61be',
+    border: '1px solid #e35085',
+    background: '#e35085',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     padding: '12px 20px',
     color: 'white',
@@ -126,10 +131,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
   },
   link: {
-    borderRadius: '5px',
     marginBottom: '50px',
-    backgroundColor: '#ff61be',
-    padding: '12px 20px',
+    borderRadius: '5px',
+    border: '1px solid #e35085',
+    background: '#e35085',
+    padding: '0.75rem 1rem',
     color: 'white',
     maxWidth: '200px',
     textAlign: 'center',
