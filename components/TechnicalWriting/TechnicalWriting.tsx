@@ -1,14 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import Timeline from '@material-ui/lab/Timeline';
 import { Typography, Box } from '@material-ui/core';
 import { getTechnicalWritingData } from '../../data/technical.testData';
+import AOS from 'aos';
 
 interface Props {
   window?: () => Window;
@@ -58,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: 'white',
     textAlign: 'right',
-    marginRight: '20px',
     fontSize: '40px',
     [theme.breakpoints.down('md')]: {
       fontSize: '35px',
@@ -81,16 +75,23 @@ const useStyles = makeStyles((theme) => ({
   timelineDot: {
     borderColor: '#ff61be',
   },
+  articleBox: {
+    paddingTop: '100px',
+  },
 }));
 
 export default function TechnicalWriting(): JSX.Element {
   const classes = useStyles();
 
+  useEffect(() => {
+    AOS.init({ duration: 2000, delay: 300 });
+  }, []);
+
   return (
-    <Box>
+    <Box className={classes.articleBox}>
       {getTechnicalWritingData.map(({ id, article, href, published }) => {
         return (
-          <div className={classes.container}>
+          <div className={classes.container} data-aos="slide-up">
             <Box className={classes.articlesHeader} key={id}>
               <Link href={href}>{article}</Link>
             </Box>

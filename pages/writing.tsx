@@ -16,11 +16,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    marginRight: '25px',
     fontSize: '40px',
     textOrientation: 'sideways',
     writingMode: 'vertical-lr',
-    marginTop: '100px',
+    marginTop: '200px',
   },
   timeline: {
     [theme.breakpoints.down('sm')]: {
