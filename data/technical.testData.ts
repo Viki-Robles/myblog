@@ -7,6 +7,12 @@ export interface TechnicalWritingDataProps {
 
 export const getTechnicalWritingData: TechnicalWritingDataProps[] = [
   {
+    id: 8,
+    href: 'https://dev.to/vikirobles/adapter-pattern-hbo',
+    article: 'The Adapter Pattern?',
+    published: 'Published on May 13, 2022',
+  },
+  {
     id: 7,
     article: 'How to create an auth login system with axios interceptors (TypeScript) PART I',
     href: 'https://dev.to/vikirobles/how-to-create-an-auth-login-system-with-axios-interceptors-typescript-2k11',

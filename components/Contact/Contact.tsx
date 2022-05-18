@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     borderRadius: '5px',
     padding: '20px 10px',
+    marginBottom: '10%',
     [theme.breakpoints.down('sm')]: {
       marginTop: '40%',
     },

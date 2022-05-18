@@ -169,10 +169,6 @@ export default ({ project }) => {
         </Box>
       </motion.div>
 
-      <Link href={project.link}>
-        <Typography className={classes.link}>VIEW WEBSITE</Typography>
-      </Link>
-
       <Box className={classes.roleBox}>
         <Typography className={classes.role}>Role: {project.role}</Typography>
       </Box>

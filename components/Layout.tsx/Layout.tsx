@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import { NavBar } from '../NavBar/NavBar';
+import { Contact } from 'components/Contact/Contact';
+import { Footer } from 'components/Footer/Footer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -109,6 +111,8 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
           </Link>
         </Box>
       </Box>
+      <Contact />
+      <Footer />
     </Box>
   );
 };
