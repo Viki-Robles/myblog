@@ -11,7 +11,6 @@ import FillCircleLoader from 'react-loaders-kit/lib/fillCircle/FillCircleLoader'
 import Paper from '@material-ui/core/Paper';
 import { Layout } from '../components/Layout.tsx/Layout';
 import '../styles/globals.css';
-import ErrorPage from './404';
 
 const useStyles = makeStyles((theme) => ({
   iconButton: {
