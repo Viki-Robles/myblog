@@ -53,10 +53,17 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '3.8rem',
+      textAlign: 'center',
     },
   },
   nameBox: {
     paddingTop: '60px',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   nameContainer: {
     [theme.breakpoints.down('sm')]: {
