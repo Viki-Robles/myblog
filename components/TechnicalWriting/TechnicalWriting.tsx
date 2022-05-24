@@ -15,20 +15,20 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     padding: '10px',
     border: '2px dashed',
-    borderColor: '#E35085',
+    borderColor: '#FFB7C5',
     borderRadius: '5px',
     marginBottom: '20px',
   },
   articlesListItem: {
     maxWidth: '800px',
     '&:hover': {
-      borderColor: '#E35085',
+      borderColor: '#FFB7C5',
     },
   },
   articlesHeader: {
     fontSize: '18px',
     '&:hover': {
-      color: '#E35085',
+      color: '#FFB7C5',
     },
   },
   articlesSubHeader: {
@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     borderRadius: '5px',
-    backgroundColor: '#E35085',
+    backgroundColor: '#FFB7C5',
     fontWeight: 600,
     color: 'white',
-    border: '1px solid #E35085',
+    border: '1px solid #FFB7C5',
     padding: '0.6rem 1rem',
     fontSize: '16px',
     maxWidth: '140px',
@@ -70,10 +70,10 @@ const useStyles = makeStyles((theme) => ({
   },
   timelineSeparator: {
     width: '1px',
-    backgroundColor: '#ff61be',
+    backgroundColor: '#FFB7C5',
   },
   timelineDot: {
-    borderColor: '#ff61be',
+    borderColor: '#FFB7C5',
   },
   articleBox: {
     paddingTop: '100px',

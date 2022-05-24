@@ -22,7 +22,7 @@ a {
 }
 
 :root {
-  --clr-neon:hsl(338, 72%, 60%);
+  --clr-neon:#FFBCD9;
   --clr-bg:hsl(323 21% 16%)
 }
 

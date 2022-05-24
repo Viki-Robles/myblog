@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     left: '30px',
     bottom: '20px',
-    border: '2px solid #e35085',
+    border: '2px solid #FFBCD9',
     borderRadius: '5px',
     padding: '0.6rem 1rem',
     fontSize: '14px',

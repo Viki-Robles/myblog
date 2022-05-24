@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px',
     border: '2px dashed',
     borderRadius: '15px',
-    borderColor: '#e35085',
+    borderColor: '#FFBCD9',
     margin: '0 auto',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
 
@@ -100,8 +100,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '5px',
     marginBottom: '50px',
-    border: '1px solid #e35085',
-    background: '#e35085',
+    border: '1px solid #FFBCD9',
+    background: '#FFBCD9',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     padding: '12px 20px',
     color: 'white',
@@ -133,8 +133,8 @@ const useStyles = makeStyles((theme) => ({
   link: {
     marginBottom: '50px',
     borderRadius: '5px',
-    border: '1px solid #e35085',
-    background: '#e35085',
+    border: '1px solid #FFBCD9',
+    background: '#FFBCD9',
     padding: '0.75rem 1rem',
     color: 'white',
     maxWidth: '200px',

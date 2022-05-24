@@ -1,9 +1,10 @@
 import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
+import Box from '@mui/material/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
-import Bulb from 'components/Bulb/Bulb';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   introduction: {
@@ -14,16 +15,17 @@ const useStyles = makeStyles((theme) => ({
     padding: '45px',
     marginTop: '12%',
     marginBottom: '14%',
-    gap: '10px',
-    width: '800px',
+    width: '1150px',
     border: '2px dashed',
     borderRadius: '15px',
-    borderColor: '#e35085',
+    borderColor: '#FFBCD9',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     [theme.breakpoints.down('sm')]: {
       marginBottom: '50%',
       width: 'auto',
       padding: '18px',
+      borderColor: '#ffff',
+      boxShadow: 'none',
     },
     [theme.breakpoints.down('md')]: {
       width: 'auto',
@@ -42,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     fontWeight: 600,
+    fontSize: '6rem',
     [theme.breakpoints.up('lg')]: {
       fontSize: '7em',
     },
@@ -52,6 +55,15 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '3.8rem',
     },
   },
+  nameBox: {
+    paddingTop: '60px',
+  },
+  nameContainer: {
+    [theme.breakpoints.down('sm')]: {
+      flexWrap: 'wrap',
+      flexDirection: 'column-reverse',
+    },
+  },
   description: {
     fontWeight: 200,
     maxWidth: '600px',
@@ -59,13 +71,13 @@ const useStyles = makeStyles((theme) => ({
 
   descriptionText: {
     border: '0 solid #e2e8f0',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.25rem', lineHeight: 'calc(1em + 0.725rem)' },
+    [theme.breakpoints.down('sm')]: { fontSize: '1.4rem', lineHeight: 'calc(1em + 0.725rem)', paddingTop: '15px' },
   },
   button: {
     textAlign: 'center',
     position: 'absolute',
     borderRadius: '5px',
-    border: '1px solid #e35085',
+    border: '1px solid #FFBCD9',
     padding: '0.75rem 1rem',
     fontSize: '13px',
     maxWidth: '140px',
@@ -73,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: { fontSize: '15px' },
   },
 
-  blog: { color: '#e35085', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
+  blog: { color: '#FFBCD9', cursor: 'pointer', paddingLeft: '5px', fontWeight: 300 },
 }));
 
 export const Introduction = (): JSX.Element => {
@@ -86,11 +98,17 @@ export const Introduction = (): JSX.Element => {
       </Typography>
       <Grid container className={classes.introduction} md={12} xl={12} spacing={4}>
         <FadeInUpBox yOffset={24} duration={1} delayOrder={1}>
-          <Grid item md={6} xl={6}>
-            <Typography variant="h2" className={classes.name}>
-              Hello, I am Vasiliki.
-            </Typography>
-          </Grid>
+          <Box sx={{ display: 'flex', gap: '10px' }} className={classes.nameContainer}>
+            <Box className={classes.nameBox}>
+              <Typography variant="h2" className={classes.name}>
+                Hello,
+              </Typography>
+              <Typography variant="h2" className={classes.name}>
+                I am Vasiliki.
+              </Typography>
+            </Box>
+            <Image src="/myprofile.svg" width={700} height={700} />
+          </Box>
         </FadeInUpBox>
         <FadeInUpBox yOffset={48} duration={1} delayOrder={1}>
           <Grid item md={6} xl={6} className={classes.description}>
