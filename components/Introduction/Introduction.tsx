@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '30px',
     fontSize: '40px',
     fontWeight: 700,
-    color: '#4A63D6',
+
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
