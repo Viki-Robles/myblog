@@ -11,7 +11,7 @@ import AOS from 'aos';
 
 const useStyles = makeStyles((theme) => ({
   projectTitle: {
-    fontSize: '2.2rem',
+    fontSize: '2.4rem',
     textAlign: 'center',
     marginBottom: '20px',
     fontWeight: 600,
@@ -88,7 +88,7 @@ export const Projects = ({ projects }): JSX.Element => {
     <div className="projects-container">
       <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={2}>
         <Typography className={classes.projectTitle} variant="h4">
-          Some Things I’ve Built.
+          Few Things I’ve Built.
         </Typography>
       </StaggerWrap>
 

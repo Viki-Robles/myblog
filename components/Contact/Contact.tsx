@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20%',
     border: '2px dashed',
     borderColor: '#FFB7C5',
+    borderWidth: '5px',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     borderRadius: '5px',
     padding: '20px 10px',

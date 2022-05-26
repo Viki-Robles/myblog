@@ -16,9 +16,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '12%',
     marginBottom: '14%',
     width: '1150px',
-    border: '2px dashed',
+    border: '1px dashed',
     borderRadius: '15px',
     borderColor: '#FFBCD9',
+    borderWidth: '5px',
     boxShadow: '0 0 1em 0 var(--clr-neon)',
     [theme.breakpoints.down('sm')]: {
       marginBottom: '50%',
@@ -32,11 +33,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    display: 'flex',
-    marginTop: '30%',
-    paddingBottom: '30px',
+    marginTop: '11%',
     fontSize: '40px',
     fontWeight: 700,
+    textAlign: 'center',
 
     [theme.breakpoints.up('sm')]: {
       display: 'none',
@@ -78,7 +78,12 @@ const useStyles = makeStyles((theme) => ({
 
   descriptionText: {
     border: '0 solid #e2e8f0',
-    [theme.breakpoints.down('sm')]: { fontSize: '1.4rem', lineHeight: 'calc(1em + 0.725rem)', paddingTop: '15px' },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      lineHeight: 'calc(1em + 0.725rem)',
+      paddingTop: '15px',
+      textAlign: 'center',
+    },
   },
   button: {
     textAlign: 'center',

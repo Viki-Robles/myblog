@@ -14,6 +14,7 @@ const Nav = styled.nav`
   align-items: center;
   @media only screen and (max-width: 768px) {
     justify-content: space-between;
+    padding-top: 20px;
   }
 `;
 
@@ -74,6 +75,10 @@ const NavIcon = styled.button`
   }
 `;
 
+const ImageContainer = styled.div`
+  margin-top: 10px;
+`;
+
 const Line = styled.span`
   display: block;
   border-radius: 50px;
@@ -85,6 +90,7 @@ const Line = styled.span`
 
   :nth-child(2) {
     width: ${(props) => (props.open ? '40%' : '70%')};
+    background-color: #ffbcd9;
   }
 `;
 
@@ -130,7 +136,9 @@ export const NavBar = () => {
       <Nav>
         <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
           <Link href="/">
-            <Image src="/logo.svg" width={42} height={42} />
+            <ImageContainer>
+              <Image src="/logo.svg" width={42} height={42} />
+            </ImageContainer>
           </Link>
         </FadeInUpBox>
         <Menu>
