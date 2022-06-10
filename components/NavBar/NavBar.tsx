@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import useSound from 'use-sound';
 import styled from 'styled-components';
 import { StaggerWrap } from 'components/StaggerWrap/StaggerWrap';
 import { FadeInUpBox } from 'components/FadeInBox/FadeInBox';
-import pop from '../../public/assets/pop.mp3';
 
 const Nav = styled.nav`
   padding: 0 20px;
@@ -127,10 +125,9 @@ const OverlayMenu = styled.ul`
 `;
 
 export const NavBar = () => {
-  const [play, { stop }] = useSound(pop);
-
   const [toggle, toggleNav] = useState(false);
 
+  const isPathRedirected = window.location.pathname === '/' ? '#projects' : '/';
   return (
     <StaggerWrap childrenDelay={1} ease="backInOut" delayOrder={1}>
       <Nav>
@@ -149,7 +146,7 @@ export const NavBar = () => {
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
             <Item>
-              <Link href="#projects">work</Link>
+              <Link href={isPathRedirected}>work</Link>
             </Item>
           </FadeInUpBox>
           <FadeInUpBox yOffset={34} duration={1} delayOrder={1}>
@@ -170,7 +167,7 @@ export const NavBar = () => {
             <Link href="/">home</Link>
           </Item>
           <Item>
-            <Link href="#projects">work</Link>
+            <Link href={isPathRedirected}>work</Link>
           </Item>
           <Item>
             <Link href="/writing">posts</Link>
